@@ -1,0 +1,46 @@
+{
+    "version": 1,
+    "name": "NewInputSystem",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "08f18039-89bc-4078-8c8d-2b451adc64f7",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "87bbdeb5-79c0-46e0-9ca3-109d5acbc548",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8d33a479-147c-4589-ac90-8deabd1854db",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a4de8bf9-9a9e-445b-927a-8f317bea5058",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

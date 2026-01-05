@@ -508,7 +508,7 @@
     },
     "m_PreviewData": {
         "serializedMesh": {
-            "m_SerializedMesh": "{\"mesh\":{\"instanceID\":0}}",
+            "m_SerializedMesh": "{\"mesh\":{\"fileID\":10202,\"guid\":\"0000000000000000e000000000000000\",\"type\":0}}",
             "m_Guid": ""
         },
         "preventRotation": false
@@ -2548,7 +2548,7 @@
     "m_ObjectId": "9dbb7a2d03034829a1dfe82e60c98ae7",
     "m_Title": "Distortion",
     "m_Position": {
-        "x": -1963.0,
+        "x": -1963.0001220703125,
         "y": 566.9999389648438
     }
 }
@@ -2896,8 +2896,8 @@
     "m_ObjectId": "b2536a23c20a411bb65152da71d3b7c0",
     "m_Title": "Cubemap",
     "m_Position": {
-        "x": -906.0,
-        "y": 958.9998168945313
+        "x": -906.0001220703125,
+        "y": 959.0
     }
 }
 

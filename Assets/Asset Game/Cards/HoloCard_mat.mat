@@ -72,8 +72,8 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _distortionValue: 3
-    - _offsetValue: 9.51
+    - _distortionValue: 7.7
+    - _offsetValue: 32.5
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

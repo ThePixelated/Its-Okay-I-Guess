@@ -1,11 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider))] // Atau BoxCollider2D kalo pure 2D project
 public class CardController : MonoBehaviour
 {
+    public static CardController instance;
+
     [Header("References")]
+    [SerializeField] private Button confirmBtn;
     [SerializeField] private Transform leftPlaceholder;
     [SerializeField] private Transform rightPlaceholder;
     // Origin bisa di-set otomatis pas Start, atau assign manual
@@ -28,6 +32,11 @@ public class CardController : MonoBehaviour
 
     // Boundary X (Batas Kiri Kanan)
     private float minX, maxX;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -53,6 +62,8 @@ public class CardController : MonoBehaviour
     void OnMouseDown()
     {
         if (leftPlaceholder == null || rightPlaceholder == null) return;
+
+        confirmBtn.interactable = false;
 
         isDragging = true;
 
@@ -203,10 +214,13 @@ public class CardController : MonoBehaviour
         transform.position = slideTarget;
         transform.rotation = targetRot;
 
+        confirmBtn.interactable = true;
+        
+
         // PHASE 2: PHYSICS DROP (THE "BOUNCY" FEEL)
 
         // Kunci Rotasi biar jatohnya 'ceplek' (flat) gak ngegelinding
-        rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
+        rb.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
 
         // Nyalain Gravity
         rb.isKinematic = false;
@@ -214,5 +228,18 @@ public class CardController : MonoBehaviour
 
         // Selesai. Rigidbody akan handle sisanya (jatoh ke Z=0 mentok collider).
         // Nanti pas kartu mau dipickup lagi, logic OnMouseDown akan ngereset ini semua.
+    }
+
+    public IEnumerator SlideOutAnimation()
+    {
+        yield return null;
+    }
+
+    public IEnumerator SlideInAnimation()
+    {
+        transform.position = originPos;
+        transform.rotation = originRot;
+
+        yield return null;
     }
 }

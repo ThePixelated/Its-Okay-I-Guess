@@ -7,13 +7,16 @@ public class DeviceDetection : MonoBehaviour
 
     void Start()
     {
-        if (Platform.IsMobileBrowser())
+        if (deviceInfo != null)
         {
-            deviceInfo.text = "Device: Mobile detected - M";
-        }
-        else
-        {
-            deviceInfo.text = "Device: Desktop detected - D";
+            if (Platform.IsMobileBrowser())
+            {
+                deviceInfo.text = "Device: Mobile detected - M";
+            }
+            else
+            {
+                deviceInfo.text = "Device: Desktop detected - D";
+            }
         }
     }
 }

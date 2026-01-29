@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Card
+  - leftSide
+  - rightSide
   layers:
   - Default
   - TransparentFX
@@ -41,6 +43,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Test
+    uniqueID: 81020061
     locked: 0
   m_RenderingLayers:
   - Default

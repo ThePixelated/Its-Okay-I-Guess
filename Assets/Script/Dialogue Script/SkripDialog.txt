@@ -1,0 +1,28 @@
+Node ID: start
+Text: "wehh dah balik bro?"
+No Choices
+nextNodeID: convo_A
+
+Node ID: convo_A
+Text: "balik kerja apa ke kampus tadi?"
+Choices:
+    - "abis dari kampus bro (bohong)" -> convo_A1
+    - "baru balik kerja ni..." -> convo_A2
+nextNodeID kosong
+
+Node ID: convo_A1
+Text: "wuih kirain ga jadi ke kampus"
+No Choices
+nextNodeID: end_convo
+
+Node ID: convo_A2
+Text: "damn.. sampe semalem ini?"
+No Choices
+nextNodeID: end_convo
+
+Node ID: end_convo
+Text: "okee istirahat dah"
+No Choices
+nextNodeID: kosong
+
+bahas dialog dulu

@@ -4,6 +4,7 @@ public class PlayerCollider : MonoBehaviour
 {
     [SerializeField] private PlayerData m_playerData;
     [SerializeField] private Transform[] anchorArea = { };
+    [SerializeField] private string tagObj;
 
     private Direction _currentDirection;
 
@@ -18,29 +19,47 @@ public class PlayerCollider : MonoBehaviour
         UpdateAnchor();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        SetCollider(collision); 
-    }
-
-    private void SetCollider(Collider2D collision)
-    {
-        switch (m_playerData.PlayerDirection)
+        if (collision.gameObject.tag == tagObj)
         {
-            case Direction.Forward:
-                Debug.Log(collision.gameObject.name + " - From top side");
-                break;
-            case Direction.Left:
-                Debug.Log(collision.gameObject.name + " - From left side");
-                break;
-            case Direction.Backward:
-                Debug.Log(collision.gameObject.name + " - From bottom side");
-                break;
-            case Direction.Right:
-                Debug.Log(collision.gameObject.name + " - From right side");
-                break;
+            PlayerManager.Instance.TriggerEnter_non();
+            Debug.Log("Enter... Mendeteksi " + collision.name);
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == tagObj)
+        {
+            PlayerManager.Instance.TriggerExit_non();
+            Debug.Log("Exit... dari " + collision.name);
+        }
+    }
+
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    SetCollider(collision);
+    //}
+
+    //private void SetCollider(Collider2D collision)  // ga terlalu penting ni
+    //{
+    //    switch (m_playerData.PlayerDirection)
+    //    {
+    //        case Direction.Forward:
+    //            Debug.Log(collision.gameObject.name + " - From top side");
+    //            break;
+    //        case Direction.Left:
+    //            Debug.Log(collision.gameObject.name + " - From left side");
+    //            break;
+    //        case Direction.Backward:
+    //            Debug.Log(collision.gameObject.name + " - From bottom side");
+    //            break;
+    //        case Direction.Right:
+    //            Debug.Log(collision.gameObject.name + " - From right side");
+    //            break;
+    //    }
+    //}
 
     private void SetTransform(int index)
     {

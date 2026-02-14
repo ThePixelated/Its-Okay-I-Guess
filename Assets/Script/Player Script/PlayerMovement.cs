@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Direction playerDirection;
     [SerializeField] private int playerSpeed;
 
+    private bool _keyPressedFlag = true;
+    private bool _isEnableMove = false;
+    private float _currentTime = 0f;
+
     private void Awake()
     {
         playerDirection = m_playerData.PlayerDirection;
@@ -34,28 +38,49 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandlePlayerMovement()
     {
-        Vector2 movement = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
-        if (Input.GetKey(KeyCode.W)) // Forward
+        if (Input.anyKey && _keyPressedFlag)
         {
-            movement = new Vector2(movement.x, movement.y + playerSpeed * Time.deltaTime);
+            _currentTime += Time.deltaTime;
+            if (_currentTime >= 0.13f)
+            {
+                _isEnableMove = true;
+                _keyPressedFlag = false;
+            }
         }
-        else if (Input.GetKey(KeyCode.A)) // Left
+        else if (!Input.anyKey && !_keyPressedFlag)
         {
-            movement = new Vector2(movement.x - playerSpeed * Time.deltaTime, movement.y);
-        }
-
-        else if (Input.GetKey(KeyCode.S)) // Backward
-        {
-            movement = new Vector2(movement.x, movement.y - playerSpeed * Time.deltaTime);
-        }
-
-        else if (Input.GetKey(KeyCode.D)) // Right
-        {
-            movement = new Vector2(movement.x + playerSpeed * Time.deltaTime, movement.y);
+            _keyPressedFlag = true;
+            _isEnableMove = false;
+            _currentTime = 0f;
         }
 
-        gameObject.transform.position = movement;
+        if (_isEnableMove)
+        {
+            //Debug.LogWarning("MOVEMENT OBSERVE");
+            Vector3 movement = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+            //Debug.Log(movement);
+            if (Input.GetKey(KeyCode.W)) // Forward
+            {
+                movement = new Vector3(movement.x, movement.y + playerSpeed * Time.deltaTime, 0f);
+            }
+            else if (Input.GetKey(KeyCode.A)) // Left
+            {
+                movement = new Vector3(movement.x - playerSpeed * Time.deltaTime, movement.y, 0f);
+            }
+
+            else if (Input.GetKey(KeyCode.S)) // Backward
+            {
+                movement = new Vector3(movement.x, movement.y - playerSpeed * Time.deltaTime, 0f);
+            }
+
+            else if (Input.GetKey(KeyCode.D)) // Right
+            {
+                movement = new Vector3(movement.x + playerSpeed * Time.deltaTime, movement.y, 0f);
+            }
+            //Debug.Log(movement);
+
+            gameObject.transform.position = movement;
+            //Debug.Log(gameObject.transform.position);
+        }
     }
 }
-
-

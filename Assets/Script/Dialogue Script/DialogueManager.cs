@@ -24,9 +24,14 @@ public class DialogueManager : MonoBehaviour
         foreach (var node in dialogueData)
         {
             nodeLookup.Add(node.NodeID, node);
+            Debug.LogWarning("Innit node....");
         }
 
+        Debug.Log("Done __innit node: " + nodeLookup);
+
         currentNode = nodeLookup["start"];
+
+        Debug.LogWarning("Is currentNode Nan: " + (currentNode == null) + " - DataNode: " + (nodeLookup == null));
 
         m_dialogueUI.StartRender(currentNode);
     }

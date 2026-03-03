@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
   m_Name: NPC_Akmal
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  currentSprite: {fileID: 21300000, guid: 33014fa1867f6194aa26dda4a8707d7c, type: 3}
   _dialogueNodes:
   - NodeID: start
+    SrcImgSprite: {fileID: 21300000, guid: 33014fa1867f6194aa26dda4a8707d7c, type: 3}
     Text: wehh dah balik bro?
     Choices: []
     NextNodeID: convo_A
   - NodeID: convo_A
+    SrcImgSprite: {fileID: -2293023420630586820, guid: 9d1f6dda8cbc8b4489f82bb4f62fea22, type: 3}
     Text: balik kerja apa ke kampus tadi?
     Choices:
     - text: abis dari kampus bro (bohong)
@@ -26,14 +29,17 @@ MonoBehaviour:
       NextNodeID: convo_A2
     NextNodeID: 
   - NodeID: convo_A1
+    SrcImgSprite: {fileID: 1597317194208157057, guid: 3cf9d7a4f86c6c0419ab67f6b15ed371, type: 3}
     Text: wuih kirain ga jadi ke kampus
     Choices: []
     NextNodeID: end_convo
   - NodeID: convo_A2
+    SrcImgSprite: {fileID: -6015010169462378560, guid: 3cf9d7a4f86c6c0419ab67f6b15ed371, type: 3}
     Text: damn.. sampe semalem ini?
     Choices: []
     NextNodeID: end_convo
   - NodeID: end_convo
+    SrcImgSprite: {fileID: 2436765836460012559, guid: 9d1f6dda8cbc8b4489f82bb4f62fea22, type: 3}
     Text: okee istirahat dah
     Choices: []
     NextNodeID: 

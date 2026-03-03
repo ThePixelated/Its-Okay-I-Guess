@@ -9,10 +9,7 @@ public class CardMode : GameModeBase
 
     public override void Update(GameModeManager GMM)
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            GMM.Switch(GMM.ExplorationMode);
-        }
+        GMM.HandleSwitchMode();
 
         if (Input.GetKey(KeyCode.W)) // Forward
         {

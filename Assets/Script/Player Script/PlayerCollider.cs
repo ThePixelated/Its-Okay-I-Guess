@@ -37,30 +37,6 @@ public class PlayerCollider : MonoBehaviour
         }
     }
 
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    SetCollider(collision);
-    //}
-
-    //private void SetCollider(Collider2D collision)  // ga terlalu penting ni
-    //{
-    //    switch (m_playerData.PlayerDirection)
-    //    {
-    //        case Direction.Forward:
-    //            Debug.Log(collision.gameObject.name + " - From top side");
-    //            break;
-    //        case Direction.Left:
-    //            Debug.Log(collision.gameObject.name + " - From left side");
-    //            break;
-    //        case Direction.Backward:
-    //            Debug.Log(collision.gameObject.name + " - From bottom side");
-    //            break;
-    //        case Direction.Right:
-    //            Debug.Log(collision.gameObject.name + " - From right side");
-    //            break;
-    //    }
-    //}
-
     private void SetTransform(int index)
     {
         gameObject.transform.localPosition = anchorArea[index].transform.localPosition;

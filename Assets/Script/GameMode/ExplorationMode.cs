@@ -9,13 +9,11 @@ public class ExplorationMode : GameModeBase
 
     public override void Update(GameModeManager GMM)
     {
+        GMM.HandleSwitchMode();
+
         GMM.HandleCharDirection();
         GMM.HandlePlayerMovement();
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            GMM.Switch(GMM.CardMode);
-        }
+        GMM.HandleObjectInteractable();
     }
 
     public override void Exit(GameModeManager GMM)

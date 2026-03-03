@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] private GameModeManager m_gameModeManager;
     [SerializeField] private DialogueUI m_dialogueUI;
     [SerializeField] private DialogueNode currentNode;
 
@@ -24,7 +25,7 @@ public class DialogueManager : MonoBehaviour
         foreach (var node in dialogueData)
         {
             nodeLookup.Add(node.NodeID, node);
-            Debug.LogWarning("Innit node....");
+            Debug.LogWarning("Innit node.... - " + node.NodeID);
         }
 
         Debug.Log("Done __innit node: " + nodeLookup);
@@ -42,7 +43,8 @@ public class DialogueManager : MonoBehaviour
         if (nodeID == null || nodeID.Length == 0)
         {
             m_dialogueUI.CloseRender();
-            currentNode = nodeLookup["start"];
+            //currentNode = nodeLookup["start"];
+            return;
         }
 
         currentNode = nodeLookup[nodeID];
@@ -57,11 +59,17 @@ public class DialogueManager : MonoBehaviour
             if (currentNode.NextNodeID == null || currentNode.NextNodeID.Length == 0)
             {
                 m_dialogueUI.CloseRender();
-                currentNode = nodeLookup["start"];
+                //currentNode = nodeLookup["start"];
+                return;
             }
 
             currentNode = nodeLookup[currentNode.NextNodeID];
             m_dialogueUI.Render(currentNode);
         }
+    }
+
+    public void DialogueStopped()
+    {
+        m_gameModeManager.DialogueStopped();
     }
 }

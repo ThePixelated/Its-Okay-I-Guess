@@ -25,12 +25,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void HandleObjectInteractable()
+    public void HandleObjectInteractable()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Key E Pressed...");
-            isObjectInteractable = false;
             PlayerManager.Instance.InteractKey_E();
         }
     }

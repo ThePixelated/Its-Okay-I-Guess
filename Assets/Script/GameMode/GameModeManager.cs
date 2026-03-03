@@ -1,18 +1,20 @@
+using System;
 using UnityEngine;
 
 public class GameModeManager : MonoBehaviour
 {
-
     [SerializeField] private GameObject m_PlayerObj;
     [SerializeField] private PlayerData m_playerData;
     [SerializeField] private Direction playerDirection;
     [SerializeField] private int playerSpeed;
 
+    [SerializeField] private bool isObjectInteractable = false;
     private bool _keyPressedFlag = true;
     private bool _isEnableMove = false;
     private float _currentTime = 0f;
 
     public GameModeBase ExplorationMode = new ExplorationMode();
+    public GameModeBase DialogueMode = new DialogueMode();
     public GameModeBase CardMode = new CardMode();
     public GameModeBase CurrentMode;
 
@@ -26,6 +28,9 @@ public class GameModeManager : MonoBehaviour
     {
         CurrentMode = ExplorationMode;
         CurrentMode.Enter(this);
+
+        PlayerManager.Instance.onTriggerEnter_non += SetFlagTrue;
+        PlayerManager.Instance.onTriggerExit_non += SetFlagFalse;
     }
 
     private void Update()
@@ -95,10 +100,48 @@ public class GameModeManager : MonoBehaviour
         }
     }
 
+    public void HandleObjectInteractable()
+    {
+        if (isObjectInteractable && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Key E Pressed...");
+            PlayerManager.Instance.InteractKey_E();
+            Switch(DialogueMode);
+        }
+    }
+
+    public void HandleSwitchMode()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Switch(ExplorationMode);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Switch(CardMode);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Switch(DialogueMode);
+        }
+    }
+
     public void Switch(GameModeBase newMode)
     {
         CurrentMode.Exit(this);
         CurrentMode = newMode;
         CurrentMode.Enter(this);
     }
+
+    public event Action<GameModeManager> onDialogueStop;
+    public void DialogueStopped()
+    {
+        if (onDialogueStop != null)
+        {
+            onDialogueStop(this);
+        }
+    }
+
+    public void SetFlagTrue() => isObjectInteractable = true;
+    public void SetFlagFalse() => isObjectInteractable = false;
 }

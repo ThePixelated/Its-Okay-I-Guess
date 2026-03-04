@@ -19,12 +19,23 @@ public class PlayerCollider : MonoBehaviour
         UpdateAnchor();
     }
 
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == tagObj)
+    //    {
+    //    {
+    //        //PlayerManager.Instance.TriggerEnter_non(collision.name);
+    //        Debug.Log(gameObject.name + " - Enter... Mendeteksi " + collision.name);
+    //        PlayerManager.Instance.InteractKey_E(collision.name);
+    //    }
+    //}
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == tagObj)
         {
-            PlayerManager.Instance.TriggerEnter_non();
-            Debug.Log("Enter... Mendeteksi " + collision.name);
+            PlayerManager.Instance.TriggerEnter_non(collision.name);
+            Debug.Log(gameObject.name + " - Enter... Mendeteksi " + collision.name);
         }
     }
 
@@ -33,7 +44,7 @@ public class PlayerCollider : MonoBehaviour
         if (collision.gameObject.tag == tagObj)
         {
             PlayerManager.Instance.TriggerExit_non();
-            Debug.Log("Exit... dari " + collision.name);
+            Debug.Log(gameObject.name + " - Exit... dari " + collision.name);
         }
     }
 

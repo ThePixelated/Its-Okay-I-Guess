@@ -8,8 +8,9 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private DialogueManager m_dialogueManager;
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private GameObject choicesPanel;
-    [SerializeField] private Image imgCharacter;
+    [SerializeField] private GameObject imgCharacter;
     [SerializeField] private GameObject buttonPrefab;
+    [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Transform buttonParent;
     [SerializeField] private List<GameObject> buttons = new List<GameObject>();
@@ -43,8 +44,19 @@ public class DialogueUI : MonoBehaviour
 
     public void Render(DialogueNode dialogueNode)
     {
+        nameText.text = dialogueNode.CharName;
         dialogueText.text = dialogueNode.Text; // ini bisa dibuat efek "writing" kedepannya
-        imgCharacter.sprite = dialogueNode.SrcImgSprite;
+
+        if (dialogueNode.SrcImgSprite != null)
+        {
+            imgCharacter.SetActive(true);
+            Image img = imgCharacter.GetComponent<Image>();
+            img.sprite = dialogueNode.SrcImgSprite;
+        }
+        else
+        {
+            imgCharacter.SetActive(false);
+        }
 
         //Debug.Log("Text: " + dialogueText.text);
 
@@ -77,6 +89,8 @@ public class DialogueUI : MonoBehaviour
     {
         // animasi closing panel, dll
         Debug.LogWarning("Dialog has been closed...");
+        RemoveButtons();
+
         dialogueBox.SetActive(false);
         choicesPanel.SetActive(false);
 

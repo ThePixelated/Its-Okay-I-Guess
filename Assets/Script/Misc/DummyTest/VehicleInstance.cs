@@ -34,55 +34,55 @@ public class VehicleInstance : MonoBehaviour
     }
 }
 
-public class ScriptableObjectVehicleExample
-{
-    [MenuItem("Example/Setup ScriptableObject Vehicle Example")]
-    static void MenuCallback()
-    {
-        // This example programmatically performs steps that would typically be performed from the Editor's user interface
-        // to creates a simple demonstration.  When going into Playmode the three objects will move according to the limits
-        // set by their vehicle type.
+//public class ScriptableObjectVehicleExample
+//{
+//    //[MenuItem("Example/Setup ScriptableObject Vehicle Example")]
+//    static void MenuCallback()
+//    {
+//        // This example programmatically performs steps that would typically be performed from the Editor's user interface
+//        // to creates a simple demonstration.  When going into Playmode the three objects will move according to the limits
+//        // set by their vehicle type.
 
-        // Step 1 - Create or reload the assets that store each VehicleTypeInfo object.
-        VehicleTypeInfo wagon = AssetDatabase.LoadAssetAtPath<VehicleTypeInfo>("Assets/VehicleTypeWagon.asset");
-        if (wagon == null)
-        {
-            // Create and save ScriptableObject because it doesn't exist yet
-            wagon = ScriptableObject.CreateInstance<VehicleTypeInfo>();
-            wagon.m_MaxSpeed = 5f;
-            wagon.m_MaxAcceration = 0.5f;
-            AssetDatabase.CreateAsset(wagon, "Assets/VehicleTypeWagon.asset");
-        }
+//        // Step 1 - Create or reload the assets that store each VehicleTypeInfo object.
+//        VehicleTypeInfo wagon = AssetDatabase.LoadAssetAtPath<VehicleTypeInfo>("Assets/VehicleTypeWagon.asset");
+//        if (wagon == null)
+//        {
+//            // Create and save ScriptableObject because it doesn't exist yet
+//            wagon = ScriptableObject.CreateInstance<VehicleTypeInfo>();
+//            wagon.m_MaxSpeed = 5f;
+//            wagon.m_MaxAcceration = 0.5f;
+//            AssetDatabase.CreateAsset(wagon, "Assets/VehicleTypeWagon.asset");
+//        }
 
-        VehicleTypeInfo cruiser = AssetDatabase.LoadAssetAtPath<VehicleTypeInfo>("Assets/VehicleTypeCruiser.asset");
-        if (cruiser == null)
-        {
-            cruiser = ScriptableObject.CreateInstance<VehicleTypeInfo>();
-            cruiser.m_MaxSpeed = 75f;
-            cruiser.m_MaxAcceration = 2f;
-            AssetDatabase.CreateAsset(cruiser, "Assets/VehicleTypeCruiser.asset");
-        }
+//        VehicleTypeInfo cruiser = AssetDatabase.LoadAssetAtPath<VehicleTypeInfo>("Assets/VehicleTypeCruiser.asset");
+//        if (cruiser == null)
+//        {
+//            cruiser = ScriptableObject.CreateInstance<VehicleTypeInfo>();
+//            cruiser.m_MaxSpeed = 75f;
+//            cruiser.m_MaxAcceration = 2f;
+//            AssetDatabase.CreateAsset(cruiser, "Assets/VehicleTypeCruiser.asset");
+//        }
 
-        // Step 2 - Create some example vehicles in the current scene
-        {
-            var vehicle = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            vehicle.name = "Wagon1";
-            var vehicleBehaviour = vehicle.AddComponent<VehicleInstance>();
-            vehicleBehaviour.Initialize(wagon);
-        }
+//        // Step 2 - Create some example vehicles in the current scene
+//        {
+//            var vehicle = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+//            vehicle.name = "Wagon1";
+//            var vehicleBehaviour = vehicle.AddComponent<VehicleInstance>();
+//            vehicleBehaviour.Initialize(wagon);
+//        }
 
-        {
-            var vehicle = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-            vehicle.name = "Wagon2";
-            var vehicleBehaviour = vehicle.AddComponent<VehicleInstance>();
-            vehicleBehaviour.Initialize(wagon);
-        }
+//        {
+//            var vehicle = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+//            vehicle.name = "Wagon2";
+//            var vehicleBehaviour = vehicle.AddComponent<VehicleInstance>();
+//            vehicleBehaviour.Initialize(wagon);
+//        }
 
-        {
-            var vehicle = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            vehicle.name = "Cruiser1";
-            var vehicleBehaviour = vehicle.AddComponent<VehicleInstance>();
-            vehicleBehaviour.Initialize(cruiser);
-        }
-    }
-}
+//        {
+//            var vehicle = GameObject.CreatePrimitive(PrimitiveType.Cube);
+//            vehicle.name = "Cruiser1";
+//            var vehicleBehaviour = vehicle.AddComponent<VehicleInstance>();
+//            vehicleBehaviour.Initialize(cruiser);
+//        }
+//    }
+//}

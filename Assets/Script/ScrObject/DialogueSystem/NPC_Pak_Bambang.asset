@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: NPC_Pak_Bambang
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isDialogueRead: 0
+  _dialogueNodes:
+  - NodeID: start_bambang
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Aduh... itu asap rokok di teras. Pak Bambang belum tidur ternyata. Padahal
+      gue udah berusaha buka gerbang sepelan mungkin.*'
+    Choices: []
+    NextNodeID: greeting_bambang
+  - NodeID: greeting_bambang
+    SrcImgSprite: {fileID: 3914889051997854691, guid: 9d1f6dda8cbc8b4489f82bb4f62fea22, type: 3}
+    CharName: Pak Bambang
+    Text: Jam segini baru mendarat, Leanst? Makin malam aja jadwal "kuliah" kamu
+      sekarang.
+    Choices:
+    - text: Kerja lembur tadi Pak, ngejar target.
+      NextNodeID: path_kerja
+    - text: Nanggung tadi di perpus Pak, wifi-nya lagi kenceng.
+      NextNodeID: path_perpus
+    NextNodeID: 
+  - NodeID: path_kerja
+    SrcImgSprite: {fileID: 2436765836460012559, guid: 9d1f6dda8cbc8b4489f82bb4f62fea22, type: 3}
+    CharName: Pak Bambang
+    Text: Ya wis, sing penting jaga kesehatan. Jangan sampai uang lemburnya habis
+      cuma buat beli obat tipes. Skripsi juga jangan ditinggal total.
+    Choices: []
+    NextNodeID: final_bambang
+  - NodeID: path_perpus
+    SrcImgSprite: {fileID: -2293023420630586820, guid: 9d1f6dda8cbc8b4489f82bb4f62fea22, type: 3}
+    CharName: Pak Bambang
+    Text: Halah, paling juga mabar sama si Akbar. Ya sudah, langsung masuk sana.
+      Gerbangnya jangan lupa digembok lagi, tadi si Yono kayaknya lupa.
+    Choices: []
+    NextNodeID: final_bambang
+  - NodeID: final_bambang
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Gue cuma bisa ngangguk-ngangguk sambil senyum kecut. Minimal gue nggak
+      ditagih uang kosan yang nunggak tiga hari itu.*'
+    Choices: []
+    NextNodeID: check_gate
+  - NodeID: check_gate
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Klak... suara gembok gerbang yang berat ini rasanya kayak tanda kalau
+      hari gue beneran udah selesai. Waktunya masuk ke zona nyaman... kamar gue.*'
+    Choices: []
+    NextNodeID: 
+  setRead: 0

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: Object_Meja_Kamar
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isDialogueRead: 0
+  _dialogueNodes:
+  - NodeID: start_room
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Akhirnya... kasur. Tapi bau bumbu mie instan sisa tadi sore masih nempel
+      kuat banget di sini. Padahal jendelanya udah gue buka sedikit.*'
+    Choices: []
+    NextNodeID: check_laptop
+  - NodeID: check_laptop
+    SrcImgSprite: {fileID: 496546231668344194, guid: ed406b0aa6e2c4940952cabca64d1f88, type: 3}
+    CharName: Laptop
+    Text: '*Layar yang masih nyala nampilin kursor yang kedip-kedip di atas halaman
+      kosong. Kayak lagi nungguin gue buat ngetik sesuatu.*'
+    Choices:
+    - text: Duduk bentar, coba ketik satu paragraf.
+      NextNodeID: try_write
+    - text: Langsung tutup layarnya tanpa ampun.
+      NextNodeID: close_laptop
+    NextNodeID: 
+  - NodeID: try_write
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Jari gue gemeteran pas megang keyboard. Mata gue perih banget, satu kalimat
+      pun nggak sanggup gue susun sekarang. Gue cuma nambahin satu titik, terus gue
+      hapus lagi.*'
+    Choices: []
+    NextNodeID: check_paper
+  - NodeID: close_laptop
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Cukup. Gue bukan robot. Cahaya monitor ini cuma bakal bikin kepala gue
+      makin meledak. Klik... suara engsel laptop ditutup rasanya kayak beban idup
+      gue berkurang 1 persen.*'
+    Choices: []
+    NextNodeID: check_paper
+  - NodeID: check_paper
+    SrcImgSprite: {fileID: 5962689061485224524, guid: 582cb7fffdbee23458888058b34c8b21, type: 3}
+    CharName: Tumpukan Kertas
+    Text: '*Coretan dosen pembimbing pake tinta merah di mana-mana. Revisi... revisi...
+      kapan selesainya ya Tuhan? Kertas-kertas ini udah kayak tumpukan tagihan hutang.*'
+    Choices: []
+    NextNodeID: check_noodle
+  - NodeID: check_noodle
+    SrcImgSprite: {fileID: -1339401858238647694, guid: 2628f96d22da2ec47b2f3dcf86512977, type: 3}
+    CharName: Sisa Mie Instan
+    Text: '*Kuahnya udah dingin dan berminyak. Satu-satunya penyemangat gue hari
+      ini cuma micin di dalem mangkok ini, itu pun udah abis.*'
+    Choices: []
+    NextNodeID: final_monologue
+  - NodeID: final_monologue
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Gue liat ke arah cermin lemari. Muka gue beneran kayak zombie. Capek
+      kerja, capek kuliah, capek mikir.*'
+    Choices:
+    - text: Tidur sekarang juga.
+      NextNodeID: end_sleep
+    - text: Cuci muka dulu biar agak segeran.
+      NextNodeID: end_wash
+    NextNodeID: 
+  - NodeID: end_sleep
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Bodo amat sama bimbingan besok pagi. Kalau gue mati malem ini karena
+      kurang tidur, skripsi gue juga nggak bakal ada yang nerusin.*'
+    Choices: []
+    NextNodeID: 
+  - NodeID: end_wash
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Gue harus cuci muka, minimal biar nggak mimpi buruk ketemu dosen pembimbing
+      di dalem tidur nanti.*'
+    Choices: []
+    NextNodeID: 
+  setRead: 0

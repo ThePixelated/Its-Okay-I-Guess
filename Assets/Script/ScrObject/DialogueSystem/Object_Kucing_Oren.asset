@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: Object_Kucing_Oren
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isDialogueRead: 0
+  _dialogueNodes:
+  - NodeID: start_cat
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Si Oren lagi goleran di depan tangga. Mukanya kalem banget padahal kata
+      Kania tadi dia abis muntah.*'
+    Choices:
+    - text: Puk-puk kepalanya pelan.
+      NextNodeID: pet_cat
+    - text: Cuma liatin dari jauh.
+      NextNodeID: look_cat
+    NextNodeID: 
+  - NodeID: pet_cat
+    SrcImgSprite: {fileID: -2001533892250857121, guid: 5a324b226203cfa4dab1cbb3c3076a95, type: 3}
+    CharName: Kucing Oren
+    Text: Meoooong...
+    Choices: []
+    NextNodeID: after_pet
+  - NodeID: after_pet
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Suaranya serak. Beneran lagi nggak enak badan kayaknya si kucing preman
+      ini.*'
+    Choices: []
+    NextNodeID: 
+  - NodeID: look_cat
+    SrcImgSprite: {fileID: 21300000, guid: 927b120debba99043b2154c16dd86e7c, type: 3}
+    CharName: Kucing Oren
+    Text: .....
+    Choices: []
+    NextNodeID: after_look
+  - NodeID: after_look
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Dia bahkan nggak nengok pas gue lewat. Sombongnya nggak ilang-ilang.*'
+    Choices: []
+    NextNodeID: 
+  setRead: 0

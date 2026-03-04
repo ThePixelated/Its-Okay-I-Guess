@@ -12,6 +12,7 @@ public class GameModeManager : MonoBehaviour
     private bool _keyPressedFlag = true;
     private bool _isEnableMove = false;
     private float _currentTime = 0f;
+    private string _interactableID;
 
     public GameModeBase ExplorationMode = new ExplorationMode();
     public GameModeBase DialogueMode = new DialogueMode();
@@ -105,7 +106,7 @@ public class GameModeManager : MonoBehaviour
         if (isObjectInteractable && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Key E Pressed...");
-            PlayerManager.Instance.InteractKey_E();
+            PlayerManager.Instance.InteractKey_E(_interactableID);
             Switch(DialogueMode);
         }
     }
@@ -142,6 +143,10 @@ public class GameModeManager : MonoBehaviour
         }
     }
 
-    public void SetFlagTrue() => isObjectInteractable = true;
+    public void SetFlagTrue(string objectName)
+    {
+        isObjectInteractable = true;
+        _interactableID = objectName;
+    }
     public void SetFlagFalse() => isObjectInteractable = false;
 }

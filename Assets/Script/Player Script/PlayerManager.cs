@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -10,24 +11,24 @@ public class PlayerManager : MonoBehaviour
         Instance = this;
     }
 
-    public event Action onInteractKey_E;
-    public event Action onTriggerEnter_non;
+    public event Action<string> onInteractKey_E;
+    public event Action<string> onTriggerEnter_non;
     public event Action onTriggerExit_non;
     public event Action onInteractKey_Dialogs;
 
-    public void InteractKey_E()
+    public void InteractKey_E(string objectName)
     {
         if (onInteractKey_E != null)
         {
-            onInteractKey_E();
+            onInteractKey_E(objectName);
         }
     }
 
-    public void TriggerEnter_non()
+    public void TriggerEnter_non(string objectName)
     {
         if (onTriggerEnter_non != null)
         {
-            onTriggerEnter_non();
+            onTriggerEnter_non(objectName);
         }
     }
 

@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: NPC_Kania
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isDialogueRead: 0
+  _dialogueNodes:
+  - NodeID: start
+    SrcImgSprite: {fileID: 21300000, guid: 33014fa1867f6194aa26dda4a8707d7c, type: 3}
+    CharName: Kania
+    Text: Baru balik, Leanst? Gila, makin malem aja balik kerjanya.
+    Choices: []
+    NextNodeID: convo_1
+  - NodeID: convo_1
+    SrcImgSprite: {fileID: -2293023420630586820, guid: 9d1f6dda8cbc8b4489f82bb4f62fea22, type: 3}
+    CharName: Kania
+    Text: Masih kuat ngerjain revisian apa mau langsung pingsan nih?
+    Choices:
+    - text: Gas ngerjain dikit lah, biar cepet lulus.
+      NextNodeID: convo_revisi
+    - text: Mau pingsan aja, udah nggak sanggup liat monitor.
+      NextNodeID: convo_pingsan
+    NextNodeID: 
+  - NodeID: convo_revisi
+    SrcImgSprite: {fileID: 2436765836460012559, guid: 9d1f6dda8cbc8b4489f82bb4f62fea22, type: 3}
+    CharName: Kania
+    Text: Ngeri, emang beneran ambis ya. Yaudah, semangat deh calon sarjana!
+    Choices: []
+    NextNodeID: end_convo
+  - NodeID: convo_pingsan
+    SrcImgSprite: {fileID: 3914889051997854691, guid: 9d1f6dda8cbc8b4489f82bb4f62fea22, type: 3}
+    CharName: Kania
+    Text: Wkwk, yaudah gih. Istirahat yang bener, muka lu udah kayak zombie soalnya.
+    Choices: []
+    NextNodeID: end_convo
+  - NodeID: end_convo
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*(Gue cuma bisa senyum tipis. Jangankan ngerjain revisian, buat buka kunci
+      pintu kamar aja rasanya berat banget.)*'
+    Choices: []
+    NextNodeID: 
+  setRead: 0

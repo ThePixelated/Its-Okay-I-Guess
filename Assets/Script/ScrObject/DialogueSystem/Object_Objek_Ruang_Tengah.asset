@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: Object_Objek_Ruang_Tengah
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isDialogueRead: 0
+  _dialogueNodes:
+  - NodeID: start_hallway
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Langkah gue terhenti di depan meja pajangan ruang tengah. Foto itu...
+      rasanya makin terang aja kena lampu lorong.*'
+    Choices: []
+    NextNodeID: check_photo
+  - NodeID: check_photo
+    SrcImgSprite: {fileID: 0}
+    CharName: Foto Wisuda
+    Text: '*Deretan wajah kakak tingkat yang sudah lulus setahun lalu. Senyum mereka
+      di balik toga itu kayak lagi ngetawain gue.*'
+    Choices:
+    - text: Elap debu di bingkainya.
+      NextNodeID: touch_photo
+    - text: Langsung buang muka.
+      NextNodeID: avoid_photo
+    NextNodeID: 
+  - NodeID: touch_photo
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Debunya tebel banget. Udah berapa angkatan ya foto ini di sini? Kapan
+      giliran muka gue dipajang di tembok ini?*'
+    Choices: []
+    NextNodeID: check_cat
+  - NodeID: avoid_photo
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Melihat toga dan ijazah malem-malem begini cuma bikin tekanan batin.
+      Mending liat ke arah lain.*'
+    Choices: []
+    NextNodeID: check_cat
+  - NodeID: check_cat
+    SrcImgSprite: {fileID: -8510078276880373923, guid: fa3a59e2e06b23d458a84078bb333a85, type: 3}
+    CharName: Patung Kucing
+    Text: Klak... klak... klak...
+    Choices: []
+    NextNodeID: cat_logic
+  - NodeID: cat_logic
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Patung kucing keberuntungan ini gerakannya udah mulai lambat. Bunyi mesinnya
+      juga makin serak.*'
+    Choices:
+    - text: Coba benerin tangannya.
+      NextNodeID: fix_cat
+    - text: Biarin aja, nasibnya sama kayak gue.
+      NextNodeID: relate_cat
+    NextNodeID: 
+  - NodeID: fix_cat
+    SrcImgSprite: {fileID: -8394505167938135788, guid: dc2391a9b6c9ac94fa295266737532a3, type: 3}
+    CharName: Patung Kucing
+    Text: Krieet... klak...
+    Choices: []
+    NextNodeID: fix_result
+  - NodeID: fix_result
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Malah makin aneh suaranya. Kayaknya emang baterainya udah mau mampus.
+      Kita berdua beneran butuh di-recharge.*'
+    Choices: []
+    NextNodeID: end_hallway
+  - NodeID: relate_cat
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Dipaksa gerak terus tiap hari padahal energinya udah di ambang batas.
+      Gue paham perasaan lu, Cing.*'
+    Choices: []
+    NextNodeID: end_hallway
+  - NodeID: end_hallway
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Udahlah, benda mati pun jadi bahan renungan. Gue harus segera masuk kamar
+      sebelum mulai ngobrol sama tembok.*'
+    Choices: []
+    NextNodeID: 
+  setRead: 0

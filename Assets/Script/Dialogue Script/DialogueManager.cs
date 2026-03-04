@@ -1,13 +1,17 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private GameModeManager m_gameModeManager;
     [SerializeField] private DialogueUI m_dialogueUI;
+    [SerializeField] private DialogueData m_dialogueData;
     [SerializeField] private DialogueNode currentNode;
 
     private Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
+    
+    public DialogueData DialogueData { get { return m_dialogueData; } set { m_dialogueData = value; } }
 
     private void Awake()
     {
@@ -30,7 +34,7 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("Done __innit node: " + nodeLookup);
 
-        currentNode = nodeLookup["start"];
+        currentNode = nodeLookup.FirstOrDefault().Value;
 
         Debug.LogWarning("Is currentNode Nan: " + (currentNode == null) + " - DataNode: " + (nodeLookup == null));
 
@@ -43,7 +47,6 @@ public class DialogueManager : MonoBehaviour
         if (nodeID == null || nodeID.Length == 0)
         {
             m_dialogueUI.CloseRender();
-            //currentNode = nodeLookup["start"];
             return;
         }
 
@@ -59,7 +62,6 @@ public class DialogueManager : MonoBehaviour
             if (currentNode.NextNodeID == null || currentNode.NextNodeID.Length == 0)
             {
                 m_dialogueUI.CloseRender();
-                //currentNode = nodeLookup["start"];
                 return;
             }
 
@@ -71,5 +73,20 @@ public class DialogueManager : MonoBehaviour
     public void DialogueStopped()
     {
         m_gameModeManager.DialogueStopped();
+        ReadableSetCheck();
+    }
+
+    private void ReadableSetCheck()
+    {
+        if (m_dialogueData.SetRead)
+        {
+            m_dialogueData.IsDialogueRead = m_dialogueData.SetRead;
+        }
     }
 }
+
+//-gimana caranya biar yang udah dibaca masuk ke list read
+//- terus nanti re-init, semuanya kereset.
+
+//- dia ngebaca semua dialogueNode
+//- button ga kereset

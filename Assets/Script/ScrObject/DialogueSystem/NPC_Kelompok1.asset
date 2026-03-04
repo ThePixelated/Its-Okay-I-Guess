@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: NPC_Kelompok1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isDialogueRead: 0
+  _dialogueNodes:
+  - NodeID: start_mabar
+    SrcImgSprite: {fileID: -7827738790085413411, guid: 3cf9d7a4f86c6c0419ab67f6b15ed371, type: 3}
+    CharName: Akbar
+    Text: WOI BACK BACK! ITU DI RUMPUT ADA ORANG, YON! JANGAN DI-PUSH DULU!
+    Choices: []
+    NextNodeID: yono_reply
+  - NodeID: yono_reply
+    SrcImgSprite: {fileID: -6015010169462378560, guid: 3cf9d7a4f86c6c0419ab67f6b15ed371, type: 3}
+    CharName: Yono
+    Text: SABAR ELAH! JARI GUE LAGI KERAM NIH, KEBANYAKAN CLICK!
+    Choices: []
+    NextNodeID: leanst_approach
+  - NodeID: leanst_approach
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Duo maut ini bener-bener nggak inget waktu. Padahal udah jam segini,
+      teriakan mereka masih kedengeran sampe depan gerbang.*'
+    Choices:
+    - text: Masih mabar aja? Nggak tidur lu berdua?
+      NextNodeID: path_chill
+    - text: Woi, pelanin dikit suaranya, Kania udah ngomel tuh.
+      NextNodeID: path_tegur
+    NextNodeID: 
+  - NodeID: path_chill
+    SrcImgSprite: {fileID: -2293023420630586820, guid: 9d1f6dda8cbc8b4489f82bb4f62fea22, type: 3}
+    CharName: Akbar
+    Text: Eh, Leanst! Baru balik kerja, Bro? Nanggung nih, satu match lagi naik rank.
+      Doain menang ya!
+    Choices: []
+    NextNodeID: check_coffee
+  - NodeID: path_tegur
+    SrcImgSprite: {fileID: 2436765836460012559, guid: 9d1f6dda8cbc8b4489f82bb4f62fea22, type: 3}
+    CharName: Yono
+    Text: Eh, sori-sori, Lean. Si Akbar nih emosian mulu kalo kalah mekanik. Kita
+      pelanin deh suaranya.
+    Choices: []
+    NextNodeID: check_coffee
+  - NodeID: check_coffee
+    SrcImgSprite: {fileID: 0}
+    CharName: Gelas Kopi
+    Text: '*Sisa ampas kopi hitam yang sudah mengering di pinggiran gelas. Baunya
+      udah nggak karuan.*'
+    Choices: []
+    NextNodeID: coffee_monologue
+  - NodeID: coffee_monologue
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Gue liat gelas mereka aja udah pusing. Udah berapa gelas ya mereka abisin
+      dari sore tadi?*'
+    Choices: []
+    NextNodeID: end_mabar
+  - NodeID: end_mabar
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: '*Mending gue masuk kamar sekarang sebelum mereka narik gue buat ikutan
+      main. Skripsi gue lebih serem daripada musuh mereka di game.*'
+    Choices: []
+    NextNodeID: 
+  setRead: 0

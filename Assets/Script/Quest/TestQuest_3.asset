@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
+  m_Name: TestQuest_3
+  m_EditorClassIdentifier: Assembly-CSharp::Quest
+  questID: 
+  Title: Shift Siang di Kafe Kopi
+  Description: Membantu operasional kafe untuk menambah uang saku.
+  objectives:
+  - ObjectiveID: 1
+    Description: Melayani 5 Pelanggan
+    Type: 2  # SideActivity
+    RequiredAmount: 5
+    Current_Amount: 0
+  - ObjectiveID: 2
+    Description: Laporkan hasil shift ke Manager
+    Type: 3  # TalkNPC
+    RequiredAmount: 1
+    Current_Amount: 0

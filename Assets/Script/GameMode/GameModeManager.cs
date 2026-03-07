@@ -76,21 +76,21 @@ public class GameModeManager : MonoBehaviour
             //Debug.LogWarning("MOVEMENT OBSERVE");
             Vector3 movement = new Vector3(m_PlayerObj.transform.position.x, m_PlayerObj.transform.position.y, m_PlayerObj.transform.position.z);
             //Debug.Log(movement);
-            if (Input.GetKey(KeyCode.W)) // Forward
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) // Forward
             {
                 movement = new Vector3(movement.x, movement.y + playerSpeed * Time.deltaTime, 0f);
             }
-            else if (Input.GetKey(KeyCode.A)) // Left
+            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) // Left
             {
                 movement = new Vector3(movement.x - playerSpeed * Time.deltaTime, movement.y, 0f);
             }
 
-            else if (Input.GetKey(KeyCode.S)) // Backward
+            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) // Backward
             {
                 movement = new Vector3(movement.x, movement.y - playerSpeed * Time.deltaTime, 0f);
             }
 
-            else if (Input.GetKey(KeyCode.D)) // Right
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Right
             {
                 movement = new Vector3(movement.x + playerSpeed * Time.deltaTime, movement.y, 0f);
             }
@@ -108,6 +108,14 @@ public class GameModeManager : MonoBehaviour
             Debug.Log("Key E Pressed...");
             PlayerManager.Instance.InteractKey_E(_interactableID);
             Switch(DialogueMode);
+        }
+    }
+
+    public void TempHandleQuest()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+
         }
     }
 

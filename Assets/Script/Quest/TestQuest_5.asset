@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
+  m_Name: TestQuest_5
+  m_EditorClassIdentifier: Assembly-CSharp::Quest
+  questID: 
+  Title: Persiapan Seminar Hasil
+  Description: Memastikan semua peralatan dan mental siap sebelum seminar.
+  objectives:
+  - ObjectiveID: 1
+    Description: Ambil Flashdisk di Meja Belajar
+    Type: 0  # Collectable
+    RequiredAmount: 1
+    Current_Amount: 0
+  - ObjectiveID: 2
+    Description: Cek Aula Pertemuan
+    Type: 1  # ReachLocation
+    RequiredAmount: 1
+    Current_Amount: 0
+  - ObjectiveID: 3
+    Description: Latihan Presentasi Depan Cermin
+    Type: 4  # Custom
+    RequiredAmount: 1
+    Current_Amount: 0

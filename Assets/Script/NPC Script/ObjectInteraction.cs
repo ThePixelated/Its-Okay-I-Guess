@@ -7,6 +7,7 @@ public class ObjectInteraction : MonoBehaviour
     [SerializeField] private DialogueManager m_dialogueManager;
     [SerializeField] private List<DialogueData> readedDialogueData;
 
+
     private void Start()
     {
         PlayerManager.Instance.onInteractKey_E += StartingDialogue;

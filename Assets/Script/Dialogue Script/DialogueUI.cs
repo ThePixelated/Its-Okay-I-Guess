@@ -78,6 +78,11 @@ public class DialogueUI : MonoBehaviour
             Button btnListener = tempBtn.GetComponent<Button>();
             btnListener.onClick.AddListener(() => NextNode(choices.NextNodeID));
 
+            if (m_dialogueManager.QuestChecker())
+            {
+                btnListener.onClick.AddListener(() => m_dialogueManager.QuestInnitialize());
+            }
+
             buttons.Add(tempBtn);
 
             //Debug.Log("Btn: " + choices.text); // debug view

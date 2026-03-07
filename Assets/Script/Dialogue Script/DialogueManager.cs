@@ -73,7 +73,23 @@ public class DialogueManager : MonoBehaviour
     public void DialogueStopped()
     {
         m_gameModeManager.DialogueStopped();
-        ReadableSetCheck();
+        //ReadableSetCheck();
+    }
+
+    public bool QuestChecker()
+    {
+        const string questKey = "quest_";
+
+        if (currentNode.NodeID.Contains(questKey))
+            return true;
+        
+        return false;
+    }
+
+    public void QuestInnitialize()
+    {
+        string questID = currentNode.NodeID.Substring(currentNode.NodeID.IndexOf("#")+1);
+        //QuestManager.Instance..Add(new Quest("Find the Key", "Find the key to unlock the door."));
     }
 
     private void ReadableSetCheck()

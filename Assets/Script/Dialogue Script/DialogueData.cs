@@ -4,6 +4,7 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "DialogueData", menuName = "Scriptable Objects/DialogueData")]
 public class DialogueData : ScriptableObject
 {
+    //[SerializeField] private string dialogueDataID;
     [SerializeField] private bool isDialogueRead;
     [SerializeField] private List<DialogueNode> _dialogueNodes = new List<DialogueNode>();
     [SerializeField] private bool setRead;

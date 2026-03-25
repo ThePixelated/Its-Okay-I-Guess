@@ -41,13 +41,13 @@ public class GameModeManager : MonoBehaviour
 
     public void HandleCharDirection()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || (Input.GetKey(KeyCode.UpArrow)))
             playerDirection = Direction.Forward;
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.LeftArrow)))
             playerDirection = Direction.Left;
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || (Input.GetKey(KeyCode.DownArrow)))
             playerDirection = Direction.Backward;
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || (Input.GetKey(KeyCode.RightArrow)))
             playerDirection = Direction.Right;
 
         m_playerData.PlayerDirection = playerDirection;
@@ -106,6 +106,8 @@ public class GameModeManager : MonoBehaviour
         if (isObjectInteractable && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Key E Pressed...");
+
+
             PlayerManager.Instance.InteractKey_E(_interactableID);
             Switch(DialogueMode);
         }

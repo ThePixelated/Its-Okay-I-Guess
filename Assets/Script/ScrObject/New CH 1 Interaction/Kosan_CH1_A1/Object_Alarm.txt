@@ -1,0 +1,49 @@
+_dialogueNodes:
+  - NodeID: start
+    SrcImgSprite: {fileID: 0}
+    CharName: Alarm
+    Text: Bip bip bip! Bip bip bip!
+    Choices: []
+    NextNodeID: choice_A1
+  - NodeID: choice_A1
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: Aduh... mata gue kayak dilem. Baru bangun saja sudah kepikiran saldo ATM yang tinggal recehan. Malas banget buat mulai hari.
+    Choices:
+    - text: Langsung Bangun
+      NextNodeID: res_bangun
+    - text: Tarik Selimut
+      NextNodeID: res_tidur
+    NextNodeID: 
+  - NodeID: res_bangun
+    SrcImgSprite: {fileID: 0}
+    CharName: Alarm
+    Text: *Klik*... Suara alarm berhenti. Tangan gue sedikit gemetar pas menekan tombol stop.
+    Choices: []
+    NextNodeID: end_node
+  - NodeID: res_tidur
+    SrcImgSprite: {fileID: 0}
+    CharName: Alarm
+    Text: *Bip*... Snooze mode active. Lima menit lagi sebelum realita benar-benar menabrak gue.
+    Choices: []
+    NextNodeID: end_node
+  - NodeID: end_node
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: Hufftt... jalani saja dulu lah.
+    Choices: []
+    NextNodeID:
+
+
+[Kosan_C1_A1]
+Alarm
+
+Deskripsi:
+- Objek interaktif pertama yang berfungsi sebagai pemicu (trigger) dimulainya narasi Chapter 1.
+- Mewakili tekanan rutinitas harian yang harus dihadapi Leanst meskipun kondisi mental dan finansialnya sedang tidak stabil.
+- Suara deringnya yang repetitif menjadi simbol gangguan terhadap ketenangan (coping mechanism berupa tidur).
+
+Dialog:
+- Alarm: Bip bip bip! Bip bip bip!
+- Alarm: *Klik*... Suara alarm berhenti. Tangan gue sedikit gemetar pas menekan tombol stop.
+- Alarm: *Bip*... Snooze mode active. Lima menit lagi sebelum realita benar-benar menabrak gue.

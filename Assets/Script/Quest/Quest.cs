@@ -18,31 +18,6 @@ public class Quest : ScriptableObject
             questID = $"{Title}_{Guid.NewGuid().ToString()}";
         }
     }
-
-    //[SerializeField] private List<Quest> dataQuest = new List<Quest>();
-    //[SerializeField] private List<Quest> completedQuest = new List<Quest>();
-
-    //private Dictionary<string, Quest> nodeLookup = new Dictionary<string, Quest>();
-
-    //public List<Quest> DataQuest { get { return dataQuest; } }
-    //public Dictionary<string, Quest> DictDataQuest { get { return nodeLookup; } set { nodeLookup = value; } }
-
-    //public void InnitQuestData()
-    //{
-    //    nodeLookup = new Dictionary<string, Quest>();
-    //    foreach (var node in dataQuest)
-    //    {
-    //        nodeLookup.Add(node.questID, node);
-    //        Debug.LogWarning("Innit node.... - " + node.questID);
-    //    }
-    //}
-
-    //public void UpdateCompleteQuest(Quest targetQuest)
-    //{
-    //    targetQuest.CompleteQuest();
-    //    completedQuest.Add(targetQuest);
-    //    dataQuest.Remove(targetQuest);
-    //}
 }
 
 public enum ObjectiveType

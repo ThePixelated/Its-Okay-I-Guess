@@ -1,0 +1,2444 @@
+fileFormatVersion: 2
+guid: c3e5aa0aae72f394e93c440ba3dbc450
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3248928505909034838
+    second: SF_Inside_C_0
+  - first:
+      213: -1465451940603566559
+    second: SF_Inside_C_1
+  - first:
+      213: -756517110490333140
+    second: SF_Inside_C_2
+  - first:
+      213: 4312268370559810128
+    second: SF_Inside_C_3
+  - first:
+      213: 6961421463270400791
+    second: SF_Inside_C_4
+  - first:
+      213: -55943049892846945
+    second: SF_Inside_C_5
+  - first:
+      213: 4525624076233204621
+    second: SF_Inside_C_6
+  - first:
+      213: 7527650985941092725
+    second: SF_Inside_C_7
+  - first:
+      213: -7625547699109708364
+    second: SF_Inside_C_8
+  - first:
+      213: -9080681002379837106
+    second: SF_Inside_C_9
+  - first:
+      213: -7931917588249244136
+    second: SF_Inside_C_10
+  - first:
+      213: 999647247163039815
+    second: SF_Inside_C_11
+  - first:
+      213: 1318329595715327501
+    second: SF_Inside_C_12
+  - first:
+      213: -7656749829592946237
+    second: SF_Inside_C_13
+  - first:
+      213: -1302416251720686058
+    second: SF_Inside_C_14
+  - first:
+      213: 60120500738975213
+    second: SF_Inside_C_15
+  - first:
+      213: -627327134264488377
+    second: SF_Inside_C_16
+  - first:
+      213: -773434722731937943
+    second: SF_Inside_C_17
+  - first:
+      213: 6240941627379070958
+    second: SF_Inside_C_18
+  - first:
+      213: -3714372162852513904
+    second: SF_Inside_C_19
+  - first:
+      213: 2602174834977133748
+    second: SF_Inside_C_20
+  - first:
+      213: -4312227713173925856
+    second: SF_Inside_C_21
+  - first:
+      213: -7331698336762787911
+    second: SF_Inside_C_22
+  - first:
+      213: -2356885336579281781
+    second: SF_Inside_C_23
+  - first:
+      213: -3215917485489997915
+    second: SF_Inside_C_24
+  - first:
+      213: -1695817056264135023
+    second: SF_Inside_C_25
+  - first:
+      213: -1703300207900986972
+    second: SF_Inside_C_26
+  - first:
+      213: -3083136439568454382
+    second: SF_Inside_C_27
+  - first:
+      213: 4512389259208149026
+    second: SF_Inside_C_28
+  - first:
+      213: 6304200747511245945
+    second: SF_Inside_C_29
+  - first:
+      213: -1738676670657581344
+    second: SF_Inside_C_30
+  - first:
+      213: 6145835029881481876
+    second: SF_Inside_C_31
+  - first:
+      213: -4497421334307083839
+    second: SF_Inside_C_32
+  - first:
+      213: -6024501190367103591
+    second: SF_Inside_C_33
+  - first:
+      213: 5536503307665127776
+    second: SF_Inside_C_34
+  - first:
+      213: 4923508559214272474
+    second: SF_Inside_C_35
+  - first:
+      213: -5813699673885316438
+    second: SF_Inside_C_36
+  - first:
+      213: 7880078806665361967
+    second: SF_Inside_C_37
+  - first:
+      213: 7526085095725750455
+    second: SF_Inside_C_38
+  - first:
+      213: -1753370536842685262
+    second: SF_Inside_C_39
+  - first:
+      213: -6836862385208709259
+    second: SF_Inside_C_40
+  - first:
+      213: -669684619502241564
+    second: SF_Inside_C_41
+  - first:
+      213: 7598384166562235299
+    second: SF_Inside_C_42
+  - first:
+      213: -7795616314686446028
+    second: SF_Inside_C_43
+  - first:
+      213: -819947140119224875
+    second: SF_Inside_C_44
+  - first:
+      213: -4424765553708975345
+    second: SF_Inside_C_45
+  - first:
+      213: -6991803388066047557
+    second: SF_Inside_C_46
+  - first:
+      213: 6924834196148220676
+    second: SF_Inside_C_47
+  - first:
+      213: 1458764301855624722
+    second: SF_Inside_C_48
+  - first:
+      213: -3147013843403081493
+    second: SF_Inside_C_49
+  - first:
+      213: -8505990132782343949
+    second: SF_Inside_C_50
+  - first:
+      213: 1371442154616639239
+    second: SF_Inside_C_51
+  - first:
+      213: 7702965561812237905
+    second: SF_Inside_C_52
+  - first:
+      213: 8124194926601142569
+    second: SF_Inside_C_53
+  - first:
+      213: 7353843615231387583
+    second: SF_Inside_C_54
+  - first:
+      213: -5836366135757848194
+    second: SF_Inside_C_55
+  - first:
+      213: -3526488586197904695
+    second: SF_Inside_C_56
+  - first:
+      213: 3781271436136732966
+    second: SF_Inside_C_57
+  - first:
+      213: 688138384352529583
+    second: SF_Inside_C_58
+  - first:
+      213: -6623482952848889954
+    second: SF_Inside_C_59
+  - first:
+      213: -3546954234314253670
+    second: SF_Inside_C_60
+  - first:
+      213: 8963604127547953058
+    second: SF_Inside_C_61
+  - first:
+      213: 2180317961969115054
+    second: SF_Inside_C_62
+  - first:
+      213: -5437661427368427039
+    second: SF_Inside_C_63
+  - first:
+      213: 9022331571062482249
+    second: SF_Inside_C_64
+  - first:
+      213: 838570776623845139
+    second: SF_Inside_C_65
+  - first:
+      213: -2319543852567033873
+    second: SF_Inside_C_66
+  - first:
+      213: -4936803066166328484
+    second: SF_Inside_C_67
+  - first:
+      213: 6340233075670221472
+    second: SF_Inside_C_68
+  - first:
+      213: 900146210220108267
+    second: SF_Inside_C_69
+  - first:
+      213: -5176525554073391600
+    second: SF_Inside_C_70
+  - first:
+      213: 3450742170905449586
+    second: SF_Inside_C_71
+  - first:
+      213: -2381928548068846526
+    second: SF_Inside_C_72
+  - first:
+      213: -7923622821822263039
+    second: SF_Inside_C_73
+  - first:
+      213: -3338770364314990586
+    second: SF_Inside_C_74
+  - first:
+      213: -1392321627650847188
+    second: SF_Inside_C_75
+  - first:
+      213: -1955171074312572285
+    second: SF_Inside_C_76
+  - first:
+      213: -1737615471854775390
+    second: SF_Inside_C_77
+  - first:
+      213: 748577215679894834
+    second: SF_Inside_C_78
+  - first:
+      213: -5586525247420485762
+    second: SF_Inside_C_79
+  - first:
+      213: 6685948186338737543
+    second: SF_Inside_C_80
+  - first:
+      213: -1074826049427747427
+    second: SF_Inside_C_81
+  - first:
+      213: -2300766841083881537
+    second: SF_Inside_C_82
+  - first:
+      213: -7249564050917276269
+    second: SF_Inside_C_83
+  - first:
+      213: 98169129299554644
+    second: SF_Inside_C_84
+  - first:
+      213: -1026026784489830203
+    second: SF_Inside_C_85
+  - first:
+      213: 2609459956163286907
+    second: SF_Inside_C_86
+  - first:
+      213: -962040800405609776
+    second: SF_Inside_C_87
+  - first:
+      213: 1385142640475350742
+    second: SF_Inside_C_88
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 47
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SF_Inside_C_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 676
+        width: 128
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f39573343861d20800000000000000
+      internalID: 3248928505909034838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 672
+        width: 128
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 126eaec693ba9abe0800000000000000
+      internalID: -1465451940603566559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_2
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 527
+        width: 481
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2008ba32bf4085f0800000000000000
+      internalID: -756517110490333140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_3
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 623
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05abe535c3148db30800000000000000
+      internalID: 4312268370559810128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 586
+        width: 38
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 713230a00ffeb9060800000000000000
+      internalID: 6961421463270400791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_5
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 528
+        width: 43
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f922c7fa710493ff0800000000000000
+      internalID: -55943049892846945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 626
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83e5da9e1f3ece30800000000000000
+      internalID: 4525624076233204621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_7
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 575
+        width: 46
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579432240b6977860800000000000000
+      internalID: 7527650985941092725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_8
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 625
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdb4c005cc9c2690800000000000000
+      internalID: -7625547699109708364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_9
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 588
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4103866db0faf180800000000000000
+      internalID: -9080681002379837106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_10
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 579
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e0bb48afa2ce190800000000000000
+      internalID: -7931917588249244136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_11
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 593
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 740a9dbffd57fdd00800000000000000
+      internalID: 999647247163039815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_12
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 479
+        width: 47
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d061f7158c5ab4210800000000000000
+      internalID: 1318329595715327501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 527
+        width: 43
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c96411e892cdb590800000000000000
+      internalID: -7656749829592946237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_14
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 529
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6162e7ec153ecede0800000000000000
+      internalID: -1302416251720686058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_15
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 536
+        width: 33
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5e342e64795d000800000000000000
+      internalID: 60120500738975213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_16
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 529
+        width: 42
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e833c8b494b47f0800000000000000
+      internalID: -627327134264488377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_17
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 480
+        width: 45
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f2c9ea7353445f0800000000000000
+      internalID: -773434722731937943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_18
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 480
+        width: 47
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee7b0eb18574c9650800000000000000
+      internalID: 6240941627379070958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_19
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 480
+        width: 43
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 097939d8236e37cc0800000000000000
+      internalID: -3714372162852513904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_20
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 479
+        width: 50
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4d54ab938cc1420800000000000000
+      internalID: 2602174834977133748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_21
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 489
+        width: 39
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0205ca5fdb3e724c0800000000000000
+      internalID: -4312227713173925856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 482
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b78eec2533904a90800000000000000
+      internalID: -7331698336762787911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_23
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 479
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8c6dd01649aa4fd0800000000000000
+      internalID: -2356885336579281781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_24
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 484
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a7b66ae514ce53d0800000000000000
+      internalID: -3215917485489997915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_25
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 482
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ed3554f5f3778e0800000000000000
+      internalID: -1695817056264135023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_26
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 503
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a176324c79ac58e0800000000000000
+      internalID: -1703300207900986972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_27
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 482
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21da57d4ebf7635d0800000000000000
+      internalID: -3083136439568454382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_28
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 287
+        width: 120
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 228c363af1a3f9e30800000000000000
+      internalID: 4512389259208149026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_29
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 484
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ce824cd250d7750800000000000000
+      internalID: 6304200747511245945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 431
+        width: 16
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ee223aa7cafed7e0800000000000000
+      internalID: -1738676670657581344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_31
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 448
+        width: 50
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49aec3cc5646a4550800000000000000
+      internalID: 6145835029881481876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_32
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 446
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c9ec53ff13f591c0800000000000000
+      internalID: -4497421334307083839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_33
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 383
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9953047261ca46ca0800000000000000
+      internalID: -6024501190367103591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_34
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 433
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069b727bc6c95dc40800000000000000
+      internalID: 5536503307665127776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_35
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 432
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adfdf80e2f0d35440800000000000000
+      internalID: 4923508559214272474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_36
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 434
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaae24be2f6915fa0800000000000000
+      internalID: -5813699673885316438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_37
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 451
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2a7f599ce9ab5d60800000000000000
+      internalID: 7880078806665361967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_38
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 450
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b858180586027860800000000000000
+      internalID: 7526085095725750455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_39
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 450
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b41bd759c6caa7e0800000000000000
+      internalID: -1753370536842685262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_40
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 464
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fa76742e59e11a0800000000000000
+      internalID: -6836862385208709259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_41
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 458
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e8b60ff26dc4b6f0800000000000000
+      internalID: -669684619502241564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_42
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 437
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a305ea3422e27960800000000000000
+      internalID: 7598384166562235299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_43
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 442
+        width: 47
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436efd5c34860d390800000000000000
+      internalID: -7795616314686446028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_44
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 431
+        width: 50
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd989a9b66fe94f0800000000000000
+      internalID: -819947140119224875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_45
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 433
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0bbacc1c231892c0800000000000000
+      internalID: -4424765553708975345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_46
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 433
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb953fadcdf18fe90800000000000000
+      internalID: -6991803388066047557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_47
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 448
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40374e51304f91060800000000000000
+      internalID: 6924834196148220676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_48
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 274
+        width: 242
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e002757629e3410800000000000000
+      internalID: 1458764301855624722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_49
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 433
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8f8b0459f8354d0800000000000000
+      internalID: -3147013843403081493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_50
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 404
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8d7887a07a4f980800000000000000
+      internalID: -8505990132782343949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_51
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 287
+        width: 8
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fcbe79f57580310800000000000000
+      internalID: 1371442154616639239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_52
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 287
+        width: 25
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15eb2eccd5e66ea60800000000000000
+      internalID: 7702965561812237905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_53
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 287
+        width: 15
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921871eed30feb070800000000000000
+      internalID: 8124194926601142569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_54
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 304
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb724a34ec91e0660800000000000000
+      internalID: 7353843615231387583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_55
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 409
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e71c8030cef010fa0800000000000000
+      internalID: -5836366135757848194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_56
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 406
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c25433a0556f0fc0800000000000000
+      internalID: -3526488586197904695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_57
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 402
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 629d24e4656c97430800000000000000
+      internalID: 3781271436136732966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_58
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 356
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: facc4a3f632cc8900800000000000000
+      internalID: 688138384352529583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_59
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 356
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97269bd859a414a0800000000000000
+      internalID: -6623482952848889954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_60
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 355
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a912d9aefa6cec0800000000000000
+      internalID: -3546954234314253670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_61
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 350
+        width: 46
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af88b9767e156c70800000000000000
+      internalID: 8963604127547953058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_62
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 309
+        width: 33
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf929472ab024e10800000000000000
+      internalID: 2180317961969115054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_63
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 307
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e18cd4edbb8984b0800000000000000
+      internalID: -5437661427368427039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_64
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 309
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 945a8f2f2c2c53d70800000000000000
+      internalID: 9022331571062482249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_65
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 309
+        width: 35
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f00bbada333ab00800000000000000
+      internalID: 838570776623845139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_66
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 275
+        width: 50
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe70dc2d7235fcfd0800000000000000
+      internalID: -2319543852567033873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_67
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 95
+        width: 192
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c53c81384c3fc7bb0800000000000000
+      internalID: -4936803066166328484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_68
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 244
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a2818ce3680df750800000000000000
+      internalID: 6340233075670221472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_69
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 239
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be965128536fd7c00800000000000000
+      internalID: 900146210220108267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_70
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 191
+        width: 50
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01e29ba5f694928b0800000000000000
+      internalID: -5176525554073391600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_71
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 191
+        width: 48
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274974cb8bf73ef20800000000000000
+      internalID: 3450742170905449586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_72
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 207
+        width: 29
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2449ef30b90b1fed0800000000000000
+      internalID: -2381928548068846526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_73
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 0
+        width: 193
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1011b135603a90290800000000000000
+      internalID: -7923622821822263039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_74
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 49
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60847601b0e4aa1d0800000000000000
+      internalID: -3338770364314990586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_75
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 191
+        width: 50
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2e07c24bda7dace0800000000000000
+      internalID: -1392321627650847188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_76
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 95
+        width: 46
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 382fa705446ddd4e0800000000000000
+      internalID: -1955171074312572285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_77
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 144
+        width: 144
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a39fd34fefb2e7e0800000000000000
+      internalID: -1737615471854775390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_78
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 95
+        width: 98
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2351d83f20b736a00800000000000000
+      internalID: 748577215679894834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_79
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 241
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f20cad2eca872b0800000000000000
+      internalID: -5586525247420485762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_80
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 95
+        width: 123
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d3369a37249cc50800000000000000
+      internalID: 6685948186338737543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 193
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9dc58817637511f0800000000000000
+      internalID: -1074826049427747427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_82
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 95
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7923e7fb80210e0800000000000000
+      internalID: -2300766841083881537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_83
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 52
+        width: 50
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39542a0d7ef546b90800000000000000
+      internalID: -7249564050917276269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_84
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 17
+        width: 38
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4513fcf8d44cc5100800000000000000
+      internalID: 98169129299554644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_85
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 14
+        width: 38
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8827c5312d2c1f0800000000000000
+      internalID: -1026026784489830203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_86
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 15
+        width: 30
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7718be210aa63420800000000000000
+      internalID: 2609459956163286907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_87
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 23
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d224683df426a2f0800000000000000
+      internalID: -962040800405609776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF_Inside_C_88
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 14
+        width: 48
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d6a7c884e3093310800000000000000
+      internalID: 1385142640475350742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SF_Inside_C_0: 3248928505909034838
+      SF_Inside_C_1: -1465451940603566559
+      SF_Inside_C_10: -7931917588249244136
+      SF_Inside_C_11: 999647247163039815
+      SF_Inside_C_12: 1318329595715327501
+      SF_Inside_C_13: -7656749829592946237
+      SF_Inside_C_14: -1302416251720686058
+      SF_Inside_C_15: 60120500738975213
+      SF_Inside_C_16: -627327134264488377
+      SF_Inside_C_17: -773434722731937943
+      SF_Inside_C_18: 6240941627379070958
+      SF_Inside_C_19: -3714372162852513904
+      SF_Inside_C_2: -756517110490333140
+      SF_Inside_C_20: 2602174834977133748
+      SF_Inside_C_21: -4312227713173925856
+      SF_Inside_C_22: -7331698336762787911
+      SF_Inside_C_23: -2356885336579281781
+      SF_Inside_C_24: -3215917485489997915
+      SF_Inside_C_25: -1695817056264135023
+      SF_Inside_C_26: -1703300207900986972
+      SF_Inside_C_27: -3083136439568454382
+      SF_Inside_C_28: 4512389259208149026
+      SF_Inside_C_29: 6304200747511245945
+      SF_Inside_C_3: 4312268370559810128
+      SF_Inside_C_30: -1738676670657581344
+      SF_Inside_C_31: 6145835029881481876
+      SF_Inside_C_32: -4497421334307083839
+      SF_Inside_C_33: -6024501190367103591
+      SF_Inside_C_34: 5536503307665127776
+      SF_Inside_C_35: 4923508559214272474
+      SF_Inside_C_36: -5813699673885316438
+      SF_Inside_C_37: 7880078806665361967
+      SF_Inside_C_38: 7526085095725750455
+      SF_Inside_C_39: -1753370536842685262
+      SF_Inside_C_4: 6961421463270400791
+      SF_Inside_C_40: -6836862385208709259
+      SF_Inside_C_41: -669684619502241564
+      SF_Inside_C_42: 7598384166562235299
+      SF_Inside_C_43: -7795616314686446028
+      SF_Inside_C_44: -819947140119224875
+      SF_Inside_C_45: -4424765553708975345
+      SF_Inside_C_46: -6991803388066047557
+      SF_Inside_C_47: 6924834196148220676
+      SF_Inside_C_48: 1458764301855624722
+      SF_Inside_C_49: -3147013843403081493
+      SF_Inside_C_5: -55943049892846945
+      SF_Inside_C_50: -8505990132782343949
+      SF_Inside_C_51: 1371442154616639239
+      SF_Inside_C_52: 7702965561812237905
+      SF_Inside_C_53: 8124194926601142569
+      SF_Inside_C_54: 7353843615231387583
+      SF_Inside_C_55: -5836366135757848194
+      SF_Inside_C_56: -3526488586197904695
+      SF_Inside_C_57: 3781271436136732966
+      SF_Inside_C_58: 688138384352529583
+      SF_Inside_C_59: -6623482952848889954
+      SF_Inside_C_6: 4525624076233204621
+      SF_Inside_C_60: -3546954234314253670
+      SF_Inside_C_61: 8963604127547953058
+      SF_Inside_C_62: 2180317961969115054
+      SF_Inside_C_63: -5437661427368427039
+      SF_Inside_C_64: 9022331571062482249
+      SF_Inside_C_65: 838570776623845139
+      SF_Inside_C_66: -2319543852567033873
+      SF_Inside_C_67: -4936803066166328484
+      SF_Inside_C_68: 6340233075670221472
+      SF_Inside_C_69: 900146210220108267
+      SF_Inside_C_7: 7527650985941092725
+      SF_Inside_C_70: -5176525554073391600
+      SF_Inside_C_71: 3450742170905449586
+      SF_Inside_C_72: -2381928548068846526
+      SF_Inside_C_73: -7923622821822263039
+      SF_Inside_C_74: -3338770364314990586
+      SF_Inside_C_75: -1392321627650847188
+      SF_Inside_C_76: -1955171074312572285
+      SF_Inside_C_77: -1737615471854775390
+      SF_Inside_C_78: 748577215679894834
+      SF_Inside_C_79: -5586525247420485762
+      SF_Inside_C_8: -7625547699109708364
+      SF_Inside_C_80: 6685948186338737543
+      SF_Inside_C_81: -1074826049427747427
+      SF_Inside_C_82: -2300766841083881537
+      SF_Inside_C_83: -7249564050917276269
+      SF_Inside_C_84: 98169129299554644
+      SF_Inside_C_85: -1026026784489830203
+      SF_Inside_C_86: 2609459956163286907
+      SF_Inside_C_87: -962040800405609776
+      SF_Inside_C_88: 1385142640475350742
+      SF_Inside_C_9: -9080681002379837106
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

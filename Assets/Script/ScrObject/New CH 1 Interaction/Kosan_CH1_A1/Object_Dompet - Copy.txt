@@ -1,0 +1,48 @@
+_dialogueNodes:
+  - NodeID: start
+    SrcImgSprite: {fileID: 0}
+    CharName: Kasur
+    Text: Sebuah alas tidur sederhana dengan sprei yang sudah agak pudar warnanya. Terlihat sangat empuk di tengah tekanan pagi ini.
+    Choices: []
+    NextNodeID: ponder_kasur
+  - NodeID: ponder_kasur
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: Kalau gue rebahan semenit lagi saja, kayaknya seluruh rencana hari ini bakal langsung hancur.
+    Choices:
+    - text: Berdiri menjauh
+      NextNodeID: res_menjauh
+    - text: Duduk di tepian
+      NextNodeID: res_duduk
+    NextNodeID: 
+  - NodeID: res_menjauh
+    SrcImgSprite: {fileID: 0}
+    CharName: Kasur
+    Text: *Kasur tetap diam, membiarkan dinginnya lantai menyambut kaki Leanst yang mulai melangkah.*
+    Choices: []
+    NextNodeID: end_node
+  - NodeID: res_duduk
+    SrcImgSprite: {fileID: 0}
+    CharName: Kasur
+    Text: *Per kasur berderit pelan saat menahan beban tubuh Leanst, seolah berusaha menariknya kembali ke dalam mimpi.*
+    Choices: []
+    NextNodeID: end_node
+  - NodeID: end_node
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: Berat banget rasanya buat lepas...
+    Choices: []
+    NextNodeID:
+
+[Kosan_C1_A1]
+Dompet*
+
+Deskripsi:
+- Objek kunci yang merepresentasikan kondisi finansial (Variabel Ku) pemain secara langsung.
+- Digunakan untuk membangun eksposisi tentang kesulitan ekonomi yang dialami Leanst tanpa perlu penjelasan panjang di awal.
+- Interaksinya memberikan gambaran psikologis tentang bagaimana Leanst memperlakukan masalah keuangannya (merapikan/menghindari atau meluapkan kekesalan).
+
+Dialog:
+- Dompet: *Sebuah dompet kulit yang sudah mulai mengelupas, isinya lebih banyak struk belanja lama daripada lembaran uang.*
+- Dompet: *Dompet tertutup rapat, menyembunyikan realita pahit di dalamnya.*
+- Dompet: *Plak! Suara dompet mendarat di meja terdengar nyaring karena isinya yang terlalu tipis.*

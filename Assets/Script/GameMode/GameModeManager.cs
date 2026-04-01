@@ -41,23 +41,31 @@ public class GameModeManager : MonoBehaviour
     private void Update()
     {
         CurrentMode.Update(this);
-        GMMPauseInputHandle();
+        GMMPauseKeypadInputHandle();
     }
 
-    private void GMMPauseInputHandle()
+    public void GMMPauseKeypadInputHandle()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
+            HandleSwitchPauseMode();
+    }
+
+    public void GMMPauseClickHandle()
+    {
+        HandleSwitchPauseMode();
+    }
+
+    private void HandleSwitchPauseMode()
+    {
+        if (!_isPaused)
         {
-            if (!_isPaused)
-            {
-                _isPaused = true;
-                Switch(TabletMode);
-            }
-            else
-            {
-                _isPaused = false;
-                Switch(PreviousMode);
-            }
+            _isPaused = true;
+            Switch(TabletMode);
+        }
+        else
+        {
+            _isPaused = false;
+            Switch(PreviousMode);
         }
     }
 

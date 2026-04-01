@@ -29,7 +29,7 @@ public class TabletMode : GameModeBase
             m_TabletManager.HandleSectionIndex(direction);
         }
 
-        if ((Input.GetKeyDown(KeyCode.KeypadEnter) && m_TabletManager.GetCurrentSectionIndex() == m_TabletManager.ResumeIndex) || m_TabletManager.IsResumeBtnPressed)
+        if ((Input.GetKeyDown(KeyCode.Return) && m_TabletManager.GetCurrentSectionIndex() == m_TabletManager.ResumeIndex) || m_TabletManager.IsResumeBtnPressed)
         {
             m_TabletManager.IsResumeBtnPressed = false;
             GMM.Switch(GMM.PreviousMode);

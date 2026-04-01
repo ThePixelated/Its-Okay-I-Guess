@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueMode : GameModeBase
@@ -18,6 +17,8 @@ public class DialogueMode : GameModeBase
             Debug.Log("Dialog Interact Key Pressed...");
             PlayerManager.Instance.InteractKey_Dialogs();
         }
+
+        // mouse skip dialog input box ?
     }
 
     public override void Exit(GameModeManager GMM)

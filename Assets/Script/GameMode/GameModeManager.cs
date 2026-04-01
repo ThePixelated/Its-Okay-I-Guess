@@ -9,15 +9,18 @@ public class GameModeManager : MonoBehaviour
     [SerializeField] private int playerSpeed;
 
     [SerializeField] private bool isObjectInteractable = false;
-    private bool _keyPressedFlag = true;
-    private bool _isEnableMove = false;
+    private bool _isPaused = false;
+    private bool _keyPressedFlag = true; // flag untuk movement
+    private bool _isEnableMove = false; // flag untuk movement (efek rotate in-position)
     private float _currentTime = 0f;
     private string _interactableID;
 
     public GameModeBase ExplorationMode = new ExplorationMode();
     public GameModeBase DialogueMode = new DialogueMode();
+    public GameModeBase TabletMode = new TabletMode();
     public GameModeBase CardMode = new CardMode();
     public GameModeBase CurrentMode;
+    public GameModeBase PreviousMode;
 
     private void Awake()
     {
@@ -28,6 +31,7 @@ public class GameModeManager : MonoBehaviour
     private void Start()
     {
         CurrentMode = ExplorationMode;
+        PreviousMode = CurrentMode;
         CurrentMode.Enter(this);
 
         PlayerManager.Instance.onTriggerEnter_non += SetFlagTrue;
@@ -37,6 +41,24 @@ public class GameModeManager : MonoBehaviour
     private void Update()
     {
         CurrentMode.Update(this);
+        GMMPauseInputHandle();
+    }
+
+    private void GMMPauseInputHandle()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!_isPaused)
+            {
+                _isPaused = true;
+                Switch(TabletMode);
+            }
+            else
+            {
+                _isPaused = false;
+                Switch(PreviousMode);
+            }
+        }
     }
 
     public void HandleCharDirection()
@@ -139,6 +161,7 @@ public class GameModeManager : MonoBehaviour
 
     public void Switch(GameModeBase newMode)
     {
+        PreviousMode = CurrentMode;
         CurrentMode.Exit(this);
         CurrentMode = newMode;
         CurrentMode.Enter(this);

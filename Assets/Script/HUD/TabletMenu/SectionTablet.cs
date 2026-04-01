@@ -1,16 +1,31 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SectionTablet : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private Image sprite;
+    [SerializeField] private Color defaultColor;
+    [SerializeField] private Color onColor;
+
+    [SerializeField] private RectTransform anchorIndicator;
+    [SerializeField] private GameObject sectionPage;
+
+    public RectTransform GetAnchorIndicator { get { return anchorIndicator; } }
+    public GameObject SectionPage { get { return sectionPage; } }
+
+    public void SetEnableUI()
     {
-        
+        sprite.color = onColor;
+
+        if (sectionPage != null)
+            sectionPage.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetDisableUI()
     {
-        
+        sprite.color = defaultColor;
+        if (sectionPage != null)
+            sectionPage.SetActive(false);
     }
 }

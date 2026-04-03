@@ -5,6 +5,7 @@ public class CardMode : GameModeBase
     public override void Enter(GameModeManager GMM)
     {
         Debug.LogWarning("Enter CardMode...");
+        GMM.SetCurrGameModeIndicator(GameMode.CardMode);
     }
 
     public override void Update(GameModeManager GMM)
@@ -34,5 +35,6 @@ public class CardMode : GameModeBase
     public override void Exit(GameModeManager GMM)
     {
         Debug.LogWarning("Exiting CardMode...");
+        GMM.SetPrevGameModeIndicator(GameMode.CardMode);
     }
 }

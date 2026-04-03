@@ -7,7 +7,9 @@ public class GameModeManager : MonoBehaviour
     [SerializeField] private PlayerData m_playerData;
     [SerializeField] private Direction playerDirection;
     [SerializeField] private int playerSpeed;
-
+    [SerializeField] private GameMode currentGameModeIndicator = GameMode.ExplorationMode;
+    [SerializeField] private GameMode previousGameModeIndicator = GameMode.ExplorationMode;
+    
     [SerializeField] private bool isObjectInteractable = false;
     private bool _isPaused = false;
     private bool _keyPressedFlag = true; // flag untuk movement
@@ -190,4 +192,24 @@ public class GameModeManager : MonoBehaviour
         _interactableID = objectName;
     }
     public void SetFlagFalse() => isObjectInteractable = false;
+
+    public void SetCurrGameModeIndicator(GameMode modeIndicator)
+    {
+        
+        currentGameModeIndicator = modeIndicator;
+    }
+
+    public void SetPrevGameModeIndicator(GameMode modeIndicator)
+    {
+        previousGameModeIndicator = modeIndicator;
+    }
+}
+
+
+public enum GameMode
+{
+    ExplorationMode,
+    DialogueMode,
+    TabletMode,
+    CardMode
 }

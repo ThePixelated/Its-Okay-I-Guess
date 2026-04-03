@@ -22092,7 +22092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueUI
   m_dialogueManager: {fileID: 2070605239}
-  dialogueBox: {fileID: 1682415178}
+  dialogueBox: {fileID: 1257622774}
   choicesPanel: {fileID: 66275268}
   imgCharacter: {fileID: 794501844}
   buttonPrefab: {fileID: 6718901019141299809, guid: d656743415b408942a904591ffcfdf05, type: 3}

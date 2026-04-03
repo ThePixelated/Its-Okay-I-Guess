@@ -6,6 +6,8 @@ public class DialogueMode : GameModeBase
     {
         Debug.LogWarning("Enter DialogueMode...");
         GMM.onDialogueStop += Switching;
+
+        GMM.SetCurrGameModeIndicator(GameMode.DialogueMode);
     }
 
     public override void Update(GameModeManager GMM)
@@ -24,6 +26,7 @@ public class DialogueMode : GameModeBase
     public override void Exit(GameModeManager GMM)
     {
         Debug.LogWarning("Exiting DialogueMode...");
+        GMM.SetPrevGameModeIndicator(GameMode.DialogueMode);
     }
 
     public void Switching(GameModeManager GMM)

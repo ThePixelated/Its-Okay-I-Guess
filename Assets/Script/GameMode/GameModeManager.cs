@@ -193,16 +193,9 @@ public class GameModeManager : MonoBehaviour
     }
     public void SetFlagFalse() => isObjectInteractable = false;
 
-    public void SetCurrGameModeIndicator(GameMode modeIndicator)
-    {
-        
-        currentGameModeIndicator = modeIndicator;
-    }
+    public void SetCurrGameModeIndicator(GameMode modeIndicator) => currentGameModeIndicator = modeIndicator;
 
-    public void SetPrevGameModeIndicator(GameMode modeIndicator)
-    {
-        previousGameModeIndicator = modeIndicator;
-    }
+    public void SetPrevGameModeIndicator(GameMode modeIndicator) => previousGameModeIndicator = modeIndicator;
 }
 
 

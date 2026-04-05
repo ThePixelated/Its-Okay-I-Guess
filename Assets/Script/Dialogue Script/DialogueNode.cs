@@ -16,6 +16,8 @@ public class DialogueNode
 [System.Serializable]
 public class Choices
 {
-    public string text;
+    public bool IsTriggerQuest;
+    public string TargetQuestID;
+    public string Text;
     public string NextNodeID;
 }

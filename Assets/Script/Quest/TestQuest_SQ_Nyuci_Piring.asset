@@ -10,14 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
-  m_Name: TestQuest_4
+  m_Name: TestQuest_SQ_Nyuci_Piring
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  QuestID: SQ_TestQuest_4
-  Title: Belanja Bahan Makanan
-  Description: Membeli bahan makanan agar bisa memasak di kosan.
+  QuestID: SQ_Nyuci_Piring
+  Title: Nyuci piring di dapur
+  Description: Memastikan semua cucian piring bersih
   objectives:
   - ObjectiveID: 1
-    Description: Beli Sayuran Segar
+    Description: Ambil Flashdisk di Meja Belajar
     Type: 0
-    RequiredAmount: 3
+    RequiredAmount: 1
+    Current_Amount: 0
+  - ObjectiveID: 2
+    Description: Cek Aula Pertemuan
+    Type: 1
+    RequiredAmount: 1
+    Current_Amount: 0
+  - ObjectiveID: 3
+    Description: Latihan Presentasi Depan Cermin
+    Type: 4
+    RequiredAmount: 1
     Current_Amount: 0

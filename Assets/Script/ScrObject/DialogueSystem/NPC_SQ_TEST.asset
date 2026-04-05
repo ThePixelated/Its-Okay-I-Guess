@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: NPC_SQ_TEST
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isDialogueRead: 0
+  _dialogueNodes:
+  - NodeID: start_Dialogue
+    SrcImgSprite: {fileID: 0}
+    CharName: TESTING
+    Text: halo kamu pasti leanst
+    Choices: []
+    NextNodeID: meminta_bantuan
+  - NodeID: meminta_bantuan
+    SrcImgSprite: {fileID: 0}
+    CharName: TESTING
+    Text: Salam kenal, bisa kah kamu bantu aku?
+    Choices:
+    - IsTriggerQuest: 1
+      TargetQuestID: SQ_Nyuci_Piring
+      Text: bantu nyuci piring
+      NextNodeID: menerima_SQ_Nyupir
+    - IsTriggerQuest: 1
+      TargetQuestID: SQ_Membersihkan_Halaman
+      Text: bantu aku bersih" halaman
+      NextNodeID: menerima_SQ_bersihkan_halaman
+    - IsTriggerQuest: 0
+      TargetQuestID: 
+      Text: Tidak mau...
+      NextNodeID: end_bantuan_ditolak
+    NextNodeID: 
+  - NodeID: menerima_SQ_Nyupir
+    SrcImgSprite: {fileID: 0}
+    CharName: TESTING
+    Text: Really? wah terima kasih banyak mau membantu nyuci piring
+    Choices: []
+    NextNodeID: end_SQ_Nyupir
+  - NodeID: menerima_SQ_bersihkan_halaman
+    SrcImgSprite: {fileID: 0}
+    CharName: TESTING
+    Text: ASIKK ada yang bantuin bersih" halaman
+    Choices: []
+    NextNodeID: end_SQ_bersihkan_halaman
+  - NodeID: end_SQ_Nyupir
+    SrcImgSprite: {fileID: 0}
+    CharName: TESTING
+    Text: baik, kamu bisa memberishkannya di dapur
+    Choices: []
+    NextNodeID: 
+  - NodeID: end_bantuan_ditolak
+    SrcImgSprite: {fileID: 0}
+    CharName: TESTING
+    Text: ohh baiklah, mungkin lain waktu
+    Choices: []
+    NextNodeID: 
+  - NodeID: end_SQ_bersihkan_halaman
+    SrcImgSprite: {fileID: 0}
+    CharName: TESTING
+    Text: kamu bisa mulai dengan mengumpulkan sampah di halaman
+    Choices: []
+    NextNodeID: 
+  setRead: 0

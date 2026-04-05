@@ -5,16 +5,41 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance;
-    public Quest m_QuestData;
+    public QuestUI m_questUI;
+    public List<Quest> questDB = new List<Quest>();
+    public List<QuestProgress> currentQuest = new List<QuestProgress>();
+
+    private Dictionary<string, Quest> questLookUp = new Dictionary<string, Quest>();
+
+
 
     //[SerializeField] 
 
     //[SerializeField] private QuestUI m_questUI;
 
-    //private void Awake()
-    //{
-    //    Instance = this;
+    /// <summary>
+    /// ada list main quest
+    /// list side quest
+    /// </summary>
 
-    //    m_QuestData.InnitQuestData();
-    //}
+    private void Awake()
+    {
+        Instance = this;
+
+        //m_QuestData.InnitQuestData();
+
+        questLookUp = new Dictionary<string, Quest>();
+        foreach (var quest in questDB)
+        {
+            questLookUp.Add(quest.QuestID, quest);
+            Debug.LogWarning("Innit quest.... - " + quest.QuestID);
+        }
+    }
+
+    public void AddQuest(string questID)
+    {
+        currentQuest.Add(new QuestProgress(questLookUp[questID]));
+
+        m_questUI.UpdateQuestUI();
+    }
 }

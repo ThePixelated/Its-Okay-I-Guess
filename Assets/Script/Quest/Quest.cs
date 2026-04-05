@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Quest", menuName = "Scriptable Objects/Quest")]
 public class Quest : ScriptableObject
 {
-    public string questID;
+    public string QuestID;
     public string Title;
     [TextArea(3, 10)]
     public string Description;
@@ -13,9 +13,9 @@ public class Quest : ScriptableObject
 
     private void OnValidate()
     {
-        if (string.IsNullOrEmpty(questID))
+        if (string.IsNullOrEmpty(QuestID))
         {
-            questID = $"{Title}_{Guid.NewGuid().ToString()}";
+            QuestID = $"{Title}_{Guid.NewGuid().ToString()}";
         }
     }
 }
@@ -68,5 +68,5 @@ public class QuestProgress
     }
 
     public bool IsCompleted => objectives.TrueForAll(x => x.IsCompleted);
-    public string QuestID => Quest.questID;
+    public string QuestID => Quest.QuestID;
 }

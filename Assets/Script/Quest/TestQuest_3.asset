@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
   m_Name: TestQuest_3
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  questID: 
+  QuestID: SQ_TestQuest_3
   Title: Shift Siang di Kafe Kopi
   Description: Membantu operasional kafe untuk menambah uang saku.
   objectives:
   - ObjectiveID: 1
     Description: Melayani 5 Pelanggan
-    Type: 2  # SideActivity
+    Type: 2
     RequiredAmount: 5
     Current_Amount: 0
   - ObjectiveID: 2
     Description: Laporkan hasil shift ke Manager
-    Type: 3  # TalkNPC
+    Type: 3
     RequiredAmount: 1
     Current_Amount: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
   m_Name: TestQuest_1
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  questID: A_06ff36e6-0b01-4b97-9cd1-fdb24de30b35
+  QuestID: SQ_TestQuest_1
   Title: Mencari barang hilang
   Description: Mencari barang hilang milik kania
   objectives:

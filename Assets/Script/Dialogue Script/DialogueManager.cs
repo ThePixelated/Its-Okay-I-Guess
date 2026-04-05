@@ -76,21 +76,22 @@ public class DialogueManager : MonoBehaviour
         //ReadableSetCheck();
     }
 
-    public bool QuestChecker()
-    {
-        const string questKey = "quest_";
+    //public void ChoicesQuestValidation()
+    //{
+    //    foreach (var flagQuest in currentNode.Choices)
+    //    {
+    //        if (flagQuest.IsTriggerQuest)
+    //        {
 
-        if (currentNode.NodeID.Contains(questKey))
-            return true;
-        
-        return false;
-    }
+    //        }
+    //    }
+    //}
 
-    public void QuestInnitialize()
-    {
-        string questID = currentNode.NodeID.Substring(currentNode.NodeID.IndexOf("#")+1);
-        //QuestManager.Instance..Add(new Quest("Find the Key", "Find the key to unlock the door."));
-    }
+    //public void QuestInnitialize()
+    //{
+    //    string questID = currentNode.NodeID.Substring(currentNode.NodeID.IndexOf("#")+1);
+    //    //QuestManager.Instance..Add(new Quest("Find the Key", "Find the key to unlock the door."));
+    //}
 
     private void ReadableSetCheck()
     {

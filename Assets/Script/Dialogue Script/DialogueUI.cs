@@ -73,14 +73,14 @@ public class DialogueUI : MonoBehaviour
             // addlistener
 
             TextMeshProUGUI btnText = tempBtn.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-            btnText.text = choices.text;
+            btnText.text = choices.Text;
 
             Button btnListener = tempBtn.GetComponent<Button>();
             btnListener.onClick.AddListener(() => NextNode(choices.NextNodeID));
 
-            if (m_dialogueManager.QuestChecker())
+            if (choices.IsTriggerQuest)
             {
-                btnListener.onClick.AddListener(() => m_dialogueManager.QuestInnitialize());
+                btnListener.onClick.AddListener(() => QuestManager.Instance.AddQuest(choices.TargetQuestID));
             }
 
             buttons.Add(tempBtn);

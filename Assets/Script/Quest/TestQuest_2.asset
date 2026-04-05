@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
   m_Name: TestQuest_2
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  questID: 
+  QuestID: SQ_TestQuest_2
   Title: Bimbingan Progress Skripsi
   Description: Menemui dosen pembimbing untuk melaporkan progress bab 1-3.
   objectives:
   - ObjectiveID: 1
     Description: Pergi ke Ruang Dosen di Lantai 2
-    Type: 1  # ReachLocation
+    Type: 1
     RequiredAmount: 1
     Current_Amount: 0
   - ObjectiveID: 2
     Description: Bicara dengan Pak Budi
-    Type: 3  # TalkNPC
+    Type: 3
     RequiredAmount: 1
     Current_Amount: 0

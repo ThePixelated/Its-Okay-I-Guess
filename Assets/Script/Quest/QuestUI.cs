@@ -10,7 +10,8 @@ public class QuestUI : MonoBehaviour
     //[SerializeField] private GameObject questEntryPrefab2;
 
     [SerializeField] private Quest targetQuest;
-    [SerializeField] private List<QuestProgress> quests = new List<QuestProgress>();
+    public QuestManager m_questManager;
+    //[SerializeField] private List<QuestProgress> quests = new List<QuestProgress>();
 
     //private void Start()
     //{
@@ -19,12 +20,12 @@ public class QuestUI : MonoBehaviour
     //    UpdateQuestUI(null);
     //}
 
-    public void AddQuest(Quest questData)
+    private void Start()
     {
-        quests.Add(new QuestProgress(questData));
-
-        UpdateQuestUI();
+        m_questManager = QuestManager.Instance;
     }
+
+    
 
     public void UpdateQuestUI()
     {
@@ -33,7 +34,7 @@ public class QuestUI : MonoBehaviour
             Destroy(item.gameObject);
         }
 
-        foreach (var itemQuest in quests)
+        foreach (var itemQuest in m_questManager.currentQuest)
         {
             GameObject entry = Instantiate(questEntryPrefab, questListContent);
             TextMeshProUGUI questTitleTxt = entry.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>();

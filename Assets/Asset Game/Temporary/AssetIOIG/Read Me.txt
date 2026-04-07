@@ -1,0 +1,59 @@
+*kalua mau ngedit sprite,etc, pake graphicsgale/software sejago lu aja pik
+
+LIST TILESET
+Lantai
+*Lantai polos (indoor)
+*Lantai ubin variasi (2 variasi)
+*Lantai parkiran
+
+Dinding
+*Dinding horizontal
+*Dinding vertikal
+*Sudut dalam & luar (corner)
+*T-junction (buat percabangan)
+*Dinding bolong pintu
+
+Pintu
+*Pintu tertutup
+*Pintu terbuka no frame
+
+Tangga
+
+KOSAN 
+
+Area luar kosan:
+* Jalan / paving
+* Lantai aspal full abu-abu
+* Gerbang / pagar
+* Tanaman kecil
+
+## Area dalam:
+* Lantai kosan
+* Dinding kosan
+
+Interior kamar:
+* Meja
+* Kursi
+* Lemari
+* Kasur
+* Kamar mandi 
+* Karpet kecil
+
+
+
+
+KAMPUS dan KELAS
+
+
+
+Struktur:
+*Lantai kelas
+*Dinding kelas
+*Pintu kelas
+
+Furniture:
+Meja panjang (baris kiri/kanan)
+Kursi (1 tile atau gabung)
+Meja dosen
+Papan tulis / whiteboard
+

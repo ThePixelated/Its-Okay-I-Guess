@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ec6b6d98e06954798a736735ab0fa0, type: 3}
+  m_Name: DataAction
+  m_EditorClassIdentifier: Assembly-CSharp::DataAction
+  NLM_Action:
+  - LeftChoice:
+      Source: SQ
+      Action: Tidak sarapan dan langsung berangkat kampus
+      Coping_Tag: 2
+      StatImpact: Kesehatan -1
+      IsSignificant: 1
+    RightChoice:
+      Source: SQ
+      Action: 
+      Coping_Tag: 0
+      StatImpact: Sosial +5
+      IsSignificant: 1
+  - LeftChoice:
+      Source: MQ
+      Action: Lari dari gapura depan karena menghemat Ojek Online
+      Coping_Tag: 2
+      StatImpact: Energi -4
+      IsSignificant: 0
+    RightChoice:
+      Source: MQ
+      Action: Membeli Makanan Kucing
+      Coping_Tag: 1
+      StatImpact: Keuangan -2
+      IsSignificant: 1

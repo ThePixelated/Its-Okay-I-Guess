@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: MQ_B_NPC_Akmal
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _dialogueNodes:
+  - NodeID: start_convo
+    SrcImgSprite: {fileID: 0}
+    CharName: Akmal
+    Text: 'Testing 123 123 '
+    Choices:
+    - IsTriggerQuest: 1
+      TargetQuestID: MQ_Act1_Sad
+      Text: Mau membantu
+      NextNodeID: end_convo
+    - IsTriggerQuest: 0
+      TargetQuestID: 
+      Text: Tidak mau membantu
+      NextNodeID: end_convo
+    NextNodeID: 
+  - NodeID: end_convo
+    SrcImgSprite: {fileID: 0}
+    CharName: Akmal
+    Text: Baiklah Kalau begitu
+    Choices: []
+    NextNodeID: 

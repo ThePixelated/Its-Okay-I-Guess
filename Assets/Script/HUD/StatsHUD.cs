@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 // Discalimer ini dibuat oleh AI - hellnah
 
 
-public class TopHUDTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class StatsHUD : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject hudParent;
     public GameObject panelStat; // Drag UI pop-up lo ke sini
@@ -46,8 +46,6 @@ public class TopHUDTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         // Pop Out
         panelStat.SetActive(false);
     }
-
-
 
     public void ToggleByButton()
     {

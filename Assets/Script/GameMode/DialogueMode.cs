@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DialogueMode : GameModeBase
 {
+    public bool test;
+
     public override void Enter(GameModeManager GMM)
     {
         Debug.LogWarning("Enter DialogueMode...");
@@ -12,8 +14,6 @@ public class DialogueMode : GameModeBase
 
     public override void Update(GameModeManager GMM)
     {
-        GMM.HandleSwitchMode();
-
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("Dialog Interact Key Pressed...");
@@ -31,6 +31,9 @@ public class DialogueMode : GameModeBase
 
     public void Switching(GameModeManager GMM)
     {
+        // if main quest activated, masuk ke
+        //GMM.Switch(GMM.CardMode);
+
         GMM.Switch(GMM.ExplorationMode);
     }
 }

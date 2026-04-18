@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: SQD_B_NPC_Pak_Bambang
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _dialogueNodes:
+  - NodeID: start_convo
+    SrcImgSprite: {fileID: 0}
+    CharName: Pak Bambang
+    Text: Walah leanst udah pulang, malem amat?
+    Choices: []
+    NextNodeID: respon_awal
+  - NodeID: respon_awal
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: Wah iya pak, kejebak macet di jalan
+    Choices: []
+    NextNodeID: pertanyaan_pulang
+  - NodeID: pertanyaan_pulang
+    SrcImgSprite: {fileID: 0}
+    CharName: Pak Bambang
+    Text: Ohh begitu, kamu tu abis dari kampus apa pulang kerja le?
+    Choices:
+    - IsTriggerQuest: 0
+      TargetQuestID: 
+      Text: Habis dari kampus pak (prank dikit)
+      NextNodeID: jawaban_El0
+    - IsTriggerQuest: 0
+      TargetQuestID: 
+      Text: Habis pulang kerja pak hehe
+      NextNodeID: jawaban_El1
+    NextNodeID: 
+  - NodeID: jawaban_El0
+    SrcImgSprite: {fileID: 0}
+    CharName: Pak Bambang
+    Text: Oalah abis pulang dari kampus toh
+    Choices: []
+    NextNodeID: quest_kenalan
+  - NodeID: jawaban_El1
+    SrcImgSprite: {fileID: 0}
+    CharName: Pak Bambang
+    Text: Wah pulang kerja sampe malem gini ya le
+    Choices: []
+    NextNodeID: quest_kenalan
+  - NodeID: quest_kenalan
+    SrcImgSprite: {fileID: 0}
+    CharName: Pak Bambang
+    Text: Kamu udah ketemu penguhi baru belum? coba kamu kenalan dulu sana sama mereka
+    Choices:
+    - IsTriggerQuest: 1
+      TargetQuestID: SQ_CH1_Bersosialisasi
+      Text: Kenalan setelah ini
+      NextNodeID: bersosialisasi_langsung
+    - IsTriggerQuest: 0
+      TargetQuestID: 
+      Text: Lain waktu saja
+      NextNodeID: beristirahat_dulu
+    NextNodeID: 
+  - NodeID: bersosialisasi_langsung
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: Oh iya pak, saya belum ketemu mereka, abis ini saya mau kenalan dengan
+      mereka
+    Choices: []
+    NextNodeID: end_convo_acceptQuest
+  - NodeID: end_convo_acceptQuest
+    SrcImgSprite: {fileID: 0}
+    CharName: Pak Bambang
+    Text: Bagus kalo begitu, semoga kalian betah ya di sini.
+    Choices: []
+    NextNodeID: 
+  - NodeID: beristirahat_dulu
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: Ahh.. mungkin lain waktu pak, saya coba ketemu dengan mereka
+    Choices: []
+    NextNodeID: end_convo_rejectQuest
+  - NodeID: end_convo_rejectQuest
+    SrcImgSprite: {fileID: 0}
+    CharName: Pak Bambang
+    Text: Baik, toh kamu juga baru pulang le, lain waktu saja
+    Choices: []
+    NextNodeID: 

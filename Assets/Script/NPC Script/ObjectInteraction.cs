@@ -1,29 +1,80 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class ObjectInteraction : MonoBehaviour
 {
-    [SerializeField] private List<DialogueData> npcDialogueData;
-    //[SerializeField] private List<List<DialogueData>> DialogueDataMainQuest;
-    [SerializeField] private DialogueManager m_dialogueManager;
-    //[SerializeField] private List<DialogueData> readedDialogueData;
+    [SerializeField] private string objectID;
+    public string ObjectID { get { return objectID; } }
 
-    [SerializeField] private int mainQuestID = -1;
+    // tambahin isInteractable ke si objek ini (trigger dari quest. dialogue) 
+
+    // tambahin first time interaction isFirstTIme; List<DialogueData> ... (trigger dari GetCurrentDialogueData())
+    // tambahin unlocked object isLocked; List<DialogueData> ... (trigger dari quest. dialogue)
+
+    [Header("Main Quest Config")]
+    public bool hasMainQuest;
+    public int mainQuestID;
+    public int MQAfterQuestCountdown;
+    public QuestDialoguePack mainQuestDialogues;
+
+    [Header("Side Quest Config")]
+    public bool hasSideQuest;
+    public string sideQuestID;
+    public int SQAfterQuestCountdown;
+    public QuestDialoguePack sideQuestDialogues;
+
+    [Header("Normal Config")]
+    public List<DialogueData> normalDialogues;
+
+    [Header("External Quest DIalogue Config")]
+    // List penampung dialog titipan dari Quest luar
+    public List<ExternalQuestDialogue> externalQuestDialogues;
+
+    // Fungsi ini yang akan dipanggil oleh DialogueManager saat Player menekan tombol interaksi
+    private void OnValidate()
+    {
+        if (objectID != null)
+        {
+            objectID = gameObject.name;
+        }
+    }
 
     private void Start()
     {
-        PlayerManager.Instance.onInteractKey_E += StartingDialogue;
+        PlayerManager.Instance.onInteractKey_E += Interact;
     }
 
-    public void DialogueValidation()
+
+    
+    [Serializable] 
+    public struct ExternalQuestDialogue
+    {
+        public string questID; // ID Quest dari luar (Misal: "SQ_B_01")
+        public List<DialogueData> dialogues; // Dialog khusus untuk quest tersebut
+    }
+
+
+    /// <summary>
+    /// berarti ExternalQuestDialogue masih disimpen di dalem objectnya masing?
+    /// kalo sebuah quest udah dijalanin, opsi tersebut ilangin
+    /// gua masih ga tau integrasininnya gimana
+    /// seakan akan semua terpisah terus disuruh jadi satuAAA
+    /// </summary>
+    /// <returns></returns>
+
+    public List<DialogueData> GetCurrentDialogueData()
+    {
+        // Logika alur prioritas diletakkan di sini
+        return DialogueRetriever.DetermineDialogue(this);
+    }
+
+    public void Interact(string objectName)
     {
         
-    }
-
-    public void StartingDialogue(string objectName)
-    {
-        if (gameObject.name == objectName && npcDialogueData != null)
+        if (gameObject.name == objectName)
         {
+            //QuestManager.Instance.OnNPCTalked(objectID);
             //foreach (var item in npcDialogueData)
             //{
             //    if (item.IsDialogueRead)
@@ -34,50 +85,26 @@ public class ObjectInteraction : MonoBehaviour
             //}
 
             // random pick
-            DialogueData pickedData = npcDialogueData[0];
+            //DialogueData pickedData = npcDialogueData[0];
             //m_dialogueManager.DialogueData = pickedData;
             //if (pickedData != null)
             //    Debug.Log(m_dialogueManager.DialogueData.name);
             //else
             //    Debug.LogWarning("picked NULL!");
 
-            m_dialogueManager.StartDialogue(pickedData.DialogueNodes); // core logic
+            //m_dialogueManager.StartDialogue(pickedData.DialogueNodes); // core logic
+
+            List<DialogueData> chosenList = GetCurrentDialogueData();
+
+            int randomIndex = UnityEngine.Random.Range(0, chosenList.Count);
+            DialogueData selectedDialogue = chosenList[randomIndex];
+
+            // Kirim selectedDialogue ini ke UI sistem dialog Anda yang sudah matang
+            DialogueManager.Instance.StartDialogue(selectedDialogue.DialogueNodes);
+
+            QuestManager.Instance.OnNPCTalked(objectID);
         }
         else
             Debug.LogWarning("DialogueData NULL!");
     }
-
-    //public DialogueData ReturnAndValidateDialogueData()
-    //{
-    //    DialogueData pickedDialogue = null;
-
-    //    // Dialogue validation for main quest
-    //    if (!(mainQuestID <= -1))
-    //    {
-    //        if (SceneData.instance.CurrentMainQuestIndex > mainQuestID) // After Quest
-    //        {
-    //            pickedDialogue = npcDialogueData[0][Random.Range(0, npcDialogueData[0].Count)];
-    //        }
-
-    //        else if (SceneData.instance.CurrentMainQuestIndex == mainQuestID) // Saat Quest
-    //        {
-    //            pickedDialogue = npcDialogueData[1][Random.Range(0, npcDialogueData[1].Count)];
-    //        }
-
-    //        else if (SceneData.instance.CurrentMainQuestIndex < mainQuestID && mainQuestID > 0) // Before Quest
-    //        {
-    //            pickedDialogue = npcDialogueData[2][Random.Range(0, npcDialogueData[2].Count)];
-    //        }
-
-    //        return pickedDialogue;
-    //    }
-
-    //    // Dialogue validation for side quest
-    //    if (true)
-    //    {
-
-    //    }
-
-    //    return pickedDialogue;
-    //}
 }

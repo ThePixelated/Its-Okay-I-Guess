@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: SQD_A1_NPC_Pak_Bambang
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _dialogueNodes:
+  - NodeID: start_convo
+    SrcImgSprite: {fileID: 0}
+    CharName: Pak Bambang
+    Text: Sepertinya kamu sudah ketemu dengan mereka ya
+    Choices: []
+    NextNodeID: jawab_pertanyaan
+  - NodeID: jawab_pertanyaan
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: Wuih iya pak, saya sudah ketemu mereka semua
+    Choices: []
+    NextNodeID: end_convo
+  - NodeID: end_convo
+    SrcImgSprite: {fileID: 0}
+    CharName: Pak Bambang
+    Text: 'Hahaha baiklah, semoga kalian akrab semua '
+    Choices: []
+    NextNodeID: 

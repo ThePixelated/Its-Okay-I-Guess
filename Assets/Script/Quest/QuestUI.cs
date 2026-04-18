@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -20,13 +18,6 @@ public class QuestUI : MonoBehaviour
     //    UpdateQuestUI(null);
     //}
 
-    private void Start()
-    {
-        m_questManager = QuestManager.Instance;
-    }
-
-    
-
     public void UpdateQuestUI()
     {
         foreach (Transform item in questListContent)
@@ -34,7 +25,7 @@ public class QuestUI : MonoBehaviour
             Destroy(item.gameObject);
         }
 
-        foreach (var itemQuest in m_questManager.currentQuest)
+        foreach (var itemQuest in m_questManager.activeQuests)
         {
             GameObject entry = Instantiate(questEntryPrefab, questListContent);
             TextMeshProUGUI questTitleTxt = entry.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>();
@@ -42,7 +33,7 @@ public class QuestUI : MonoBehaviour
             TextMeshProUGUI questDescTxt = entry.transform.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>();
             Debug.LogWarning(questDescTxt.gameObject.name);
 
-            questTitleTxt.text = itemQuest.Quest.Title;
+            questTitleTxt.text = itemQuest.Title;
 
             string tempText = "";
             foreach (var objective in itemQuest.objectives)
@@ -53,6 +44,6 @@ public class QuestUI : MonoBehaviour
         }
 
 
-        UILoader.Instance.RefreshLayoutObj();
+        UIManager.Instance.m_UILoader.RefreshLayoutObj();
     }
 }

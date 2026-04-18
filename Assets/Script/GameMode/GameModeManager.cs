@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GameModeManager : MonoBehaviour
 {
+    public static GameModeManager Instance;
+
     [SerializeField] private GameObject m_PlayerObj;
     [SerializeField] private PlayerData m_playerData;
     [SerializeField] private Direction playerDirection;
@@ -26,6 +28,8 @@ public class GameModeManager : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
+
         playerDirection = m_playerData.PlayerDirection;
         playerSpeed = m_playerData.PlayerSpeed;
     }
@@ -43,12 +47,14 @@ public class GameModeManager : MonoBehaviour
     private void Update()
     {
         CurrentMode.Update(this);
+
+        HandleSwitchMode();
         GMMPauseKeypadInputHandle();
     }
 
     public void GMMPauseKeypadInputHandle()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.P))
             HandleSwitchPauseMode();
     }
 
@@ -71,6 +77,7 @@ public class GameModeManager : MonoBehaviour
         }
     }
 
+    // masukin ke player controller, ambil reference scriptnya ke sini
     public void HandleCharDirection()
     {
         if (Input.GetKey(KeyCode.W) || (Input.GetKey(KeyCode.UpArrow)))
@@ -139,7 +146,6 @@ public class GameModeManager : MonoBehaviour
         {
             Debug.Log("Key E Pressed...");
 
-
             PlayerManager.Instance.InteractKey_E(_interactableID);
             Switch(DialogueMode);
         }
@@ -157,6 +163,7 @@ public class GameModeManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            CameraManager.Instance.CameraCardIsLocked = false;
             Switch(ExplorationMode);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -184,6 +191,11 @@ public class GameModeManager : MonoBehaviour
         {
             onDialogueStop(this);
         }
+    }
+
+    public void HandleCameraChange(bool cameraTopDownState, bool cameraCardState)
+    {
+        CameraManager.Instance.ChangeActiveCamera(cameraTopDownState, cameraCardState);
     }
 
     public void SetFlagTrue(string objectName)

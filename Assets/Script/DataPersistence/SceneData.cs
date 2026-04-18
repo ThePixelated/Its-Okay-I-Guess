@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SceneData : MonoBehaviour
 {
-    public static SceneData instance;
+    public static SceneData Instance;
 
     [SerializeField] private int currentChapterIndex;
     [SerializeField] private int currentMainQuestIndex;
@@ -12,7 +12,7 @@ public class SceneData : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        Instance = this;
     }
 
     public void SetCurrentChapterIndex(int setValue) => currentChapterIndex = setValue;

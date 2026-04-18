@@ -6,29 +6,16 @@ public class CardMode : GameModeBase
     {
         Debug.LogWarning("Enter CardMode...");
         GMM.SetCurrGameModeIndicator(GameMode.CardMode);
+
+        GMM.HandleCameraChange(false, true);
+        CameraManager.Instance.CameraCardIsLocked = true;
     }
 
     public override void Update(GameModeManager GMM)
     {
-        GMM.HandleSwitchMode();
-
-        if (Input.GetKey(KeyCode.W)) // Forward
+        if (Input.GetKey(KeyCode.Alpha0)) // Forward
         {
-            Debug.Log("Press W");
-        }
-        else if (Input.GetKey(KeyCode.A)) // Left
-        {
-            Debug.Log("Press A");
-        }
-
-        else if (Input.GetKey(KeyCode.S)) // Backward
-        {
-            Debug.Log("Press S");
-        }
-
-        else if (Input.GetKey(KeyCode.D)) // Right
-        {
-            Debug.Log("Press D");
+            GMM.Switch(GMM.ExplorationMode);
         }
     }
 
@@ -36,5 +23,10 @@ public class CardMode : GameModeBase
     {
         Debug.LogWarning("Exiting CardMode...");
         GMM.SetPrevGameModeIndicator(GameMode.CardMode);
+
+        if (!CameraManager.Instance.CameraCardIsLocked)
+            GMM.HandleCameraChange(true, false);
+
+        Debug.LogWarning("Test...");
     }
 }

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: ExtD_NPC_Yono_Akbar
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _dialogueNodes:
+  - NodeID: start_convoo
+    SrcImgSprite: {fileID: 0}
+    CharName: Yono & Akbar
+    Text: Bang leanst, halo bang akhirnya ketemu
+    Choices: []
+    NextNodeID: convo_1
+  - NodeID: convo_1
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: Wuidih Yono Akbar, sehat" bro, gimana lu bedua?
+    Choices: []
+    NextNodeID: reply_leanst
+  - NodeID: reply_leanst
+    SrcImgSprite: {fileID: 0}
+    CharName: Yono & Akbar
+    Text: Aman banget bang kita
+    Choices: []
+    NextNodeID: added_akbar
+  - NodeID: added_akbar
+    SrcImgSprite: {fileID: 0}
+    CharName: Akbar
+    Text: Begini-begini aja + ketambahan PKL aja bang hahaha
+    Choices: []
+    NextNodeID: reply_akbar
+  - NodeID: reply_akbar
+    SrcImgSprite: {fileID: 0}
+    CharName: Leanst
+    Text: Hahahha iya juga ya, yodah moga-moga lu bedua betah di sini dah yak
+    Choices: []
+    NextNodeID: end_convo
+  - NodeID: end_convo
+    SrcImgSprite: {fileID: 0}
+    CharName: Yono & Akbar
+    Text: Siappp bang, aamiin dah
+    Choices: []
+    NextNodeID: 

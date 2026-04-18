@@ -5,13 +5,6 @@ using UnityEngine.UI;
 
 public class UILoader : MonoBehaviour
 {
-    public static UILoader Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-
     public Transform parentContainer;
 
     // ini nanti dipanggil setiap quest added

@@ -5,10 +5,10 @@ using System.Collections.Generic;
 public class DialogueData : ScriptableObject
 {
     //[SerializeField] private string dialogueDataID;
-    [SerializeField] private bool isDialogueRead;
+    //[SerializeField] private bool isDialogueRead;
     [SerializeField] private List<DialogueNode> _dialogueNodes = new List<DialogueNode>();
-    [SerializeField] private bool setRead;
+    //[SerializeField] private bool setRead;
     public List<DialogueNode> DialogueNodes {  get { return _dialogueNodes; } }
-    public bool IsDialogueRead { get { return isDialogueRead; } set { isDialogueRead = value; } }
-    public bool SetRead { get { return setRead; } set { setRead = value; } }
+    //public bool IsDialogueRead { get { return isDialogueRead; } set { isDialogueRead = value; } }
+    //public bool SetRead { get { return setRead; } set { setRead = value; } }
 }

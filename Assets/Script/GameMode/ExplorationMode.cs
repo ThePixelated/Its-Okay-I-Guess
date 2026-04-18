@@ -10,8 +10,6 @@ public class ExplorationMode : GameModeBase
 
     public override void Update(GameModeManager GMM)
     {
-        GMM.HandleSwitchMode();
-
         GMM.HandleCharDirection();
         GMM.HandlePlayerMovement();
         GMM.HandleObjectInteractable();

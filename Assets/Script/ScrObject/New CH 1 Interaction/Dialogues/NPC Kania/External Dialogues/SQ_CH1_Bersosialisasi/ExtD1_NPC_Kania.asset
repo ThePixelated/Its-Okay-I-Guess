@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: ExtD1_NPC_Kania
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _dialogueNodes:
+  - NodeID: start_convo
+    SrcImgSprite: {fileID: 0}
+    CharName: Kania
+    Text: Eh haloo, aku kania penguhi baru di sini
+    Choices: []
+    NextNodeID: convo_1
+  - NodeID: convo_1
+    SrcImgSprite: {fileID: 0}
+    CharName: Leasnt
+    Text: Halo salam kenall, semoga kamu betah di sini yaa
+    Choices: []
+    NextNodeID: end_convo
+  - NodeID: end_convo
+    SrcImgSprite: {fileID: 0}
+    CharName: Kania
+    Text: Haha iyaaa terima kasih
+    Choices: []
+    NextNodeID: 

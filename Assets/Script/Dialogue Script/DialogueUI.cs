@@ -78,9 +78,19 @@ public class DialogueUI : MonoBehaviour
             Button btnListener = tempBtn.GetComponent<Button>();
             btnListener.onClick.AddListener(() => NextNode(choices.NextNodeID));
 
+
+            // dijadiin switch case, untuk nambah quest, transisi ke card gameplay, atau minigame.
             if (choices.IsTriggerQuest)
             {
-                btnListener.onClick.AddListener(() => QuestManager.Instance.AddQuest(choices.TargetQuestID));
+                if (choices.TargetQuestID.StartsWith("SQ_", System.StringComparison.OrdinalIgnoreCase))
+                {
+                    btnListener.onClick.AddListener(() => QuestManager.Instance.AddQuest(choices.TargetQuestID));
+                }
+
+                else if (choices.TargetQuestID.StartsWith("MQ_", System.StringComparison.OrdinalIgnoreCase))
+                {
+                    btnListener.onClick.AddListener(() => QuestManager.Instance.ChangeToCardGame());
+                }
             }
 
             buttons.Add(tempBtn);

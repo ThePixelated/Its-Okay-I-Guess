@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager Instance;
+
     [SerializeField] private GameModeManager m_gameModeManager;
     [SerializeField] private DialogueUI m_dialogueUI;
     [SerializeField] private DialogueData m_dialogueData;
@@ -15,7 +17,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        m_dialogueUI = gameObject.GetComponent<DialogueUI>();
+        Instance = this;
     }
 
     private void Start()
@@ -54,7 +56,7 @@ public class DialogueManager : MonoBehaviour
         m_dialogueUI.Render(currentNode);
     }
 
-    public void GoToNode() // BUTTON DOANG
+    public void GoToNode()
     {
         if (currentNode.Choices.Count <= 0)
         {
@@ -93,15 +95,96 @@ public class DialogueManager : MonoBehaviour
     //    //QuestManager.Instance..Add(new Quest("Find the Key", "Find the key to unlock the door."));
     //}
 
-    private void ReadableSetCheck()
-    {
-        if (m_dialogueData.SetRead)
-        {
-            m_dialogueData.IsDialogueRead = m_dialogueData.SetRead;
-        }
-    }
+    //private void ReadableSetCheck()
+    //{
+    //    if (m_dialogueData.SetRead)
+    //    {
+    //        m_dialogueData.IsDialogueRead = m_dialogueData.SetRead;
+    //    }
+    //}
 }
 
+[System.Serializable]
+public class QuestDialoguePack
+{
+    // Setiap fase berisi list agar bisa diacak variasinya
+    public List<DialogueData> beforeQuest;
+    public List<DialogueData> duringQuest;
+    public List<DialogueData> afterQuest;
+}
+
+public static class DialogueRetriever
+{
+    public static List<DialogueData> DetermineDialogue(ObjectInteraction npc)
+    {
+        // Ambil data global dari SceneData atau QuestManager Anda
+        int globalMQIndex = SceneData.Instance.CurrentMainQuestIndex;
+
+        // ----------------------------------------------------
+        // PRIORITAS 1: EVALUASI MAIN QUEST
+        // ----------------------------------------------------
+        if (npc.hasMainQuest)
+        {
+            // Jika saat ini memang giliran Main Quest milik NPC ini
+            if (globalMQIndex == npc.mainQuestID)
+            {
+                // Anda perlu mengecek status MQ ini di QuestManager Anda.
+                // Anggap saja kita punya fungsi pengecekan statusnya.
+                QuestState mqState = QuestManager.Instance.GetMainQuestState(npc.mainQuestID);
+
+                switch (mqState)
+                {
+                    case QuestState.Unassigned:
+                        return npc.mainQuestDialogues.beforeQuest;
+                    case QuestState.Active:
+                        return npc.mainQuestDialogues.duringQuest;
+                    case QuestState.Success:
+                        return npc.mainQuestDialogues.afterQuest;
+                }
+            }
+        }
+
+        foreach (var external in npc.externalQuestDialogues)
+        {
+            // Cek ke QuestManager apakah ID Quest ini sedang ON GOING
+            if (QuestManager.Instance.GetSideQuestState(external.questID) == QuestState.Active)
+            {
+                return external.dialogues; // Balikin dialog titipan ini
+            }
+        }
+
+        // ----------------------------------------------------
+        // PRIORITAS 2: EVALUASI SIDE QUEST
+        // ----------------------------------------------------
+        // Masuk ke sini jika NPC tidak punya MQ, ATAU MQ-nya tidak aktif (indeks global < atau > dari ID NPC)
+        if (npc.hasSideQuest && !string.IsNullOrEmpty(npc.sideQuestID))
+        {
+            QuestState sqState = QuestManager.Instance.GetSideQuestState(npc.sideQuestID);
+            Debug.Log($"NPC ID: {npc.ObjectID} - Quest State: {sqState}");
+
+            switch (sqState)
+            {
+                case QuestState.Unassigned:
+                    return npc.sideQuestDialogues.beforeQuest;
+                case QuestState.Active:
+                    return npc.sideQuestDialogues.duringQuest;
+                case QuestState.Success:
+
+                    npc.SQAfterQuestCountdown--;
+                    if (npc.SQAfterQuestCountdown > 0)
+                        return npc.sideQuestDialogues.afterQuest;
+
+                    npc.hasSideQuest = false;
+                    break;
+            }
+        }
+
+        // ----------------------------------------------------
+        // PRIORITAS 3: FALLBACK (TIDAK ADA QUEST / SEMUA SELESAI)
+        // ----------------------------------------------------
+        return npc.normalDialogues;
+    }
+}
 //-gimana caranya biar yang udah dibaca masuk ke list read
 //- terus nanti re-init, semuanya kereset.
 

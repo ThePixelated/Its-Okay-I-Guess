@@ -7,7 +7,10 @@ public class QuestUI : MonoBehaviour
     [SerializeField] private GameObject questEntryPrefab;
     //[SerializeField] private GameObject questEntryPrefab2;
 
-    [SerializeField] private Quest targetQuest;
+    [SerializeField] private TextMeshProUGUI titleQuest;
+    [SerializeField] private TextMeshProUGUI descQuest;
+
+    //[SerializeField] private Quest targetQuest;
     public QuestManager m_questManager;
     //[SerializeField] private List<QuestProgress> quests = new List<QuestProgress>();
 
@@ -22,7 +25,10 @@ public class QuestUI : MonoBehaviour
     {
         foreach (Transform item in questListContent)
         {
-            Destroy(item.gameObject);
+            if (item.gameObject.name != "")
+            {
+                Destroy(item.gameObject);
+            }
         }
 
         foreach (var itemQuest in m_questManager.activeQuests)

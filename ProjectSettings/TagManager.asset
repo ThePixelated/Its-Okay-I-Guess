@@ -7,8 +7,8 @@ TagManager:
   - Card
   - leftSide
   - rightSide
-  - NPC
   - Interactable
+  - TriggerArea
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,7 @@
+Act 1:
+- Do something_A (NPC_Obj_1)
+- Card Gameplay
+- Clean up the dishes
+- Go to class (to Object_Gate)
+
+** Transition to Scene Lorong Kelas **

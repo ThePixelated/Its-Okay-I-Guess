@@ -7,57 +7,50 @@ public class QuestManager : MonoBehaviour
     public static QuestManager Instance;
 
     public QuestUI m_questUI;
+    public List<Quest> mainQuestDB = new List<Quest>();
+    public List<Quest> subMainQuestDB = new List<Quest>();
     public List<Quest> sideQuestDB = new List<Quest>();
-    //public List<QuestProgress> currentQuest = new List<QuestProgress>();
 
     private Dictionary<string, Quest> questLookUp = new Dictionary<string, Quest>();
+    public List<Quest> actActiveQuest = new List<Quest>();
     public List<Quest> activeQuests = new List<Quest>();
 
-    //[SerializeField] private QuestUI m_questUI;
-
-    /// <summary>
-    /// ada list main quest
-    /// list side quest
-    /// </summary>
-    /// 
-
     public Dictionary<string, QuestState> sideQuestDatabase = new Dictionary<string, QuestState>();
-
-    //private void OnValidate()
-    //{
-    //    questLookUp = new Dictionary<string, Quest>();
-    //    foreach (var questData in questDB)
-    //    {
-    //        questLookUp.Add(questData.QuestID, questData);
-    //        sideQuestDatabase.Add(questData.QuestID, questData.questState);
-    //        Debug.LogWarning("Innit node.... - " + questData.QuestID);
-    //    }
-    //}
 
     private void Awake()
     {
         Instance = this;
 
-        //m_QuestData.InnitQuestData();
+        foreach (var questData in mainQuestDB) 
+            questData.ResetValue();
 
-        //questLookUp = new Dictionary<string, Quest>();
-        //foreach (var quest in questDB)
-        //{
-        //    questLookUp.Add(quest.QuestID, quest);
-        //    Debug.LogWarning("Innit quest.... - " + quest.QuestID);
-        //}
+        foreach (var questData in subMainQuestDB)
+            questData.ResetValue();
 
         foreach (var questData in sideQuestDB)
-        {
             questData.ResetValue();
+
+        // to lookup dict
+
+        foreach (var questData in mainQuestDB)
+        {
+            questLookUp.Add(questData.QuestID, questData);
+            //sideQuestDatabase.Add(questData.QuestID, questData.questState);
+            Debug.LogWarning("Innit MQ DB.... - " + questData.QuestID);
+        }
+        
+        foreach (var questData in subMainQuestDB)
+        {
+            questLookUp.Add(questData.QuestID, questData);
+            //sideQuestDatabase.Add(questData.QuestID, questData.questState);
+            Debug.LogWarning("Innit SubMQ DB.... - " + questData.QuestID);
         }
 
-        //questLookUp = new Dictionary<string, Quest>();
         foreach (var questData in sideQuestDB)
         {
             questLookUp.Add(questData.QuestID, questData);
             sideQuestDatabase.Add(questData.QuestID, questData.questState);
-            Debug.LogWarning("Innit node.... - " + questData.QuestID);
+            Debug.LogWarning("Innit SQ DB.... - " + questData.QuestID);
         }
     }
 

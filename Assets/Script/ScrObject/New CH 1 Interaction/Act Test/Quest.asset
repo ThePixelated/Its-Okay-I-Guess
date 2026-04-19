@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
   m_Name: Quest
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  QuestID: 
+  QuestID: SubMQ
   Title: 
   Description: 
-  objectives: []
+  objectives:
+  - ObjectiveID: 
+    Description: 
+    Type: 5
+    RequiredAmount: 0
+    Current_Amount: 0
   questState: 0

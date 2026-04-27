@@ -7,18 +7,19 @@ public class Quest : ScriptableObject
 {
     public string QuestID;
     public string Title;
+    public string SubTitle;
     [TextArea(3, 10)]
     public string Description;
     public List<QuestObjective> objectives;
     public QuestState questState;
 
-    private void OnValidate()
-    {
-        if (string.IsNullOrEmpty(QuestID))
-        {
-            QuestID = $"{Title}_{Guid.NewGuid().ToString()}";
-        }
-    }
+    //private void OnValidate()
+    //{
+    //    if (string.IsNullOrEmpty(QuestID))
+    //    {
+    //        QuestID = $"{Title}_{Guid.NewGuid().ToString()}";
+    //    }
+    //}
 
     public bool IsAllObjectivesComplete()
     {
@@ -43,7 +44,6 @@ public class Quest : ScriptableObject
 [System.Serializable]
 public class QuestObjective
 {
-
     public string ObjectiveID;
     [TextArea(3, 10)]
     public string Description;

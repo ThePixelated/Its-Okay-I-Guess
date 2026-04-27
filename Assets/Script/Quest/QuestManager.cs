@@ -3,35 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
-{
+{   
     public static QuestManager Instance;
 
     public QuestUI m_questUI;
+    [Header("Assign Data Quest")]
     public List<Quest> mainQuestDB = new List<Quest>();
     public List<Quest> subMainQuestDB = new List<Quest>();
     public List<Quest> sideQuestDB = new List<Quest>();
 
-    private Dictionary<string, Quest> questLookUp = new Dictionary<string, Quest>();
-    public List<Quest> actActiveQuest = new List<Quest>();
+    //public List<Quest> actActiveQuest = new List<Quest>();
+    [Header("Tracked Active Quest")]
+    public Quest currentActiveActQuest;
+    public Quest currentActiveSQ;
     public List<Quest> activeQuests = new List<Quest>();
 
+    private Dictionary<string, Quest> questLookUp = new Dictionary<string, Quest>();
     public Dictionary<string, QuestState> sideQuestDatabase = new Dictionary<string, QuestState>();
 
     private void Awake()
     {
         Instance = this;
-
+    
         foreach (var questData in mainQuestDB) 
             questData.ResetValue();
-
+        
         foreach (var questData in subMainQuestDB)
             questData.ResetValue();
-
+        
         foreach (var questData in sideQuestDB)
             questData.ResetValue();
-
+        
         // to lookup dict
-
+    
         foreach (var questData in mainQuestDB)
         {
             questLookUp.Add(questData.QuestID, questData);
@@ -45,7 +49,7 @@ public class QuestManager : MonoBehaviour
             //sideQuestDatabase.Add(questData.QuestID, questData.questState);
             Debug.LogWarning("Innit SubMQ DB.... - " + questData.QuestID);
         }
-
+    
         foreach (var questData in sideQuestDB)
         {
             questLookUp.Add(questData.QuestID, questData);
@@ -53,7 +57,6 @@ public class QuestManager : MonoBehaviour
             Debug.LogWarning("Innit SQ DB.... - " + questData.QuestID);
         }
     }
-
 
     public void OnNPCTalked(string npcID)
     {
@@ -69,7 +72,7 @@ public class QuestManager : MonoBehaviour
 
                     obj.Current_Amount = 1; // Tandai sudah selesai
                     Debug.Log($"Objective {obj.ObjectiveID} di quest {quest.QuestID} selesai!");
-
+    
                     // Cek apakah semua langkah di quest ini sudah beres
                     if (quest.IsAllObjectivesComplete())
                     {

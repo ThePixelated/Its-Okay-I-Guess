@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: DD_D1_Kosan_Trans23
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  _dialogueNodes:
+  - NodeID: trans23_keluar_kamar
+    SrcImgSprite: {fileID: 0} 
+    CharName: "..."
+    Text: Oke. Keluar dulu.
+    Choices: []
+    NextNodeID: trans23_lihat_sekitar
+  - NodeID: trans23_lihat_sekitar
+    SrcImgSprite: {fileID: 0} 
+    CharName: "..."
+    Text: Kosan pagi-pagi gini selalu sepi. Atau emang cuma gue yang
+          ngerasa sepi?
+    Choices: []
+    NextNodeID: trans23_fokus
+  - NodeID: trans23_fokus # 12345678 - 1234
+    SrcImgSprite: {fileID: 0}
+    CharName: "..."
+    Text: Tumbler dulu. Nanti dehidrasi di jalan.
+    Choices: []
+    NextNodeID:

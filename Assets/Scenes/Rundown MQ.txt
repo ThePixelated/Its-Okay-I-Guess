@@ -1,7 +1,72 @@
-Act 1:
-- Do something_A (NPC_Obj_1)
-- Card Gameplay
-- Clean up the dishes
-- Go to class (to Object_Gate)
+!- Start Day 1 : "Seperti biasa" -!
 
-** Transition to Scene Lorong Kelas **
+# start from Scene Kamar Kosan # - PAGI
+
+Act 1: (MQ 1)
+- before waking up
+  + Objectives:
+
+< Transition to Scene Kosan > - PAGI *dilakukan pengecekan dvalidasi
+    
+- Do something_A
+  + Objectives:
+    collect X 0/3
+    talk to NPC
+- Card Gameplay [MAIN GAMEPLAY]
+- Clean up the dishes
+  + Objectives:
+    do something
+    pick some items
+- Go to class (to Object_Gate)
+  + Objectives:
+    go to location
+
+** Transition to Scene Lorong Kelas ** - PAGI menjelang SIANG
+
+Act 2: (MQ 2)
+- Ketemu dengan dika (di dalam kelas)
+  + Objectives:
+    go to location
+
+< Transition to Scene Kelas > - SIANG
+
+- Do x stuff
+  + Objectives:
+    go to location
+    collect x/n
+...
+- Card Gameplay [MAIN GAMEPLAY]
+...
+
+< Transition to Scene lorong kelas > - SIANG
+
+- Go to home (go to stairs)
+  + Objectives:
+    go to location
+
+** Transition to Scene kosan ** - MALAM
+
+- Kitchen assignment
+  + Objectives:
+    custom (interacting) angkat galon
+    bersihin piring x/n
+- Prepare to sleep
+  + Objectives:
+    custom (interacting) angkat galon
+    bersihin piring x/n
+
+< Transisi ke Scene Kamar Kosan >
+
+- Bersihkan kamar
+  + Objectives:
+    ambil sampah-sampah x/n
+    rapihkan buku ke rak x/n
+    rapihkan baju kotor ke bak x/n
+
+- Sudah saat nya (turu)
+  + Objectives:
+    go to location (kasur)
+
+!- End Day 1 -!
+
+....

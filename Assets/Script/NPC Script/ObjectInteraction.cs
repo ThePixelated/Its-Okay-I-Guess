@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using TMPro;
 
 public class ObjectInteraction : MonoBehaviour
 {
+    [SerializeField] private TextMeshPro namaTxt;
     [SerializeField] private string objectID;
     public string ObjectID { get { return objectID; } }
 
@@ -34,18 +36,17 @@ public class ObjectInteraction : MonoBehaviour
     // Fungsi ini yang akan dipanggil oleh DialogueManager saat Player menekan tombol interaksi
     private void OnValidate()
     {
+        if (namaTxt != null && (namaTxt.text == "" || namaTxt.text != null))
+            namaTxt.text = gameObject.name;
+        
         if (objectID != null)
-        {
             objectID = gameObject.name;
-        }
     }
 
     private void Start()
     {
         PlayerManager.Instance.onInteractKey_E += Interact;
     }
-
-
     
     [Serializable] 
     public struct ExternalQuestDialogue

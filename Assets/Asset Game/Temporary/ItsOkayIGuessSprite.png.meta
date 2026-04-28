@@ -1,0 +1,1378 @@
+fileFormatVersion: 2
+guid: 17f4ee9d20aeab647b52920439120bd3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4843906863425457579
+    second: ItsOkayIGuessSprite_0
+  - first:
+      213: -7449109636696262596
+    second: ItsOkayIGuessSprite_1
+  - first:
+      213: 7697056965200167634
+    second: ItsOkayIGuessSprite_2
+  - first:
+      213: 3830161683324319628
+    second: ItsOkayIGuessSprite_3
+  - first:
+      213: 2989648519658151392
+    second: ItsOkayIGuessSprite_4
+  - first:
+      213: -7611477172900992080
+    second: ItsOkayIGuessSprite_5
+  - first:
+      213: -9183834619764067273
+    second: ItsOkayIGuessSprite_6
+  - first:
+      213: -4113698825860280631
+    second: ItsOkayIGuessSprite_7
+  - first:
+      213: 2193806660635175656
+    second: ItsOkayIGuessSprite_8
+  - first:
+      213: 7207888509287670328
+    second: ItsOkayIGuessSprite_9
+  - first:
+      213: 3289085001605890536
+    second: ItsOkayIGuessSprite_10
+  - first:
+      213: 4862973098497200260
+    second: ItsOkayIGuessSprite_11
+  - first:
+      213: -6908967860860690849
+    second: ItsOkayIGuessSprite_12
+  - first:
+      213: 1223848988687480457
+    second: ItsOkayIGuessSprite_13
+  - first:
+      213: 2015620715116634960
+    second: ItsOkayIGuessSprite_14
+  - first:
+      213: 441678434352641434
+    second: ItsOkayIGuessSprite_15
+  - first:
+      213: -831899631575007971
+    second: ItsOkayIGuessSprite_16
+  - first:
+      213: -2412571410050381579
+    second: ItsOkayIGuessSprite_17
+  - first:
+      213: -7257622157481956538
+    second: ItsOkayIGuessSprite_18
+  - first:
+      213: -4335045022026016298
+    second: ItsOkayIGuessSprite_19
+  - first:
+      213: -7324065132283411444
+    second: ItsOkayIGuessSprite_20
+  - first:
+      213: -9102576962461692777
+    second: ItsOkayIGuessSprite_21
+  - first:
+      213: -1429207926213121402
+    second: ItsOkayIGuessSprite_22
+  - first:
+      213: 6772472441660772962
+    second: ItsOkayIGuessSprite_23
+  - first:
+      213: -3264082763802108493
+    second: ItsOkayIGuessSprite_24
+  - first:
+      213: -964980877393571273
+    second: ItsOkayIGuessSprite_25
+  - first:
+      213: 7796592554787079858
+    second: ItsOkayIGuessSprite_26
+  - first:
+      213: 4660786000821001066
+    second: ItsOkayIGuessSprite_27
+  - first:
+      213: 5612032079349944658
+    second: ItsOkayIGuessSprite_28
+  - first:
+      213: 3395243075844631590
+    second: ItsOkayIGuessSprite_29
+  - first:
+      213: -3929656637021822936
+    second: ItsOkayIGuessSprite_30
+  - first:
+      213: 1192507752329031929
+    second: ItsOkayIGuessSprite_31
+  - first:
+      213: -4664880100359030887
+    second: ItsOkayIGuessSprite_32
+  - first:
+      213: 8567462514413282649
+    second: ItsOkayIGuessSprite_33
+  - first:
+      213: -4421194611724381285
+    second: ItsOkayIGuessSprite_34
+  - first:
+      213: -739924889688624892
+    second: ItsOkayIGuessSprite_35
+  - first:
+      213: -4599485859306103624
+    second: ItsOkayIGuessSprite_36
+  - first:
+      213: 6103952654248577784
+    second: ItsOkayIGuessSprite_37
+  - first:
+      213: -1477094004213806496
+    second: ItsOkayIGuessSprite_38
+  - first:
+      213: 6355007987523175369
+    second: ItsOkayIGuessSprite_39
+  - first:
+      213: 5437144263410889157
+    second: ItsOkayIGuessSprite_40
+  - first:
+      213: 8794079400647655415
+    second: ItsOkayIGuessSprite_41
+  - first:
+      213: 1033441653277299900
+    second: ItsOkayIGuessSprite_42
+  - first:
+      213: -4970171501589240140
+    second: ItsOkayIGuessSprite_43
+  - first:
+      213: -6811286511354506809
+    second: ItsOkayIGuessSprite_44
+  - first:
+      213: -6501169959779142538
+    second: ItsOkayIGuessSprite_45
+  - first:
+      213: 4856311797206373615
+    second: ItsOkayIGuessSprite_46
+  - first:
+      213: -2141483896616279259
+    second: ItsOkayIGuessSprite_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 335
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad0d8fc0a3093340800000000000000
+      internalID: 4843906863425457579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 335
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38b7c3a0427f9890800000000000000
+      internalID: -7449109636696262596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 335
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d2c3b2778071da60800000000000000
+      internalID: 7697056965200167634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_3
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 335
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87bbd602c7772530800000000000000
+      internalID: 3830161683324319628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 335
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed1f712d7d5d7920800000000000000
+      internalID: 2989648519658151392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_5
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 335
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbed3da6d99e5690800000000000000
+      internalID: -7611477172900992080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_6
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 335
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 734370542177c8080800000000000000
+      internalID: -9183834619764067273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_7
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 335
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce08a396b439e6c0800000000000000
+      internalID: -4113698825860280631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_8
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 335
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eaab09d887f17e10800000000000000
+      internalID: 2193806660635175656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_9
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 335
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83226b00960970460800000000000000
+      internalID: 7207888509287670328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 287
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1c8c4f16d25ad20800000000000000
+      internalID: 3289085001605890536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_11
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 287
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 480d4389440cc7340800000000000000
+      internalID: 4862973098497200260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_12
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 287
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5edec8f55a6e10a0800000000000000
+      internalID: -6908967860860690849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_13
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 287
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9863075cb2cfbf010800000000000000
+      internalID: 1223848988687480457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_14
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 287
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05322767c5ce8fb10800000000000000
+      internalID: 2015620715116634960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_15
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 287
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a953a882238212600800000000000000
+      internalID: 441678434352641434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_16
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 287
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d713351bf7474f0800000000000000
+      internalID: -831899631575007971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_17
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 287
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f80facb513d48ed0800000000000000
+      internalID: -2412571410050381579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_18
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 287
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ba84da91fb74b90800000000000000
+      internalID: -7257622157481956538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_19
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 287
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d950d04583d6d3c0800000000000000
+      internalID: -4335045022026016298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_20
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 239
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c044c661191bb5a90800000000000000
+      internalID: -7324065132283411444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_21
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 239
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c01dbea762da180800000000000000
+      internalID: -9102576962461692777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_22
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 239
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ae4ef96fe6a2ce0800000000000000
+      internalID: -1429207926213121402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_23
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 239
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2621058bdc7acfd50800000000000000
+      internalID: 6772472441660772962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_24
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 239
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bd991a2506a3b2d0800000000000000
+      internalID: -3264082763802108493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_25
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 239
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73259e33103bb92f0800000000000000
+      internalID: -964980877393571273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_26
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 239
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b60a86de9f033c60800000000000000
+      internalID: 7796592554787079858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_27
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 239
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6b9c018c207ea040800000000000000
+      internalID: 4660786000821001066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_28
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 239
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25110cd3171f1ed40800000000000000
+      internalID: 5612032079349944658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_29
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 239
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ce2d5b6935e1f20800000000000000
+      internalID: 3395243075844631590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_30
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 191
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820ee0ddb1e0779c0800000000000000
+      internalID: -3929656637021822936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_31
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 191
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0b8798b73ac8010800000000000000
+      internalID: 1192507752329031929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_32
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 191
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997bf4aa344034fb0800000000000000
+      internalID: -4664880100359030887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_33
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 191
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9552416b3cdb5e670800000000000000
+      internalID: 8567462514413282649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_34
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 191
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b931c45dce2c4a2c0800000000000000
+      internalID: -4421194611724381285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_35
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 191
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401b3adab324bb5f0800000000000000
+      internalID: -739924889688624892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_36
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 143
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc90a6eaf75b20c0800000000000000
+      internalID: -4599485859306103624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_37
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 143
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa0a42599895b450800000000000000
+      internalID: 6103952654248577784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_38
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 143
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a0af244de408be0800000000000000
+      internalID: -1477094004213806496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_39
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 143
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3c6192816813850800000000000000
+      internalID: 6355007987523175369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_40
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 143
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c1b82d76ed947b40800000000000000
+      internalID: 5437144263410889157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_41
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 143
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fffe223f98da0a70800000000000000
+      internalID: 8794079400647655415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_42
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 95
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb49faf45b5875e00800000000000000
+      internalID: 1033441653277299900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_43
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 95
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b6e0073a57660bb0800000000000000
+      internalID: -4970171501589240140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_44
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 95
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c11e4371037971a0800000000000000
+      internalID: -6811286511354506809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_45
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 95
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6747ce2cd5437c5a0800000000000000
+      internalID: -6501169959779142538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_46
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 95
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4560789d5156340800000000000000
+      internalID: 4856311797206373615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItsOkayIGuessSprite_47
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 95
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 523a7f9fdbbe742e0800000000000000
+      internalID: -2141483896616279259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ItsOkayIGuessSprite_0: 4843906863425457579
+      ItsOkayIGuessSprite_1: -7449109636696262596
+      ItsOkayIGuessSprite_10: 3289085001605890536
+      ItsOkayIGuessSprite_11: 4862973098497200260
+      ItsOkayIGuessSprite_12: -6908967860860690849
+      ItsOkayIGuessSprite_13: 1223848988687480457
+      ItsOkayIGuessSprite_14: 2015620715116634960
+      ItsOkayIGuessSprite_15: 441678434352641434
+      ItsOkayIGuessSprite_16: -831899631575007971
+      ItsOkayIGuessSprite_17: -2412571410050381579
+      ItsOkayIGuessSprite_18: -7257622157481956538
+      ItsOkayIGuessSprite_19: -4335045022026016298
+      ItsOkayIGuessSprite_2: 7697056965200167634
+      ItsOkayIGuessSprite_20: -7324065132283411444
+      ItsOkayIGuessSprite_21: -9102576962461692777
+      ItsOkayIGuessSprite_22: -1429207926213121402
+      ItsOkayIGuessSprite_23: 6772472441660772962
+      ItsOkayIGuessSprite_24: -3264082763802108493
+      ItsOkayIGuessSprite_25: -964980877393571273
+      ItsOkayIGuessSprite_26: 7796592554787079858
+      ItsOkayIGuessSprite_27: 4660786000821001066
+      ItsOkayIGuessSprite_28: 5612032079349944658
+      ItsOkayIGuessSprite_29: 3395243075844631590
+      ItsOkayIGuessSprite_3: 3830161683324319628
+      ItsOkayIGuessSprite_30: -3929656637021822936
+      ItsOkayIGuessSprite_31: 1192507752329031929
+      ItsOkayIGuessSprite_32: -4664880100359030887
+      ItsOkayIGuessSprite_33: 8567462514413282649
+      ItsOkayIGuessSprite_34: -4421194611724381285
+      ItsOkayIGuessSprite_35: -739924889688624892
+      ItsOkayIGuessSprite_36: -4599485859306103624
+      ItsOkayIGuessSprite_37: 6103952654248577784
+      ItsOkayIGuessSprite_38: -1477094004213806496
+      ItsOkayIGuessSprite_39: 6355007987523175369
+      ItsOkayIGuessSprite_4: 2989648519658151392
+      ItsOkayIGuessSprite_40: 5437144263410889157
+      ItsOkayIGuessSprite_41: 8794079400647655415
+      ItsOkayIGuessSprite_42: 1033441653277299900
+      ItsOkayIGuessSprite_43: -4970171501589240140
+      ItsOkayIGuessSprite_44: -6811286511354506809
+      ItsOkayIGuessSprite_45: -6501169959779142538
+      ItsOkayIGuessSprite_46: 4856311797206373615
+      ItsOkayIGuessSprite_47: -2141483896616279259
+      ItsOkayIGuessSprite_5: -7611477172900992080
+      ItsOkayIGuessSprite_6: -9183834619764067273
+      ItsOkayIGuessSprite_7: -4113698825860280631
+      ItsOkayIGuessSprite_8: 2193806660635175656
+      ItsOkayIGuessSprite_9: 7207888509287670328
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

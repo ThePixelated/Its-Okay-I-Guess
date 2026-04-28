@@ -147,7 +147,7 @@ public static class DialogueRetriever
         foreach (var external in npc.externalQuestDialogues)
         {
             // Cek ke QuestManager apakah ID Quest ini sedang ON GOING
-            if (QuestManager.Instance.GetSideQuestState(external.questID) == QuestState.Active)
+            if (QuestManager.Instance.GetQuestState(external.questID) == QuestState.Active)
             {
                 return external.dialogues; // Balikin dialog titipan ini
             }

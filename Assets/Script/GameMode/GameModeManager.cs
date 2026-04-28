@@ -19,6 +19,8 @@ public class GameModeManager : MonoBehaviour
     private float _currentTime = 0f;
     private string _interactableID;
 
+    public string InteratableID { get { return _interactableID; } set {  _interactableID = value; }  }
+
     public GameModeBase ExplorationMode = new ExplorationMode();
     public GameModeBase DialogueMode = new DialogueMode();
     public GameModeBase TabletMode = new TabletMode();
@@ -147,17 +149,18 @@ public class GameModeManager : MonoBehaviour
             Debug.Log("Key E Pressed...");
 
             PlayerManager.Instance.InteractKey_E(_interactableID);
+
             Switch(DialogueMode);
         }
     }
 
-    public void TempHandleQuest()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
+    //public void TempHandleQuest()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Alpha0))
+    //    {
 
-        }
-    }
+    //    }
+    //}
 
     public void HandleSwitchMode()
     {

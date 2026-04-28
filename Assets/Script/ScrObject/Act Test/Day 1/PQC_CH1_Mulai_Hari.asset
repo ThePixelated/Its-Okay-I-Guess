@@ -18,14 +18,16 @@ MonoBehaviour:
   Description: Pagi selalu datang lebih cepat dari yang kamu harapkan. Setidaknya,
     ada beberapa hal kecil yang harus dilakukan sebelum semuanya benar-benar dimulai.
   objectives:
-  - ObjectiveID: Object_A
-    Description: Matikan alarm di HP
-    Type: 4
-    RequiredAmount: 1
-    Current_Amount: 0
   - ObjectiveID: Object_F
+    Description: Matikan alarm di HP
+    Type: 3
+    RequiredAmount: 1
+    Current_Amount: 1
+    ObjectivesIDs: []
+  - ObjectiveID: Object_A; Object_B
     Description: Ambil handuk dan perlengkapan mandi
-    Type: 0
+    Type: 3
     RequiredAmount: 2
-    Current_Amount: 0
-  questState: 1
+    Current_Amount: 2
+    ObjectivesIDs: []
+  questState: 3

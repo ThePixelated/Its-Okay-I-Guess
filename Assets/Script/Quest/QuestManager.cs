@@ -16,9 +16,9 @@ public class QuestManager : MonoBehaviour
     [Header("Tracked Active Quest")]
     public Quest currentActiveActQuest;
     public Quest currentActiveSQ;
-    public List<Quest> activeQuests = new List<Quest>();
+    public List<Quest> onHoldSQ = new List<Quest>();
 
-    private Dictionary<string, Quest> questLookUp = new Dictionary<string, Quest>();
+    public Dictionary<string, Quest> questLookUp = new Dictionary<string, Quest>();
     public Dictionary<string, QuestState> sideQuestDatabase = new Dictionary<string, QuestState>();
 
     private void Awake()
@@ -61,18 +61,20 @@ public class QuestManager : MonoBehaviour
     public void OnNPCTalked(string npcID)
     {
         // Cek semua quest yang lagi aktif
-        foreach (Quest quest in activeQuests)
+        foreach (Quest quest in onHoldSQ)
         {
             foreach (QuestObjective obj in quest.objectives)
             {
                 // Jika ada langkah quest yang menyuruh bicara ke NPC ini
-                if (obj.Type == ObjectiveType.TalkNPC && npcID == obj.ObjectiveID)
+                if (obj.Type == ObjectiveType.TalkNPC && obj.ObjectivesIDs.Contains(npcID))
                 {
                     Debug.Log($"Currently talk: {npcID} - target objective: {obj.ObjectiveID}");
 
-                    obj.Current_Amount = 1; // Tandai sudah selesai
+                    obj.Current_Amount += 1; // Tandai sudah selesai
                     Debug.Log($"Objective {obj.ObjectiveID} di quest {quest.QuestID} selesai!");
-    
+
+                    obj.ObjectivesIDs.Remove(npcID);
+
                     // Cek apakah semua langkah di quest ini sudah beres
                     if (quest.IsAllObjectivesComplete())
                     {
@@ -96,7 +98,7 @@ public class QuestManager : MonoBehaviour
 
     public void AddQuest(string questID)
     {
-        activeQuests.Add(questLookUp[questID]);
+        Debug.Log("Quest Added!");
         questLookUp[questID].questState = QuestState.Active;
         sideQuestDatabase[questID] = QuestState.Active;
         m_questUI.UpdateQuestUI();
@@ -112,7 +114,7 @@ public class QuestManager : MonoBehaviour
         }
         return QuestState.Unassigned; // Default jika belum terdaftar
     }
-
+    
     public QuestState GetSideQuestState(string sqID)
     {
         if (sideQuestDatabase.ContainsKey(sqID))
@@ -123,18 +125,21 @@ public class QuestManager : MonoBehaviour
         return QuestState.Unassigned; // Default jika belum terdaftar
     }
 
-    //public void GetActiveQuestsForTarget(string objectID)
-    //{
-    //    //foreach (var curr_activeQuest in activeQuests)
-    //    //{
-    //    //    curr_activeQuest
-    //    //}
-    //}
+    public QuestState GetQuestState(string sqID)
+    {
+        if (questLookUp.ContainsKey(sqID))
+        {
+            Debug.Log($"QUEST State RETRIVE: {questLookUp[sqID]}");
+            return questLookUp[sqID].questState;
+        }
+        return QuestState.Unassigned; // Default jika belum terdaftar
+    }
 }
 
 public enum QuestState
 {
     Unassigned, // Belum diambil / Belum mulai
     Active,     // Sedang berjalan / Belum selesai
+    OnHold, 
     Success     // Sudah selesai
 }

@@ -31,7 +31,7 @@ public class QuestUI : MonoBehaviour
             }
         }
 
-        foreach (var itemQuest in m_questManager.activeQuests)
+        foreach (var itemQuest in m_questManager.onHoldSQ)
         {
             GameObject entry = Instantiate(questEntryPrefab, questListContent);
             TextMeshProUGUI questTitleTxt = entry.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>();

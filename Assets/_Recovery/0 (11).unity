@@ -6023,7 +6023,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 061bfe21496af3d46860a8e09de6cd19, type: 2}
   currentActiveActQuest: {fileID: 0}
   currentActiveSQ: {fileID: 0}
-  onHoldSQ: []
+  onHoldSQ:
+  - {fileID: 11400000, guid: b7393aa51b31e7b49a0a4ada072eacd7, type: 2}
 --- !u!4 &354287059
 Transform:
   m_ObjectHideFlags: 0
@@ -27901,7 +27902,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Object_C
+  m_text: NPC_Object_2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Quest", menuName = "Scriptable Objects/Quest")]
@@ -13,13 +14,11 @@ public class Quest : ScriptableObject
     public List<QuestObjective> objectives;
     public QuestState questState;
 
-    //private void OnValidate()
-    //{
-    //    if (string.IsNullOrEmpty(QuestID))
-    //    {
-    //        QuestID = $"{Title}_{Guid.NewGuid().ToString()}";
-    //    }
-    //}
+    private void OnValidate()
+    {
+        foreach (var item in objectives)
+            item.InnitObjectiveIDs(); // ini harus masuk ke bagian resetvalue
+    }
 
     public bool IsAllObjectivesComplete()
     {
@@ -52,27 +51,21 @@ public class QuestObjective
     public int RequiredAmount;
     public int Current_Amount;
 
+    public List<string> ObjectivesIDs = new List<string>();
+
     public bool IsReached() 
     {
         return Current_Amount >= this.RequiredAmount;
     }
+
+    public void InnitObjectiveIDs()
+    {
+        ObjectivesIDs = ObjectiveID.Split(';')
+                           .Select(id => id.Trim())
+                           .Where(id => !string.IsNullOrEmpty(id))
+                           .ToList();
+    }
 }
-
-//public class QuestData
-//{
-//    public string questID; // Misal: "SQ_B_01"
-//    public string questName;
-//    public List<QuestObjective> objectives; // Daftar langkah misinya
-
-//    public bool IsAllObjectivesComplete()
-//    {
-//        foreach (var obj in objectives)
-//        {
-//            if (!obj.IsReached()) return false;
-//        }
-//        return true;
-//    }
-//}
 
 public enum ObjectiveType
 {
@@ -84,31 +77,3 @@ public enum ObjectiveType
     SubMainQuest,
     MainQuest
 }
-
-//[System.Serializable]
-//public class QuestProgress
-//{
-//    public Quest Quest;
-//    public List<QuestObjective> objectives;
-
-//    public QuestProgress(Quest quest)
-//    {
-//        this.Quest = quest;
-//        this.objectives = new List<QuestObjective>();
-
-//        foreach (var obj in quest.objectives)
-//        {
-//            objectives.Add(new QuestObjective
-//            {
-//                ObjectiveID = obj.ObjectiveID,
-//                Description = obj.Description,
-//                Type = obj.Type,
-//                RequiredAmount = obj.RequiredAmount,
-//                Current_Amount = 0,
-//            });
-//        }
-//    }
-
-//    //public bool IsCompleted => objectives.TrueForAll(x => x.IsCompleted);
-//    public string QuestID => Quest.QuestID;
-//}

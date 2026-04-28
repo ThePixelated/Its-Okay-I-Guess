@@ -95,13 +95,43 @@ public class ObjectInteraction : MonoBehaviour
 
             //m_dialogueManager.StartDialogue(pickedData.DialogueNodes); // core logic
 
+            foreach (var external in externalQuestDialogues)
+            {
+                // Cek ke QuestManager apakah ID Quest ini sedang ON GOING
+                if (QuestManager.Instance.GetQuestState(external.questID) == QuestState.Active)
+                {
+                    Debug.LogWarning(QuestManager.Instance.GetQuestState(external.questID));
+                    break;
+                }
+            }
+
             List<DialogueData> chosenList = GetCurrentDialogueData();
 
             int randomIndex = UnityEngine.Random.Range(0, chosenList.Count);
             DialogueData selectedDialogue = chosenList[randomIndex];
 
+            foreach (var external in externalQuestDialogues)
+            {
+                // Cek ke QuestManager apakah ID Quest ini sedang ON GOING
+                if (QuestManager.Instance.GetQuestState(external.questID) == QuestState.Active)
+                {
+                    Debug.Log(QuestManager.Instance.GetQuestState(external.questID));
+                    break;
+                }
+            }
+
             // Kirim selectedDialogue ini ke UI sistem dialog Anda yang sudah matang
             DialogueManager.Instance.StartDialogue(selectedDialogue.DialogueNodes);
+
+            foreach (var external in externalQuestDialogues)
+            {
+                // Cek ke QuestManager apakah ID Quest ini sedang ON GOING
+                if (QuestManager.Instance.GetQuestState(external.questID) == QuestState.Active)
+                {
+                    Debug.LogWarning(QuestManager.Instance.GetQuestState(external.questID));
+                    break;
+                }
+            }
 
             QuestManager.Instance.OnNPCTalked(objectID);
         }

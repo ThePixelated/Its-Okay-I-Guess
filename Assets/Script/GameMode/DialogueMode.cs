@@ -7,6 +7,9 @@ public class DialogueMode : GameModeBase
     public override void Enter(GameModeManager GMM)
     {
         Debug.LogWarning("Enter DialogueMode...");
+
+        //PlayerManager.Instance.InteractKey_E(GMM.InteratableID);
+
         GMM.onDialogueStop += Switching;
 
         GMM.SetCurrGameModeIndicator(GameMode.DialogueMode);

@@ -57,7 +57,7 @@ MonoBehaviour:
     Text: Kamu udah ketemu penguhi baru belum? coba kamu kenalan dulu sana sama mereka
     Choices:
     - IsTriggerQuest: 1
-      TargetQuestID: SQ_CH1_Bersosialisasi
+      TargetQuestID: SQ_CH1_Bersosialisasi_D1_NamaScene
       Text: Kenalan setelah ini
       NextNodeID: bersosialisasi_langsung
     - IsTriggerQuest: 0

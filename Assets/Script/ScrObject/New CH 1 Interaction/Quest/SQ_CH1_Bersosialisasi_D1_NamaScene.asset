@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
-  m_Name: SQ_CH1_Bersosialisasi
+  m_Name: SQ_CH1_Bersosialisasi_D1_NamaScene
   m_EditorClassIdentifier: Assembly-CSharp::Quest
-  QuestID: SQ_CH1_Bersosialisasi
+  QuestID: SQ_CH1_Bersosialisasi_D1_NamaScene
   Title: Tak Kenal Maka Tak Sayang
+  SubTitle: 
   Description: Kenalan dengan penghuni kos-kos baru
   objectives:
   - ObjectiveID: NPC_Kania
@@ -21,9 +22,13 @@ MonoBehaviour:
     Type: 3
     RequiredAmount: 1
     Current_Amount: 0
+    ObjectivesIDs:
+    - NPC_Kania
   - ObjectiveID: NPC_Yono_Akbar
     Description: Berbicara dengan Yono dan Akbar
     Type: 3
     RequiredAmount: 1
     Current_Amount: 0
+    ObjectivesIDs:
+    - NPC_Yono_Akbar
   questState: 0

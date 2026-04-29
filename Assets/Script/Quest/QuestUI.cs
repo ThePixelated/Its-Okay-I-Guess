@@ -3,6 +3,20 @@ using UnityEngine;
 
 public class QuestUI : MonoBehaviour
 {
+    public QuestManager m_questManager;
+    
+    [Header("Primary Quest UI")]
+    [SerializeField] private GameObject panelPrimaryQuest;
+    [SerializeField] private TextMeshProUGUI PtitleText;
+    [SerializeField] private TextMeshProUGUI PdesctText;
+
+    [Header("Side Quest UI")]
+    [SerializeField] private GameObject panelSideQuest;
+    [SerializeField] private TextMeshProUGUI StitleText;
+    [SerializeField] private TextMeshProUGUI SdesctText;
+
+
+    [Header("OLD")]
     [SerializeField] private Transform questListContent;
     [SerializeField] private GameObject questEntryPrefab;
     //[SerializeField] private GameObject questEntryPrefab2;
@@ -11,7 +25,6 @@ public class QuestUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI descQuest;
 
     //[SerializeField] private Quest targetQuest;
-    public QuestManager m_questManager;
     //[SerializeField] private List<QuestProgress> quests = new List<QuestProgress>();
 
     //private void Start()
@@ -21,7 +34,65 @@ public class QuestUI : MonoBehaviour
     //    UpdateQuestUI(null);
     //}
 
+    private void Start()
+    {
+        UpdateQuestUI();
+    }
+
     public void UpdateQuestUI()
+    {
+        if (m_questManager.currentActiveActQuest != null)
+        {
+            panelPrimaryQuest.SetActive(true);
+            PtitleText.text = m_questManager.currentActiveActQuest.Title;
+            //PdesctText.text = m_questManager.currentActiveActQuest.SubTitle;
+
+            string tempText = "";
+            foreach (var objective in m_questManager.currentActiveActQuest.objectives)
+            {
+                string numeratorDesc = " ";
+                if (objective.Type == ObjectiveType.Collectable)
+                    numeratorDesc = $" ({objective.Current_Amount}/{objective.RequiredAmount})";
+
+                tempText += $"{objective.Description}{numeratorDesc}\n";
+            }
+            PdesctText.text = tempText;
+        }
+        else
+        {
+            PtitleText.text = "";
+            PdesctText.text = "";
+            panelPrimaryQuest.SetActive(false);
+        }
+
+        if (m_questManager.currentActiveSQ != null)
+        {
+            panelSideQuest.SetActive(true);
+            StitleText.text = m_questManager.currentActiveSQ.Title;
+            //SdesctText.text = m_questManager.currentActiveSQ.SubTitle;
+
+            string tempText = "";
+            foreach (var objective in m_questManager.currentActiveSQ.objectives)
+            {
+                string numeratorDesc = " ";
+                if (objective.Type == ObjectiveType.Collectable)
+                    numeratorDesc = $" ({objective.Current_Amount}/{objective.RequiredAmount})";
+
+                tempText += $"{objective.Description}{numeratorDesc}\n";
+            }
+            SdesctText.text = tempText;
+        }
+        else
+        {
+            StitleText.text = "";
+            SdesctText.text = "";
+            panelSideQuest.SetActive(false);
+        }
+
+        UIManager.Instance.m_UILoader.RefreshLayoutObj();
+    }
+
+    public void DEPRICATED_UpdateQuestUI()
     {
         foreach (Transform item in questListContent)
         {

@@ -127,7 +127,7 @@ public class ObjectInteraction : MonoBehaviour
             {
                 // Cek ke QuestManager apakah ID Quest ini sedang ON GOING
                 if (QuestManager.Instance.GetQuestState(external.questID) == QuestState.Active)
-                {
+                { 
                     Debug.LogWarning(QuestManager.Instance.GetQuestState(external.questID));
                     break;
                 }

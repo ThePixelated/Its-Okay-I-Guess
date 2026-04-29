@@ -19,7 +19,7 @@ MonoBehaviour:
     Text: 
     Choices:
     - IsTriggerQuest: 1
-      TargetQuestID: PQC_CH1_Mulai_Hari
+      TargetQuestID: SQ_CH1_CollecatableTest_D1_NamaScene
       Text: Iye
       NextNodeID: 
     NextNodeID: 

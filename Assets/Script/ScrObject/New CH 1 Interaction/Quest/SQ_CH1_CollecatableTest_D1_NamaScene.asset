@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
+  m_Name: SQ_CH1_CollecatableTest_D1_NamaScene
+  m_EditorClassIdentifier: Assembly-CSharp::Quest
+  QuestID: SQ_CH1_CollecatableTest_D1_NamaScene
+  Title: Testing Collectables
+  SubTitle: 
+  Description: Labubu oh labubu
+  objectives:
+  - ObjectiveID: NPC_Kania; Object_Dispensor_Galon
+    Description: Testing
+    Type: 3
+    RequiredAmount: 2
+    Current_Amount: 0
+    ObjectivesIDs:
+    - NPC_Kania
+    - Object_Dispensor_Galon
+  - ObjectiveID: Object_Kucing_Oren
+    Description: Testing
+    Type: 3
+    RequiredAmount: 3
+    Current_Amount: 0
+    ObjectivesIDs:
+    - Object_Kucing_Oren
+  - ObjectiveID: NPC_Akmal
+    Description: Testing
+    Type: 3
+    RequiredAmount: 1
+    Current_Amount: 0
+    ObjectivesIDs:
+    - NPC_Akmal
+  questState: 1

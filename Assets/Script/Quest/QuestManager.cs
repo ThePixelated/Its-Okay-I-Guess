@@ -19,7 +19,7 @@ public class QuestManager : MonoBehaviour
     public List<Quest> onHoldSQ = new List<Quest>();
 
     public Dictionary<string, Quest> questLookUp = new Dictionary<string, Quest>();
-    public Dictionary<string, QuestState> sideQuestDatabase = new Dictionary<string, QuestState>();
+    //public Dictionary<string, QuestState> sideQuestDatabase = new Dictionary<string, QuestState>();
 
     private void Awake()
     {
@@ -53,7 +53,7 @@ public class QuestManager : MonoBehaviour
         foreach (var questData in sideQuestDB)
         {
             questLookUp.Add(questData.QuestID, questData);
-            sideQuestDatabase.Add(questData.QuestID, questData.questState);
+            //sideQuestDatabase.Add(questData.QuestID, questData.questState);
             Debug.LogWarning("Innit SQ DB.... - " + questData.QuestID);
         }
     }
@@ -61,12 +61,15 @@ public class QuestManager : MonoBehaviour
     public void OnNPCTalked(string npcID)
     {
         // Cek semua quest yang lagi aktif
-        foreach (Quest quest in onHoldSQ)
+        //foreach (Quest quest in onHoldSQ)
+        //{
+        if (currentActiveSQ != null)
         {
+            Quest quest = currentActiveSQ;
             foreach (QuestObjective obj in quest.objectives)
             {
                 // Jika ada langkah quest yang menyuruh bicara ke NPC ini
-                if (obj.Type == ObjectiveType.TalkNPC && obj.ObjectivesIDs.Contains(npcID))
+                if (obj.ObjectivesIDs.Contains(npcID))
                 {
                     Debug.Log($"Currently talk: {npcID} - target objective: {obj.ObjectiveID}");
 
@@ -79,11 +82,12 @@ public class QuestManager : MonoBehaviour
                     if (quest.IsAllObjectivesComplete())
                     {
                         Debug.Log($"Quest {quest.QuestID} siap diselesaikan!");
-                        sideQuestDatabase[quest.QuestID] = quest.questState;
+                        //sideQuestDatabase[quest.QuestID] = quest.questState;
                     }
                 }
             }
         }
+        //}
     }
 
     public void SuccessQuest(Quest quest)
@@ -100,7 +104,16 @@ public class QuestManager : MonoBehaviour
     {
         Debug.Log("Quest Added!");
         questLookUp[questID].questState = QuestState.Active;
-        sideQuestDatabase[questID] = QuestState.Active;
+
+        if (currentActiveSQ != null)
+        {
+            currentActiveSQ.questState = QuestState.OnHold;
+            onHoldSQ.Add(currentActiveSQ);
+        }
+
+        currentActiveSQ = questLookUp[questID];
+
+        //sideQuestDatabase[questID] = QuestState.Active;
         m_questUI.UpdateQuestUI();
     }
 
@@ -115,15 +128,15 @@ public class QuestManager : MonoBehaviour
         return QuestState.Unassigned; // Default jika belum terdaftar
     }
     
-    public QuestState GetSideQuestState(string sqID)
-    {
-        if (sideQuestDatabase.ContainsKey(sqID))
-        {
-            Debug.Log($"QUEST State RETRIVE: {sideQuestDatabase[sqID]}");
-            return sideQuestDatabase[sqID];
-        }
-        return QuestState.Unassigned; // Default jika belum terdaftar
-    }
+    //public QuestState GetSideQuestState(string sqID)
+    //{
+    //    if (sideQuestDatabase.ContainsKey(sqID))
+    //    {
+    //        Debug.Log($"QUEST State RETRIVE: {sideQuestDatabase[sqID]}");
+    //        return sideQuestDatabase[sqID];
+    //    }
+    //    return QuestState.Unassigned; // Default jika belum terdaftar
+    //}
 
     public QuestState GetQuestState(string sqID)
     {

@@ -159,7 +159,7 @@ public static class DialogueRetriever
         // Masuk ke sini jika NPC tidak punya MQ, ATAU MQ-nya tidak aktif (indeks global < atau > dari ID NPC)
         if (npc.hasSideQuest && !string.IsNullOrEmpty(npc.sideQuestID))
         {
-            QuestState sqState = QuestManager.Instance.GetSideQuestState(npc.sideQuestID);
+            QuestState sqState = QuestManager.Instance.GetQuestState(npc.sideQuestID);
             Debug.Log($"NPC ID: {npc.ObjectID} - Quest State: {sqState}");
 
             switch (sqState)

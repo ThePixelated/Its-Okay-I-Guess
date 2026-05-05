@@ -70,10 +70,10 @@ public class QuestObjective
 public enum ObjectiveType
 {
     Collectable,
+    Use,
+    TalkNPC,
+    Interactable,
     ReachLocation,
     SideActivity,
-    TalkNPC,
     Custom,
-    SubMainQuest,
-    MainQuest
 }

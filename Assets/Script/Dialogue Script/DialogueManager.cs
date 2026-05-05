@@ -77,31 +77,6 @@ public class DialogueManager : MonoBehaviour
         m_gameModeManager.DialogueStopped();
         //ReadableSetCheck();
     }
-
-    //public void ChoicesQuestValidation()
-    //{
-    //    foreach (var flagQuest in currentNode.Choices)
-    //    {
-    //        if (flagQuest.IsTriggerQuest)
-    //        {
-
-    //        }
-    //    }
-    //}
-
-    //public void QuestInnitialize()
-    //{
-    //    string questID = currentNode.NodeID.Substring(currentNode.NodeID.IndexOf("#")+1);
-    //    //QuestManager.Instance..Add(new Quest("Find the Key", "Find the key to unlock the door."));
-    //}
-
-    //private void ReadableSetCheck()
-    //{
-    //    if (m_dialogueData.SetRead)
-    //    {
-    //        m_dialogueData.IsDialogueRead = m_dialogueData.SetRead;
-    //    }
-    //}
 }
 
 [System.Serializable]
@@ -130,7 +105,7 @@ public static class DialogueRetriever
             {
                 // Anda perlu mengecek status MQ ini di QuestManager Anda.
                 // Anggap saja kita punya fungsi pengecekan statusnya.
-                QuestState mqState = QuestManager.Instance.GetMainQuestState(npc.mainQuestID);
+                QuestState mqState = QuestManager.Instance.GetQuestState(npc.mainQuestID.ToString());
 
                 switch (mqState)
                 {
@@ -182,6 +157,9 @@ public static class DialogueRetriever
         // ----------------------------------------------------
         // PRIORITAS 3: FALLBACK (TIDAK ADA QUEST / SEMUA SELESAI)
         // ----------------------------------------------------
+        if (npc.normalDialogues == null || npc.normalDialogues.Count <= 0)
+            return null;
+
         return npc.normalDialogues;
     }
 }

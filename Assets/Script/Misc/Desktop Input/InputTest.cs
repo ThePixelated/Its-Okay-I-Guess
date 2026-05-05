@@ -41,10 +41,10 @@ public class CardController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        // Simpan posisi LOKAL relatif terhadap CardViewport
 
-        // Simpan posisi awal sebagai "Origin"
-        originPos = transform.position;
-        originRot = transform.rotation;
+        originPos = transform.localPosition;
+        originRot = transform.localRotation;
 
         // Set awal physics: Kinematic ON (Gak jatuh dulu)
         rb.isKinematic = true;
@@ -92,16 +92,18 @@ public class CardController : MonoBehaviour
     {
         if (!isDragging) return;
 
-        // 1. Hitung Posisi Mouse + Offset
-        Vector3 rawMousePos = GetMouseWorldPos() + dragOffset;
+        // 1. Dapatkan posisi mouse di dunia
+        Vector3 worldMousePos = GetMouseWorldPos() + dragOffset;
 
-        // 2. Clamp X (Biar gak bablas)
-        float clampedX = Mathf.Clamp(rawMousePos.x, minX, maxX);
+        // 2. KONVERSI: Ubah dari posisi dunia ke posisi lokal relatif terhadap parent (CardViewport)
+        Vector3 localMousePos = transform.parent.InverseTransformPoint(worldMousePos);
 
-        // 3. Update Posisi (X=Clamp, Y=Lock, Z=Animasi dari Coroutine)
-        transform.position = new Vector3(clampedX, lockedY, currentZ);
+        // 3. Clamp X (Gunakan nilai lokal)
+        float clampedX = Mathf.Clamp(localMousePos.x, minX, maxX);
 
-        // 4. Update Rotasi Dinamis (Tilt)
+        // 4. Update posisi LOKAL
+        transform.localPosition = new Vector3(clampedX, lockedY, currentZ);
+
         HandleDynamicRotation(clampedX);
     }
 

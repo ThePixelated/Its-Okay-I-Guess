@@ -54,7 +54,10 @@ public class QuestUI : MonoBehaviour
                 if (objective.Type == ObjectiveType.Collectable)
                     numeratorDesc = $" ({objective.Current_Amount}/{objective.RequiredAmount})";
 
-                tempText += $"{objective.Description}{numeratorDesc}\n";
+                if (objective.Current_Amount >= objective.RequiredAmount)
+                    tempText += $"<s>{objective.Description}{numeratorDesc}</s>\n";
+                else
+                    tempText += $"<b>{objective.Description}{numeratorDesc}</b>\n";
             }
             PdesctText.text = tempText;
         }
@@ -78,7 +81,10 @@ public class QuestUI : MonoBehaviour
                 if (objective.Type == ObjectiveType.Collectable)
                     numeratorDesc = $" ({objective.Current_Amount}/{objective.RequiredAmount})";
 
-                tempText += $"{objective.Description}{numeratorDesc}\n";
+                if (objective.Current_Amount >= objective.RequiredAmount)
+                    tempText += $"<s>{objective.Description}{numeratorDesc}</s>\n";
+                else
+                    tempText += $"<b>{objective.Description}{numeratorDesc}</b>\n";
             }
             SdesctText.text = tempText;
         }

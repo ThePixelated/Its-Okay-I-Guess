@@ -4,11 +4,22 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "DialogueData", menuName = "Scriptable Objects/DialogueData")]
 public class DialogueData : ScriptableObject
 {
-    //[SerializeField] private string dialogueDataID;
-    //[SerializeField] private bool isDialogueRead;
+    [SerializeField] private bool isIgnoredbyPQ = true;
     [SerializeField] private List<DialogueNode> _dialogueNodes = new List<DialogueNode>();
-    //[SerializeField] private bool setRead;
-    public List<DialogueNode> DialogueNodes {  get { return _dialogueNodes; } }
-    //public bool IsDialogueRead { get { return isDialogueRead; } set { isDialogueRead = value; } }
-    //public bool SetRead { get { return setRead; } set { setRead = value; } }
+
+    public List<DialogueNode> DialogueNodes { get { return _dialogueNodes; } }
+    public bool IsIgnoredbyPQ { get { return isIgnoredbyPQ; } private set { isIgnoredbyPQ = value; } }
+
+    public PMQuestInfo PMQuestInfo = new PMQuestInfo();
+}
+
+[System.Serializable]
+public class PMQuestInfo
+{
+    public bool isTriggerQuest;
+    public string targetQuest;
+    public bool isTriggerDialogue;
+    public string targetDialogueData;
+    public int waitTransitionTime;
+    public GameMode gameModeTransition;
 }

@@ -19,24 +19,26 @@ MonoBehaviour:
   objectives:
   - ObjectiveID: NPC_Kania; Object_Dispensor_Galon
     Description: Testing
-    Type: 3
+    Type: 0
     RequiredAmount: 2
-    Current_Amount: 0
+    Current_Amount: 2
     ObjectivesIDs:
     - NPC_Kania
     - Object_Dispensor_Galon
-  - ObjectiveID: Object_Kucing_Oren
+  - ObjectiveID: Object_Kucing_Oren; Object_A; Object_B
     Description: Testing
-    Type: 3
+    Type: 0
     RequiredAmount: 3
-    Current_Amount: 0
+    Current_Amount: 3
     ObjectivesIDs:
     - Object_Kucing_Oren
+    - Object_A
+    - Object_B
   - ObjectiveID: NPC_Akmal
     Description: Testing
     Type: 3
     RequiredAmount: 1
-    Current_Amount: 0
+    Current_Amount: 1
     ObjectivesIDs:
     - NPC_Akmal
-  questState: 1
+  questState: 3

@@ -33,15 +33,15 @@ public class GameManager : MonoBehaviour
     }
 
     private string isClick = "input idle..";
-    private void OnGUI()
-    {
-        GUILayout.BeginArea(new Rect(20, 20, 250, 120));
-        GUILayout.Label("Current Chapter Section: " + _currentChaptSect.ID);
-        GUILayout.Label("Current Action Section: " + indexCurrentChaptSect);
-        GUILayout.Label("Current State: " + (!actionFlag ? "ActionChapt state" : "Cons state"));
-        GUILayout.Label(isClick);
-        GUILayout.EndArea();
-    }
+    //private void OnGUI()
+    //{
+    //    GUILayout.BeginArea(new Rect(20, 20, 250, 120));
+    //    GUILayout.Label("Current Chapter Section: " + _currentChaptSect.ID);
+    //    GUILayout.Label("Current Action Section: " + indexCurrentChaptSect);
+    //    GUILayout.Label("Current State: " + (!actionFlag ? "ActionChapt state" : "Cons state"));
+    //    GUILayout.Label(isClick);
+    //    GUILayout.EndArea();
+    //}
 
     // dari datachapter ActionChapt ke sini
     // cs, data diangkat, geser statement

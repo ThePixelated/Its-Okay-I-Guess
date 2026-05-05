@@ -34,12 +34,13 @@ public class GameModeManager : MonoBehaviour
 
         playerDirection = m_playerData.PlayerDirection;
         playerSpeed = m_playerData.PlayerSpeed;
+
+        CurrentMode = ExplorationMode;
+        PreviousMode = CurrentMode;
     }
 
     private void Start()
     {
-        CurrentMode = ExplorationMode;
-        PreviousMode = CurrentMode;
         CurrentMode.Enter(this);
 
         PlayerManager.Instance.onTriggerEnter_non += SetFlagTrue;
@@ -149,8 +150,6 @@ public class GameModeManager : MonoBehaviour
             Debug.Log("Key E Pressed...");
 
             PlayerManager.Instance.InteractKey_E(_interactableID);
-
-            Switch(DialogueMode);
         }
     }
 
@@ -194,11 +193,6 @@ public class GameModeManager : MonoBehaviour
         {
             onDialogueStop(this);
         }
-    }
-
-    public void HandleCameraChange(bool cameraTopDownState, bool cameraCardState)
-    {
-        CameraManager.Instance.ChangeActiveCamera(cameraTopDownState, cameraCardState);
     }
 
     public void SetFlagTrue(string objectName)

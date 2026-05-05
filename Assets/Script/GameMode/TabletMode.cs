@@ -8,7 +8,7 @@ public class TabletMode : GameModeBase
     public override void Enter(GameModeManager GMM)
     {
         Debug.LogWarning("Enter TabletMode...");
-        GMM.SetCurrGameModeIndicator(GameMode.TabletMode);
+        //GMM.SetCurrGameModeIndicator(GameMode.TabletMode);
 
         m_TabletManager = TabletManager.instance;
         m_TabletManager.InnitTablet();
@@ -41,7 +41,7 @@ public class TabletMode : GameModeBase
     {
         Debug.LogWarning("Exiting TabletMode...");
         m_TabletManager.TerminateTablet();
-        GMM.SetPrevGameModeIndicator(GameMode.TabletMode);
+        //GMM.SetPrevGameModeIndicator(GameMode.TabletMode);
     }
 
     public void Switching(GameModeManager GMM)

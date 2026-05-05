@@ -5,6 +5,8 @@ using TMPro;
 
 public class ObjectInteraction : MonoBehaviour
 {
+    public bool isInteractable = true;
+
     [SerializeField] private TextMeshPro namaTxt;
     [SerializeField] private string objectID;
     public string ObjectID { get { return objectID; } }
@@ -36,16 +38,24 @@ public class ObjectInteraction : MonoBehaviour
     // Fungsi ini yang akan dipanggil oleh DialogueManager saat Player menekan tombol interaksi
     private void OnValidate()
     {
-        if (namaTxt != null && (namaTxt.text == "" || namaTxt.text != null))
+        if (namaTxt != null)
+        {
             namaTxt.text = gameObject.name;
+            //Debug.Log(namaTxt.text);
+        }
         
-        if (objectID != null)
-            objectID = gameObject.name;
+        objectID = gameObject.name;
+    }
+
+    private void Awake()
+    {
+        isInteractable = true;
     }
 
     private void Start()
     {
         PlayerManager.Instance.onInteractKey_E += Interact;
+        isInteractable = true;
     }
     
     [Serializable] 
@@ -54,7 +64,6 @@ public class ObjectInteraction : MonoBehaviour
         public string questID; // ID Quest dari luar (Misal: "SQ_B_01")
         public List<DialogueData> dialogues; // Dialog khusus untuk quest tersebut
     }
-
 
     /// <summary>
     /// berarti ExternalQuestDialogue masih disimpen di dalem objectnya masing?
@@ -66,76 +75,28 @@ public class ObjectInteraction : MonoBehaviour
 
     public List<DialogueData> GetCurrentDialogueData()
     {
-        // Logika alur prioritas diletakkan di sini
         return DialogueRetriever.DetermineDialogue(this);
     }
 
     public void Interact(string objectName)
     {
-        
-        if (gameObject.name == objectName)
+        if (gameObject.name == objectName && isInteractable)
         {
-            //QuestManager.Instance.OnNPCTalked(objectID);
-            //foreach (var item in npcDialogueData)
-            //{
-            //    if (item.IsDialogueRead)
-            //    {
-            //        readedDialogueData.Add(item);
-            //        npcDialogueData.Remove(item);
-            //    }
-            //}
-
-            // random pick
-            //DialogueData pickedData = npcDialogueData[0];
-            //m_dialogueManager.DialogueData = pickedData;
-            //if (pickedData != null)
-            //    Debug.Log(m_dialogueManager.DialogueData.name);
-            //else
-            //    Debug.LogWarning("picked NULL!");
-
-            //m_dialogueManager.StartDialogue(pickedData.DialogueNodes); // core logic
-
-            foreach (var external in externalQuestDialogues)
-            {
-                // Cek ke QuestManager apakah ID Quest ini sedang ON GOING
-                if (QuestManager.Instance.GetQuestState(external.questID) == QuestState.Active)
-                {
-                    Debug.LogWarning(QuestManager.Instance.GetQuestState(external.questID));
-                    break;
-                }
-            }
-
+            Debug.LogWarning($"Object {gameObject.name} is selected! - Target gObj: {objectName}");
             List<DialogueData> chosenList = GetCurrentDialogueData();
 
-            int randomIndex = UnityEngine.Random.Range(0, chosenList.Count);
-            DialogueData selectedDialogue = chosenList[randomIndex];
-
-            foreach (var external in externalQuestDialogues)
+            if (chosenList != null)
             {
-                // Cek ke QuestManager apakah ID Quest ini sedang ON GOING
-                if (QuestManager.Instance.GetQuestState(external.questID) == QuestState.Active)
-                {
-                    Debug.Log(QuestManager.Instance.GetQuestState(external.questID));
-                    break;
-                }
+                int randomIndex = UnityEngine.Random.Range(0, chosenList.Count);
+                DialogueData selectedDialogue = chosenList[randomIndex];
+                DialogueManager.Instance.DialogueData = selectedDialogue;
+                DialogueManager.Instance.StartDialogue(selectedDialogue.DialogueNodes);
+                GameModeManager.Instance.Switch(GameModeManager.Instance.DialogueMode);
             }
 
-            // Kirim selectedDialogue ini ke UI sistem dialog Anda yang sudah matang
-            DialogueManager.Instance.StartDialogue(selectedDialogue.DialogueNodes);
-
-            foreach (var external in externalQuestDialogues)
-            {
-                // Cek ke QuestManager apakah ID Quest ini sedang ON GOING
-                if (QuestManager.Instance.GetQuestState(external.questID) == QuestState.Active)
-                { 
-                    Debug.LogWarning(QuestManager.Instance.GetQuestState(external.questID));
-                    break;
-                }
-            }
-
-            QuestManager.Instance.OnNPCTalked(objectID);
+            QuestManager.Instance.OnNPCInteract(objectID, gameObject);
         }
         else
-            Debug.LogWarning("DialogueData NULL!");
+            Debug.Log($"Object {gameObject.name} is selected! - Target gObj: {objectName}");
     }
 }

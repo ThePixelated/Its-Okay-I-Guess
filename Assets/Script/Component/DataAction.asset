@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ec6b6d98e06954798a736735ab0fa0, type: 3}
+  m_Name: DataAction
+  m_EditorClassIdentifier: Assembly-CSharp::DataAction
+  ChapterSections:
+  - TitleCaseScenario: Alarm bunyi, setelah bangun kamu langsung mengecek saldo ATM
+      sisa dikit
+    LeftChoice:
+      Source: MQ
+      Action: Memaksakan diri sarapan seadanya dan langsung buka laptop
+      Coping_Tag: 1
+      StatImpact: Kesehatan 1; Sosial 0; Energi -3; Keuangan 0;
+      IsSignificant: 1
+      StatVariable:
+        Health: 1
+        Social: 0
+        Energy: -3
+        Money: 0
+    RightChoice:
+      Source: MQ
+      Action: Menarik selimut dan mencoba tidur lagi untuk melupakan rasa lapar
+      Coping_Tag: 0
+      StatImpact: Kesehatan -2; Sosial 0; Energi 3; Keuangan 0;
+      IsSignificant: 1
+      StatVariable:
+        Health: -2
+        Social: 0
+        Energy: 3
+        Money: 0
+  - TitleCaseScenario: Saat di kampus, seorang teman menanyakan progress tugasmu
+    LeftChoice:
+      Source: MQ
+      Action: Berbohong dan bilang "Aman, dikit lagi selesai" sambil tertawa
+      Coping_Tag: 2
+      StatImpact: Kesehatan 0; Sosial 6; Energi -3; Keuangan 0;
+      IsSignificant: 1
+      StatVariable:
+        Health: 0
+        Social: 6
+        Energy: -3
+        Money: 0
+    RightChoice:
+      Source: MQ
+      Action: Mengaku jujur kalau kamu sedang "stuck" dan butuh bantuan
+      Coping_Tag: 0
+      StatImpact: Kesehatan 2; Sosial -3; Energi -5; Keuangan 0;
+      IsSignificant: 1
+      StatVariable:
+        Health: 2
+        Social: -3
+        Energy: -5
+        Money: 0

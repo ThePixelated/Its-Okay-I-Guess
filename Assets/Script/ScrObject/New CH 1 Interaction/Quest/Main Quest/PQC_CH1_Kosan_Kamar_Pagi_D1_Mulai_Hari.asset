@@ -33,4 +33,4 @@ MonoBehaviour:
     ObjectivesIDs:
     - Object_Handuk
     - Object_Pelengkapan_Mandi
-  questState: 1
+  questState: 3

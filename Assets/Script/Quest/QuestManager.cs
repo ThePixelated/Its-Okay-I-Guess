@@ -34,7 +34,16 @@ public class QuestManager : MonoBehaviour
     private void InnitNodeLookupQuest(List<Quest> targetQuest)
     {
         foreach (var questData in targetQuest)
+        {
             questData.ResetValue();
+            foreach (var item in questData.objectives)
+            {
+                if (item.ObjectivesIDs != null || item.ObjectivesIDs.Count > 0)
+                {
+                    item.InnitObjectiveIDs();
+                }
+            }
+        }
 
         foreach (var questData in targetQuest)
         {
@@ -61,15 +70,16 @@ public class QuestManager : MonoBehaviour
         {
             if (obj.ObjectivesIDs.Contains(npcID))
             {
-                Debug.Log($"Currently talk: {npcID} - target objective: {obj.ObjectiveID}");
+                if (ObjectiveTypeValidation(obj, quest, npcID, npcGameObj, isActiveSQ))
+                {
+                    Debug.Log($"Currently talk: {npcID} - target objective: {obj.ObjectiveID}");
 
-                obj.Current_Amount += 1;
-                Debug.Log($"Objective {obj.ObjectiveID} di quest {quest.QuestID} selesai!");
+                    obj.Current_Amount += 1;
+                    Debug.Log($"Objective {obj.ObjectiveID} di quest {quest.QuestID} selesai!");
 
-                obj.ObjectivesIDs.Remove(npcID);
-
-                ObjectiveTypeValidation(obj, quest, npcID, npcGameObj, isActiveSQ);
-
+                    obj.ObjectivesIDs.Remove(npcID);
+                }
+         
                 if (quest.IsAllObjectivesComplete())
                 {
                     Debug.Log($"Quest {quest.QuestID} siap diselesaikan!");
@@ -85,8 +95,10 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-    public void ObjectiveTypeValidation(QuestObjective obj, Quest quest, string npcID, GameObject npcGameObj, bool isActiveSQ)
+    public bool ObjectiveTypeValidation(QuestObjective obj, Quest quest, string npcID, GameObject npcGameObj, bool isActiveSQ)
     {
+        bool countRequiredfromEndLoc = true;
+
         switch (obj.Type)
         {
             case ObjectiveType.Single:
@@ -113,7 +125,8 @@ public class QuestManager : MonoBehaviour
                 Debug.Log("Interacable");
                 break;
             case ObjectiveType.EndLocation:
-                if (EndLocationValidation(quest))
+                countRequiredfromEndLoc = EndLocationValidation(quest);
+                if (countRequiredfromEndLoc)
                 {
                     GameModeManager.Instance.Switch(GameModeManager.Instance.TransitionMode);
 
@@ -127,18 +140,21 @@ public class QuestManager : MonoBehaviour
                 Debug.Log("Custom");
                 break;
         }
+
+        return countRequiredfromEndLoc;
     }
 
     private bool EndLocationValidation(Quest quest)
     {
+        bool returnVal = true;
         foreach (QuestObjective otherObj in quest.objectives)
         {
-            if (otherObj.Type != ObjectiveType.EndLocation && otherObj.Current_Amount < otherObj.RequiredAmount)
+            if (otherObj.Current_Amount < otherObj.RequiredAmount && otherObj.Type != ObjectiveType.EndLocation)
             {
-                return false;
+                returnVal = false;
             }
         }
-        return true;
+        return returnVal;
     }
 
     public void ConfigOnHoldSQtoCurrentSQ()

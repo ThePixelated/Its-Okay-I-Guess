@@ -17,7 +17,7 @@ MonoBehaviour:
   - type: 0
     dialogueData: {fileID: 11400000, guid: 46d329e1cea3dc841b697840c20bfc48, type: 2}
     questID: 
-    waitTransitionTime: 2
+    waitTransitionTime: 7
   - type: 0
     dialogueData: {fileID: 11400000, guid: 69d7a9c68c66f0f4792ff7da34b1bad6, type: 2}
     questID: 

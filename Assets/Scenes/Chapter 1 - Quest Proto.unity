@@ -2246,12 +2246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrimaryQuestManager
   m_questManager: {fileID: 354287058}
-  m_questUI: {fileID: 704191858}
-  currentDialogueData: {fileID: 0}
-  dialogueData:
-  - {fileID: 11400000, guid: 46d329e1cea3dc841b697840c20bfc48, type: 2}
-  - {fileID: 11400000, guid: 69d7a9c68c66f0f4792ff7da34b1bad6, type: 2}
-  - {fileID: 11400000, guid: 2b78170dc09dfa44a85c248e2ccd64dc, type: 2}
+  startingAct: {fileID: 0}
 --- !u!1 &119265754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,6 +2441,7 @@ GameObject:
   - component: {fileID: 120137782}
   - component: {fileID: 120137781}
   - component: {fileID: 120137780}
+  - component: {fileID: 120137784}
   m_Layer: 0
   m_Name: NPC_Object_4
   m_TagString: Interactable
@@ -2500,6 +2496,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!70 &120137781
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2633,6 +2630,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &120137784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120137778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &125954271
 GameObject:
   m_ObjectHideFlags: 0
@@ -3699,6 +3711,7 @@ GameObject:
   - component: {fileID: 210592369}
   - component: {fileID: 210592368}
   - component: {fileID: 210592367}
+  - component: {fileID: 210592371}
   m_Layer: 0
   m_Name: NPC_Object_8
   m_TagString: Interactable
@@ -3753,6 +3766,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!70 &210592368
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3886,6 +3900,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &210592371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210592365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &223481669
 GameObject:
   m_ObjectHideFlags: 0
@@ -5277,6 +5306,7 @@ GameObject:
   - component: {fileID: 276819462}
   - component: {fileID: 276819461}
   - component: {fileID: 276819460}
+  - component: {fileID: 276819464}
   m_Layer: 0
   m_Name: Object_C
   m_TagString: Interactable
@@ -5331,6 +5361,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &276819461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5482,6 +5513,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &276819464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276819458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &276827732
 GameObject:
   m_ObjectHideFlags: 0
@@ -7718,6 +7764,7 @@ GameObject:
   - component: {fileID: 429578399}
   - component: {fileID: 429578398}
   - component: {fileID: 429578397}
+  - component: {fileID: 429578401}
   m_Layer: 0
   m_Name: NPC_Pak_Bambang
   m_TagString: Interactable
@@ -7780,6 +7827,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c74adbf9b5a762545a06fbb1fa56bf56, type: 2}
   - {fileID: 11400000, guid: eb2e47a7ce3e4954ba1528ff0132bec7, type: 2}
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!70 &429578398
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -7913,6 +7961,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &429578401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429578395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &431841939
 GameObject:
   m_ObjectHideFlags: 0
@@ -9493,6 +9556,7 @@ GameObject:
   - component: {fileID: 553905187}
   - component: {fileID: 553905186}
   - component: {fileID: 553905185}
+  - component: {fileID: 553905189}
   m_Layer: 0
   m_Name: NPC_Akmal
   m_TagString: Interactable
@@ -9552,6 +9616,7 @@ MonoBehaviour:
   - questID: SQ_CH1_CollecatableTest_D1_NamaScene
     dialogues:
     - {fileID: 11400000, guid: 6a0126376456df14a9e432f887c1fed5, type: 2}
+  m_objectComponent: {fileID: 0}
 --- !u!70 &553905186
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9685,6 +9750,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &553905189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553905183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &561818069
 GameObject:
   m_ObjectHideFlags: 0
@@ -9734,6 +9814,7 @@ GameObject:
   - component: {fileID: 565528854}
   - component: {fileID: 565528853}
   - component: {fileID: 565528852}
+  - component: {fileID: 565528856}
   m_Layer: 0
   m_Name: NPC_Kania
   m_TagString: Interactable
@@ -9799,6 +9880,7 @@ MonoBehaviour:
   - questID: PQC_CH1_Mulai_Hari
     dialogues:
     - {fileID: 11400000, guid: 6a0126376456df14a9e432f887c1fed5, type: 2}
+  m_objectComponent: {fileID: 0}
 --- !u!70 &565528853
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9932,6 +10014,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &565528856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565528850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &605999270
 GameObject:
   m_ObjectHideFlags: 0
@@ -10862,6 +10959,7 @@ GameObject:
   - component: {fileID: 660476692}
   - component: {fileID: 660476691}
   - component: {fileID: 660476690}
+  - component: {fileID: 660476694}
   m_Layer: 0
   m_Name: Object_Dispensor_Galon
   m_TagString: Interactable
@@ -10920,6 +11018,7 @@ MonoBehaviour:
   - questID: SQ_CH1_CollecatableTest_D1_NamaScene
     dialogues:
     - {fileID: 11400000, guid: 6a0126376456df14a9e432f887c1fed5, type: 2}
+  m_objectComponent: {fileID: 0}
 --- !u!61 &660476691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11071,6 +11170,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &660476694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660476688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &676074181
 GameObject:
   m_ObjectHideFlags: 0
@@ -11084,6 +11198,7 @@ GameObject:
   - component: {fileID: 676074185}
   - component: {fileID: 676074184}
   - component: {fileID: 676074183}
+  - component: {fileID: 676074187}
   m_Layer: 0
   m_Name: Object_F
   m_TagString: Interactable
@@ -11142,6 +11257,7 @@ MonoBehaviour:
   - questID: PQC_CH1_Mulai_Hari
     dialogues:
     - {fileID: 11400000, guid: 6a0126376456df14a9e432f887c1fed5, type: 2}
+  m_objectComponent: {fileID: 0}
 --- !u!61 &676074184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11293,6 +11409,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &676074187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676074181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &684559572
 GameObject:
   m_ObjectHideFlags: 0
@@ -11903,6 +12034,7 @@ MonoBehaviour:
   statsHUD: {fileID: 1791901544}
   questHUD: {fileID: 223481669}
   cardUI: {fileID: 1014825111}
+  fadeImage: {fileID: 0}
 --- !u!1 &709874981
 GameObject:
   m_ObjectHideFlags: 0
@@ -12007,6 +12139,7 @@ GameObject:
   - component: {fileID: 711727208}
   - component: {fileID: 711727207}
   - component: {fileID: 711727206}
+  - component: {fileID: 711727210}
   m_Layer: 0
   m_Name: Object_Sisa_Makanan
   m_TagString: Interactable
@@ -12061,6 +12194,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &711727207
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12212,6 +12346,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &711727210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711727204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &712942969
 GameObject:
   m_ObjectHideFlags: 0
@@ -12771,6 +12920,7 @@ GameObject:
   - component: {fileID: 733718886}
   - component: {fileID: 733718885}
   - component: {fileID: 733718884}
+  - component: {fileID: 733718888}
   m_Layer: 0
   m_Name: Object_E
   m_TagString: Interactable
@@ -12829,6 +12979,7 @@ MonoBehaviour:
   - questID: SQ_CH1_CollecatableTest_D1_NamaScene
     dialogues:
     - {fileID: 11400000, guid: 6a0126376456df14a9e432f887c1fed5, type: 2}
+  m_objectComponent: {fileID: 0}
 --- !u!61 &733718885
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12980,6 +13131,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &733718888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733718882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &742835779
 GameObject:
   m_ObjectHideFlags: 0
@@ -12993,6 +13159,7 @@ GameObject:
   - component: {fileID: 742835783}
   - component: {fileID: 742835782}
   - component: {fileID: 742835781}
+  - component: {fileID: 742835785}
   m_Layer: 0
   m_Name: NPC_Object_4
   m_TagString: Interactable
@@ -13047,6 +13214,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!70 &742835782
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -13180,6 +13348,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &742835785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742835779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &743368682
 GameObject:
   m_ObjectHideFlags: 0
@@ -13508,6 +13691,7 @@ GameObject:
   - component: {fileID: 753642412}
   - component: {fileID: 753642411}
   - component: {fileID: 753642410}
+  - component: {fileID: 753642414}
   m_Layer: 0
   m_Name: NPC_Object_5
   m_TagString: Interactable
@@ -13562,6 +13746,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!70 &753642411
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -13695,6 +13880,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &753642414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753642408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &754576617
 GameObject:
   m_ObjectHideFlags: 0
@@ -15119,6 +15319,7 @@ GameObject:
   - component: {fileID: 810330159}
   - component: {fileID: 810330158}
   - component: {fileID: 810330157}
+  - component: {fileID: 810330161}
   m_Layer: 0
   m_Name: Object_Objek_Ruang_Tengah
   m_TagString: Interactable
@@ -15173,6 +15374,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &810330158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15324,6 +15526,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &810330161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810330155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &815274365
 GameObject:
   m_ObjectHideFlags: 0
@@ -15337,6 +15554,7 @@ GameObject:
   - component: {fileID: 815274369}
   - component: {fileID: 815274368}
   - component: {fileID: 815274367}
+  - component: {fileID: 815274371}
   m_Layer: 0
   m_Name: Object_X
   m_TagString: Interactable
@@ -15391,6 +15609,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &815274368
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15542,6 +15761,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &815274371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815274365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &827376286
 GameObject:
   m_ObjectHideFlags: 0
@@ -15630,6 +15864,7 @@ GameObject:
   - component: {fileID: 829508612}
   - component: {fileID: 829508611}
   - component: {fileID: 829508610}
+  - component: {fileID: 829508614}
   m_Layer: 0
   m_Name: NPC_Object_1
   m_TagString: Interactable
@@ -15685,6 +15920,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!70 &829508611
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -15818,6 +16054,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &829508614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829508608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &836817417
 GameObject:
   m_ObjectHideFlags: 0
@@ -17107,6 +17358,7 @@ GameObject:
   - component: {fileID: 884000474}
   - component: {fileID: 884000473}
   - component: {fileID: 884000472}
+  - component: {fileID: 884000476}
   m_Layer: 0
   m_Name: Object_D
   m_TagString: Interactable
@@ -17161,6 +17413,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &884000473
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17312,6 +17565,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &884000476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884000470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &886191776
 GameObject:
   m_ObjectHideFlags: 0
@@ -17574,7 +17842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &901037542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17582,7 +17850,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901037541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 826061f2461ac3741bcdaec0b8be6fe8, type: 3}
   m_Name: 
@@ -17610,7 +17878,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901037541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22e74e6d8a6c59b4fbdab43c4bacdcf5, type: 3}
   m_Name: 
@@ -19458,6 +19726,7 @@ GameObject:
   - component: {fileID: 1068036125}
   - component: {fileID: 1068036124}
   - component: {fileID: 1068036123}
+  - component: {fileID: 1068036127}
   m_Layer: 0
   m_Name: Object_HP
   m_TagString: Interactable
@@ -19512,6 +19781,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &1068036124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19663,6 +19933,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1068036127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068036121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1068046838
 GameObject:
   m_ObjectHideFlags: 0
@@ -20738,6 +21023,7 @@ GameObject:
   - component: {fileID: 1151175413}
   - component: {fileID: 1151175412}
   - component: {fileID: 1151175411}
+  - component: {fileID: 1151175415}
   m_Layer: 0
   m_Name: Object_Kucing_Oren
   m_TagString: Interactable
@@ -20796,6 +21082,7 @@ MonoBehaviour:
   - questID: SQ_CH1_CollecatableTest_D1_NamaScene
     dialogues:
     - {fileID: 11400000, guid: 6a0126376456df14a9e432f887c1fed5, type: 2}
+  m_objectComponent: {fileID: 0}
 --- !u!61 &1151175412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20947,6 +21234,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1151175415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151175409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1152610302
 GameObject:
   m_ObjectHideFlags: 0
@@ -22494,6 +22796,7 @@ GameObject:
   - component: {fileID: 1226817106}
   - component: {fileID: 1226817111}
   - component: {fileID: 1226817107}
+  - component: {fileID: 1226817112}
   m_Layer: 0
   m_Name: Object_A
   m_TagString: Interactable
@@ -22598,6 +22901,7 @@ MonoBehaviour:
   - questID: PQC_CH1_Mulai_Hari
     dialogues:
     - {fileID: 11400000, guid: 6a0126376456df14a9e432f887c1fed5, type: 2}
+  m_objectComponent: {fileID: 0}
 --- !u!212 &1226817110
 SpriteRenderer:
   serializedVersion: 2
@@ -22703,6 +23007,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1226817112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226817104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1231410232
 GameObject:
   m_ObjectHideFlags: 0
@@ -24689,6 +25008,7 @@ GameObject:
   - component: {fileID: 1330199922}
   - component: {fileID: 1330199921}
   - component: {fileID: 1330199920}
+  - component: {fileID: 1330199924}
   m_Layer: 0
   m_Name: Object_B
   m_TagString: Interactable
@@ -24747,6 +25067,7 @@ MonoBehaviour:
   - questID: PQC_CH1_Mulai_Hari
     dialogues:
     - {fileID: 11400000, guid: 6a0126376456df14a9e432f887c1fed5, type: 2}
+  m_objectComponent: {fileID: 0}
 --- !u!61 &1330199921
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24898,6 +25219,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1330199924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330199918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1334723571
 GameObject:
   m_ObjectHideFlags: 0
@@ -25514,6 +25850,7 @@ GameObject:
   - component: {fileID: 1368721194}
   - component: {fileID: 1368721193}
   - component: {fileID: 1368721192}
+  - component: {fileID: 1368721196}
   m_Layer: 0
   m_Name: NPC_SQ TEST
   m_TagString: Interactable
@@ -25568,6 +25905,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!70 &1368721193
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -25701,6 +26039,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1368721196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368721190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1371380249
 GameObject:
   m_ObjectHideFlags: 0
@@ -26287,6 +26640,7 @@ GameObject:
   - component: {fileID: 1420264734}
   - component: {fileID: 1420264733}
   - component: {fileID: 1420264732}
+  - component: {fileID: 1420264736}
   m_Layer: 0
   m_Name: NPC_Object_6
   m_TagString: Interactable
@@ -26341,6 +26695,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!70 &1420264733
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -26474,6 +26829,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1420264736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420264730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1420922199
 GameObject:
   m_ObjectHideFlags: 0
@@ -27455,6 +27825,7 @@ GameObject:
   - component: {fileID: 1505810983}
   - component: {fileID: 1505810982}
   - component: {fileID: 1505810981}
+  - component: {fileID: 1505810985}
   m_Layer: 0
   m_Name: Object_Handuk
   m_TagString: Interactable
@@ -27509,6 +27880,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &1505810982
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27660,6 +28032,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1505810985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505810979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1506432443
 GameObject:
   m_ObjectHideFlags: 0
@@ -28172,6 +28559,7 @@ GameObject:
   - component: {fileID: 1557626300}
   - component: {fileID: 1557626299}
   - component: {fileID: 1557626298}
+  - component: {fileID: 1557626302}
   m_Layer: 0
   m_Name: Object_Laptop
   m_TagString: Interactable
@@ -28226,6 +28614,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &1557626299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28377,6 +28766,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1557626302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557626296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1558321633
 GameObject:
   m_ObjectHideFlags: 0
@@ -28767,6 +29171,7 @@ GameObject:
   - component: {fileID: 1572207331}
   - component: {fileID: 1572207330}
   - component: {fileID: 1572207329}
+  - component: {fileID: 1572207333}
   m_Layer: 0
   m_Name: Object_Meja_Kamar
   m_TagString: Interactable
@@ -28821,6 +29226,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &1572207330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28972,6 +29378,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1572207333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572207327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1572750113
 GameObject:
   m_ObjectHideFlags: 0
@@ -30405,6 +30826,7 @@ GameObject:
   - component: {fileID: 1688189807}
   - component: {fileID: 1688189806}
   - component: {fileID: 1688189805}
+  - component: {fileID: 1688189809}
   m_Layer: 0
   m_Name: NPC_Yono_Akbar
   m_TagString: Interactable
@@ -30465,6 +30887,7 @@ MonoBehaviour:
   - questID: SQ_CH1_CollecatableTest_D1_NamaScene
     dialogues:
     - {fileID: 11400000, guid: 6a0126376456df14a9e432f887c1fed5, type: 2}
+  m_objectComponent: {fileID: 0}
 --- !u!61 &1688189806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30616,6 +31039,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1688189809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688189803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1701042615
 GameObject:
   m_ObjectHideFlags: 0
@@ -32576,8 +33014,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopHUDTrigger
   hudParent: {fileID: 331567205}
-  panelStat: {fileID: 1417952605}
+  hiddenPos: {x: 0, y: 0}
+  shownPos: {x: 0, y: 0}
   displayDuration: 2
+  transitionDuration: 0.5
 --- !u!1 &1800180045
 GameObject:
   m_ObjectHideFlags: 0
@@ -32591,6 +33031,7 @@ GameObject:
   - component: {fileID: 1800180049}
   - component: {fileID: 1800180048}
   - component: {fileID: 1800180047}
+  - component: {fileID: 1800180051}
   m_Layer: 0
   m_Name: Object_Buku
   m_TagString: Interactable
@@ -32645,6 +33086,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &1800180048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32796,6 +33238,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1800180051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800180045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1801267588
 GameObject:
   m_ObjectHideFlags: 0
@@ -41600,6 +42057,7 @@ GameObject:
   - component: {fileID: 2023493108}
   - component: {fileID: 2023493107}
   - component: {fileID: 2023493106}
+  - component: {fileID: 2023493110}
   m_Layer: 0
   m_Name: Object_Pelengkapan_Mandi
   m_TagString: Interactable
@@ -41654,6 +42112,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!61 &2023493107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41805,6 +42264,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2023493110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023493104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &2024129981
 GameObject:
   m_ObjectHideFlags: 0
@@ -42294,6 +42768,7 @@ GameObject:
   - component: {fileID: 2051733659}
   - component: {fileID: 2051733658}
   - component: {fileID: 2051733657}
+  - component: {fileID: 2051733661}
   m_Layer: 0
   m_Name: NPC_Object_2
   m_TagString: Interactable
@@ -42349,6 +42824,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!70 &2051733658
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -42482,6 +42958,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2051733661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051733655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &2060332316
 GameObject:
   m_ObjectHideFlags: 0
@@ -42657,6 +43148,8 @@ MonoBehaviour:
   m_dialogueManager: {fileID: 2070605239}
   dialogueBox: {fileID: 1257622774}
   choicesPanel: {fileID: 66275268}
+  stopDialouePanel: {fileID: 0}
+  namePanel: {fileID: 0}
   imgCharacter: {fileID: 794501844}
   buttonPrefab: {fileID: 6718901019141299809, guid: d656743415b408942a904591ffcfdf05, type: 3}
   nameText: {fileID: 22917954}
@@ -44012,6 +44505,7 @@ GameObject:
   - component: {fileID: 2125872835}
   - component: {fileID: 2125872834}
   - component: {fileID: 2125872833}
+  - component: {fileID: 2125872837}
   m_Layer: 0
   m_Name: NPC_Object_7
   m_TagString: Interactable
@@ -44066,6 +44560,7 @@ MonoBehaviour:
     afterQuest: []
   normalDialogues: []
   externalQuestDialogues: []
+  m_objectComponent: {fileID: 0}
 --- !u!70 &2125872834
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -44199,6 +44694,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2125872837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125872831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
+  defaultSprite: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &2128491984
 GameObject:
   m_ObjectHideFlags: 0

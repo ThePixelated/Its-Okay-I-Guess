@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
         ConfirmLogicBtn();
 
-        UIManager.Instance.fadeImage.StartFadeOut(3);
+        UIManager.Instance.fadeImage.StartFadeOut(6);
     }
 
     private string isClick = "input idle..";

@@ -96,7 +96,7 @@ public static class DialogueRetriever
     public static List<DialogueData> DetermineDialogue(ObjectInteraction npc)
     {
         // Ambil data global dari SceneData atau QuestManager Anda
-        int globalMQIndex = SceneData.Instance.CurrentMainQuestIndex;
+        int globalMQIndex = 0; //SceneData.Instance.CurrentMainQuestIndex
 
         // ----------------------------------------------------
         // PRIORITAS 1: EVALUASI MAIN QUEST

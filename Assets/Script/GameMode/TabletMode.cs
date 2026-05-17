@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TabletMode : GameModeBase
 {
@@ -30,10 +31,19 @@ public class TabletMode : GameModeBase
             m_TabletManager.HandleSectionIndex(direction);
         }
 
-        if ((Input.GetKeyDown(KeyCode.Return) && m_TabletManager.GetCurrentSectionIndex() == m_TabletManager.ResumeIndex) || m_TabletManager.IsResumeBtnPressed)
+        // Resume Section
+        if ((Input.GetKeyDown(KeyCode.Return) && m_TabletManager.GetCurrentSectionIndex() == m_TabletManager.ResumeIndex) || m_TabletManager.IsTargetBtnPressed)
         {
-            m_TabletManager.IsResumeBtnPressed = false;
+            m_TabletManager.IsTargetBtnPressed = false;
             GMM.Switch(GMM.PreviousMode);
+        }
+
+        // Exit Section - hardcoded Exit button di index 6 
+        if ((Input.GetKeyDown(KeyCode.Return) && m_TabletManager.GetCurrentSectionIndex() == 6) || m_TabletManager.IsTargetBtnPressed)
+        {
+            m_TabletManager.IsTargetBtnPressed = false;
+            //GMM.Switch(GMM.PreviousMode);
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
@@ -44,8 +54,8 @@ public class TabletMode : GameModeBase
         //GMM.SetPrevGameModeIndicator(GameMode.TabletMode);
     }
 
-    public void Switching(GameModeManager GMM)
-    {
-        GMM.Switch(GMM.ExplorationMode);
-    }
+    //public void Switching(GameModeManager GMM)
+    //{
+    //    GMM.Switch(GMM.ExplorationMode);
+    //}
 }

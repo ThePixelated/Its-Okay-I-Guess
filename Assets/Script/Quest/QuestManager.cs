@@ -25,37 +25,22 @@ public class QuestManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-    
-        foreach (var questData in mainQuestDB) 
+
+        InnitNodeLookupQuest(mainQuestDB);
+        InnitNodeLookupQuest(subMainQuestDB);
+        InnitNodeLookupQuest(sideQuestDB);
+    }
+
+    private void InnitNodeLookupQuest(List<Quest> targetQuest)
+    {
+        foreach (var questData in targetQuest)
             questData.ResetValue();
-        
-        foreach (var questData in subMainQuestDB)
-            questData.ResetValue();
-        
-        foreach (var questData in sideQuestDB)
-            questData.ResetValue();
-        
-        // to lookup dict
-    
-        foreach (var questData in mainQuestDB)
+
+        foreach (var questData in targetQuest)
         {
             questLookUp.Add(questData.QuestID, questData);
             //sideQuestDatabase.Add(questData.QuestID, questData.questState);
-            Debug.LogWarning("Innit MQ DB.... - " + questData.QuestID);
-        }
-        
-        foreach (var questData in subMainQuestDB)
-        {
-            questLookUp.Add(questData.QuestID, questData);
-            //sideQuestDatabase.Add(questData.QuestID, questData.questState);
-            Debug.LogWarning("Innit SubMQ DB.... - " + questData.QuestID);
-        }
-    
-        foreach (var questData in sideQuestDB)
-        {
-            questLookUp.Add(questData.QuestID, questData);
-            //sideQuestDatabase.Add(questData.QuestID, questData.questState);
-            Debug.LogWarning("Innit SQ DB.... - " + questData.QuestID);
+            Debug.LogWarning("Innit Quest DB.... - " + questData.QuestID);
         }
     }
 
@@ -174,10 +159,12 @@ public class QuestManager : MonoBehaviour
 
     public void ConfigCurrentActQuest()
     {
+        string questID = currentActiveActQuest.QuestID;
+
         currentActiveActQuest.questState = QuestState.Success;
         currentActiveActQuest = null;
 
-        m_primaryQuestManager.OnQuestCompleted();
+        m_primaryQuestManager.OnQuestCompleted(questID);
     }
 
     public void SuccessQuest(Quest quest)
@@ -195,16 +182,7 @@ public class QuestManager : MonoBehaviour
         Debug.Log("Primary Quest Added!");
         questLookUp[questID].questState = QuestState.Active;
 
-        //if (currentActiveActQuest != null)
-        //{
-            //currentActiveActQuest
-            //currentActiveSQ.questState = QuestState.OnHold;
-            //onHoldSQ.Add(currentActiveSQ);
-        //}
-
         currentActiveActQuest = questLookUp[questID];
-
-        //sideQuestDatabase[questID] = QuestState.Active;
         m_questUI.UpdateQuestUI();
     }
 

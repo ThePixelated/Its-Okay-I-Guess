@@ -11,7 +11,7 @@ public class GameModeManager : MonoBehaviour
     [SerializeField] private int playerSpeed;
     [SerializeField] private GameMode currentGameModeIndicator = GameMode.ExplorationMode;
     [SerializeField] private GameMode previousGameModeIndicator = GameMode.ExplorationMode;
-    
+
     [SerializeField] private bool isObjectInteractable = false;
     private bool _isPaused = false;
     private bool _keyPressedFlag = true; // flag untuk movement
@@ -19,7 +19,7 @@ public class GameModeManager : MonoBehaviour
     private float _currentTime = 0f;
     private string _interactableID;
 
-    public string InteratableID { get { return _interactableID; } set {  _interactableID = value; }  }
+    public string InteratableID { get { return _interactableID; } set { _interactableID = value; } }
 
     public GameModeBase ExplorationMode = new ExplorationMode();
     public GameModeBase TransitionMode = new TransitionMode();
@@ -193,6 +193,15 @@ public class GameModeManager : MonoBehaviour
         if (onDialogueStop != null)
         {
             onDialogueStop(this);
+        }
+    }
+
+    public event Action<GameModeManager> onTransitionStop;
+    public void TransitionStop()
+    {
+        if (onTransitionStop != null)
+        {
+            onTransitionStop(this);
         }
     }
 

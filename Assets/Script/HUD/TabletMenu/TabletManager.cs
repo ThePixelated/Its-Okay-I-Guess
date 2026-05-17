@@ -17,7 +17,7 @@ public class TabletManager : MonoBehaviour
     [SerializeField] private List<GameObject> section = new List<GameObject>();
 
     public int ResumeIndex { get { return resumeIndex; } }
-    public bool IsResumeBtnPressed { get; set; } = false;
+    public bool IsTargetBtnPressed { get; set; } = false;
 
     public void ChangeSection(int targetIndexSection = 0)
     {
@@ -74,8 +74,8 @@ public class TabletManager : MonoBehaviour
         return currentSectionIndex;
     }
 
-    public void ResumeBtnPressed()
+    public void TargetBtnPressed()
     {
-        IsResumeBtnPressed = true;
+        IsTargetBtnPressed = true;
     }
 }

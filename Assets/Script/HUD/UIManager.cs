@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -13,11 +14,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject statsHUD;
     [SerializeField] private GameObject questHUD;
     [SerializeField] private GameObject cardUI;
-
-    [Header("Config Dialog UI")]
-    public GameObject stopDialouePanel;
-    public GameObject dialogueNamePanel;
-
+    
     public ScreenFader fadeImage;
 
     private void Awake()
@@ -25,19 +22,8 @@ public class UIManager : MonoBehaviour
         Instance = this;
     }
 
-    public void PQDialogueValidation(DialogueData dialogueData)
+    public void GoToScene(string targetScene)
     {
-        if (dialogueData.name.StartsWith("PQ_", System.StringComparison.OrdinalIgnoreCase))
-        {
-            SetStopDialoguePanel(false);
-            Debug.Log("Stop Dialogue Button disabled!!!");
-        }
-        else
-            SetStopDialoguePanel(true);
-    }
-
-    public void SetStopDialoguePanel(bool state)
-    {
-        stopDialouePanel.SetActive(state);
+        SceneManager.LoadScene(targetScene);
     }
 }

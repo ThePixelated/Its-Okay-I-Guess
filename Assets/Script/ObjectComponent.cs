@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class ObjectComponent : MonoBehaviour
 {
@@ -72,11 +73,15 @@ public class ObjectComponent : MonoBehaviour
         // Ambil durasi animasi yang sedang jalan sekarang
         float duration = anim.GetCurrentAnimatorStateInfo(0).length;
 
-        yield return new WaitForSeconds(duration + 2);
+        yield return new WaitForSeconds(duration + 1);
 
         if (objType == ObjectiveType.EndLocation)
         {
             UIManager.Instance.fadeImage.StartFadeIn();
+            Debug.Log("Fading....");
+            yield return new WaitForSeconds(duration + 3);
+            Debug.Log("Transisi");
+            SceneManager.LoadScene("MainMenu");
         }
         
         // Kasih tau siapa pun yang dengerin kalau animasinya kelar

@@ -2245,8 +2245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b0ab5a5224f254e802356fea5e76d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrimaryQuestManager
-  currentAct: {fileID: 11400000, guid: 98a044aa443f96d4eb69260ab2635745, type: 2}
   m_questManager: {fileID: 354287058}
+  startingAct: {fileID: 11400000, guid: 98a044aa443f96d4eb69260ab2635745, type: 2}
 --- !u!1 &119265754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,6 +2642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &125954271
@@ -2897,6 +2898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: -1475074094255596288, guid: 1841934b53a4d314b929085c9bf66afe, type: 3}
   anim: {fileID: 134485481}
 --- !u!114 &134485483
@@ -4306,6 +4308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &223481669
@@ -4759,7 +4762,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 704191860}
         m_TargetAssemblyTypeName: TabletManager, Assembly-CSharp
-        m_MethodName: ResumeBtnPressed
+        m_MethodName: TargetBtnPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6010,6 +6013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &276827732
@@ -8497,6 +8501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &431841939
@@ -10356,6 +10361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &561818069
@@ -10619,6 +10625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &569371634
@@ -13440,6 +13447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &676074181
@@ -13678,6 +13686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &684559572
@@ -14290,8 +14299,6 @@ MonoBehaviour:
   statsHUD: {fileID: 1791901544}
   questHUD: {fileID: 223481669}
   cardUI: {fileID: 1014825111}
-  stopDialouePanel: {fileID: 1158258269}
-  dialogueNamePanel: {fileID: 802401985}
   fadeImage: {fileID: 1845615385}
 --- !u!1 &709874981
 GameObject:
@@ -15166,6 +15173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &742835779
@@ -15382,6 +15390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &743368682
@@ -15913,6 +15922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &754576617
@@ -18036,6 +18046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &815274365
@@ -18270,6 +18281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &827376286
@@ -18562,6 +18574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &836817417
@@ -20163,6 +20176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &886191776
@@ -23072,6 +23086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1068046838
@@ -23741,6 +23756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1088519836
@@ -24948,6 +24964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1152610302
@@ -26720,6 +26737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1231410232
@@ -28750,6 +28768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1334723571
@@ -29569,6 +29588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1371380249
@@ -30358,6 +30378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1420922199
@@ -32165,6 +32186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 21300000, guid: a504aacfd412f6d4bbc409356d9d3323, type: 3}
   anim: {fileID: 0}
 --- !u!1 &1506432443
@@ -34115,6 +34137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1558321633
@@ -34817,6 +34840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1572750113
@@ -36749,6 +36773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1701042615
@@ -36884,6 +36909,18 @@ MonoBehaviour:
           m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 704191861}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1701042620
@@ -37356,7 +37393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Object_C
+  m_text: NPC_Object_2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -38685,7 +38722,7 @@ GameObject:
   - component: {fileID: 1762429381}
   - component: {fileID: 1762429380}
   - component: {fileID: 1762429379}
-  - component: {fileID: 1762429378}
+  - component: {fileID: 1762429382}
   m_Layer: 0
   m_Name: animated_door_5_48x48_0
   m_TagString: Untagged
@@ -38708,20 +38745,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1004579934}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1762429378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762429376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61023c3f92026af4aa522b49f05b27ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimatedObject
-  defaultSprite: {fileID: 3759396605457195425, guid: 0eeca019158caa84b9eb113da2673f31, type: 3}
-  anim: {fileID: 1762429379}
 --- !u!95 &1762429379
 Animator:
   serializedVersion: 7
@@ -38849,6 +38872,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1762429382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762429376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 1
+  defaultSprite: {fileID: 3759396605457195425, guid: 0eeca019158caa84b9eb113da2673f31, type: 3}
+  anim: {fileID: 1762429379}
 --- !u!1 &1770032762
 GameObject:
   m_ObjectHideFlags: 0
@@ -39483,6 +39521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &1801267588
@@ -48664,6 +48703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 8612329417983480239, guid: d824b492ac2aaea4783adc9a1b5fbfac, type: 3}
   anim: {fileID: 0}
 --- !u!1 &2024129981
@@ -49357,6 +49397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &2060332316
@@ -49534,6 +49575,7 @@ MonoBehaviour:
   m_dialogueManager: {fileID: 2070605239}
   dialogueBox: {fileID: 1257622774}
   choicesPanel: {fileID: 66275268}
+  stopDialouePanel: {fileID: 1158258269}
   namePanel: {fileID: 802401985}
   imgCharacter: {fileID: 794501844}
   buttonPrefab: {fileID: 6718901019141299809, guid: d656743415b408942a904591ffcfdf05, type: 3}
@@ -51091,6 +51133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6797c2f5349f428cac4b4be1f707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectComponent
+  isTriggerEnable: 0
   defaultSprite: {fileID: 0}
   anim: {fileID: 0}
 --- !u!1 &2128491984

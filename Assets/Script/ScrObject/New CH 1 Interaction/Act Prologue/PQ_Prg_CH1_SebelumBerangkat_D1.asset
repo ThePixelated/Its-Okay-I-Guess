@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d33ba8a57ae0a458aeacd6c5856eb1, type: 3}
   m_Name: PQ_Prg_CH1_SebelumBerangkat_D1
   m_EditorClassIdentifier: Assembly-CSharp::ActData
+  actID: PQ_Prg_CH1_SebelumBerangkat_D1
   steps:
   - type: 0
     dialogueData: {fileID: 11400000, guid: 2b78170dc09dfa44a85c248e2ccd64dc, type: 2}
-    questId: 
-    waitTransitionTime: 4
+    questID: 
+    waitTransitionTime: 0
   - type: 1
     dialogueData: {fileID: 0}
-    questId: PQC_CH1_Kosan_Kamar_Pagi_D1_Sebelum_Keluar
-    waitTransitionTime: 0
+    questID: PQC_CH1_Kosan_Kamar_Pagi_D1_Sebelum_Keluar
+    waitTransitionTime: 0.5
   nextAct: {fileID: 0}
+  hasTransitionBeforeNextAct: 0

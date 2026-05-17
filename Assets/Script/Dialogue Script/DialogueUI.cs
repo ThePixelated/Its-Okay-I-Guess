@@ -8,6 +8,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private DialogueManager m_dialogueManager;
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private GameObject choicesPanel;
+    public GameObject stopDialouePanel;
     public GameObject namePanel;
     [SerializeField] private GameObject imgCharacter;
     [SerializeField] private GameObject buttonPrefab;
@@ -105,7 +106,6 @@ public class DialogueUI : MonoBehaviour
         }
     }
 
-    
     public void CloseRender()
     {
         // animasi closing panel, dll
@@ -132,5 +132,22 @@ public class DialogueUI : MonoBehaviour
     {
         m_dialogueManager.GoToNodeBtn(nextNodeID);
         RemoveButtons();
+    }
+
+
+    public void PQDialogueValidation(DialogueData dialogueData)
+    {
+        if (dialogueData.name.StartsWith("PQ_", System.StringComparison.OrdinalIgnoreCase))
+        {
+            SetStopDialoguePanel(false);
+            Debug.Log("Stop Dialogue Button disabled!!!");
+        }
+        else
+            SetStopDialoguePanel(true);
+    }
+
+    public void SetStopDialoguePanel(bool state)
+    {
+        stopDialouePanel.SetActive(state);
     }
 }

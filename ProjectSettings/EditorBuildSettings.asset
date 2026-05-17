@@ -8,12 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/DEPRICATED/Chapter 1 - Proto.unity
     guid: df63583906fa96a4ab03b580d890187e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Chapter 1 - Quest Proto.unity
     guid: 10a100c3def610246838804b7fb0b897
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Card System - Proto.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Testing.unity
+    guid: b408c1dbacbc26344adb0daf033412f6
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: b2f7aad82a851504cb3ce5d2cebf8fb5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

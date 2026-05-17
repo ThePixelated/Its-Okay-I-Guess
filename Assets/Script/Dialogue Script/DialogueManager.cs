@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(List<DialogueNode> dialogueData)
     {
-        UIManager.Instance.PQDialogueValidation(DialogueManager.Instance.DialogueData);
+        m_dialogueUI.PQDialogueValidation(DialogueData);
 
         nodeLookup = new Dictionary<string, DialogueNode>();
         foreach (var node in dialogueData)
@@ -77,7 +77,7 @@ public class DialogueManager : MonoBehaviour
     public void DialogueStopped()
     {
         m_gameModeManager.DialogueStopped();
-        UIManager.Instance.SetStopDialoguePanel(true);
+        m_dialogueUI.SetStopDialoguePanel(true);
         //ReadableSetCheck();
     }
 }

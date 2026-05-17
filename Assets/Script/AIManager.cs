@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 public class AIManager : MonoBehaviour
 {
     [Header("Server Config")]
-    [SerializeField] private string serverUrl = "https://ISI-URL-RAILWAY-KAMU.up.railway.app/chat";
+    [SerializeField] private string serverUrl = "https://llm-ioig-production.up.railway.app/chat";
 
     [Header("UI")]
     public TextMeshProUGUI outputText;

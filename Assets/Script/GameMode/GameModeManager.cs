@@ -22,6 +22,7 @@ public class GameModeManager : MonoBehaviour
     public string InteratableID { get { return _interactableID; } set {  _interactableID = value; }  }
 
     public GameModeBase ExplorationMode = new ExplorationMode();
+    public GameModeBase TransitionMode = new TransitionMode();
     public GameModeBase DialogueMode = new DialogueMode();
     public GameModeBase TabletMode = new TabletMode();
     public GameModeBase CardMode = new CardMode();
@@ -35,7 +36,7 @@ public class GameModeManager : MonoBehaviour
         playerDirection = m_playerData.PlayerDirection;
         playerSpeed = m_playerData.PlayerSpeed;
 
-        CurrentMode = ExplorationMode;
+        CurrentMode = TransitionMode;
         PreviousMode = CurrentMode;
     }
 
@@ -211,6 +212,7 @@ public class GameModeManager : MonoBehaviour
 public enum GameMode
 {
     ExplorationMode,
+    TransitionMode,
     DialogueMode,
     TabletMode,
     CardMode

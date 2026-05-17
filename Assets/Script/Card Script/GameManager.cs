@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
         _currentChaptSect = dataChapter.ChapterSections[indexCurrentChaptSect];
 
         ConfirmLogicBtn();
+
+        UIManager.Instance.fadeImage.StartFadeOut(3);
     }
 
     private string isClick = "input idle..";

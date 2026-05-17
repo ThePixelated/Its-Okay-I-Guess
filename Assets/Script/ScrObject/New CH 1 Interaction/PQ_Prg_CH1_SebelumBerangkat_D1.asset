@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d33ba8a57ae0a458aeacd6c5856eb1, type: 3}
+  m_Name: PQ_Prg_CH1_SebelumBerangkat_D1
+  m_EditorClassIdentifier: Assembly-CSharp::ActData
+  steps:
+  - type: 0
+    dialogueData: {fileID: 11400000, guid: 2b78170dc09dfa44a85c248e2ccd64dc, type: 2}
+    questId: 
+    waitTransitionTime: 4
+  - type: 1
+    dialogueData: {fileID: 0}
+    questId: PQC_CH1_Kosan_Kamar_Pagi_D1_Sebelum_Keluar
+    waitTransitionTime: 0
+  nextAct: {fileID: 0}

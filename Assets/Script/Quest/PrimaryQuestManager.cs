@@ -1,88 +1,101 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 
 public class PrimaryQuestManager : MonoBehaviour
 {
-    public QuestManager m_questManager;
-    public QuestUI m_questUI;
+    public ActData currentAct;
 
-    [Header("Setup Dialogue")]
-    [SerializeField] private DialogueData currentDialogueData;
-    public List<DialogueData> dialogueData = new List<DialogueData>();
-
-    private Dictionary<string, DialogueData> nodeDialogueData = new Dictionary<string, DialogueData>();
+    private int _stepIndex = 0;
     private Coroutine _currentCoroutine;
 
     private DialogueManager m_dialogueManager;
     private GameModeManager m_gameModeManager;
+    public QuestManager m_questManager;
 
-    async void Start()
+    void Start()
     {
-        GameModeManager.Instance.onDialogueStop += ConfigPrimaryQuest;
-
         m_dialogueManager = DialogueManager.Instance;
         m_gameModeManager = GameModeManager.Instance;
 
-        // NON PERMANENT !!!!
-        m_gameModeManager.Switch(m_gameModeManager.DialogueMode);
+        GameModeManager.Instance.onDialogueStop += OnDialogueStop;
 
-        foreach (var DialogueData in dialogueData)
-            nodeDialogueData.Add(DialogueData.name, DialogueData);
-
-        await Task.Delay(12000);
-
-        currentDialogueData = dialogueData[0];
-        m_dialogueManager.DialogueData = currentDialogueData;
-        m_dialogueManager.StartDialogue(currentDialogueData.DialogueNodes);
-        //m_gameModeManager.Switch(m_gameModeManager.DialogueMode);
+        m_gameModeManager.Switch(m_gameModeManager.TransitionMode);
+        RunStep(); // kick off Act pertama, step pertama
     }
 
-    public void ConfigPQAfterQuest()
+    // Dipanggil otomatis setiap kali dialogue selesai
+    private void OnDialogueStop(GameModeManager gmm)
     {
-        PMQuestInfo curPMQ_Info = currentDialogueData.PMQuestInfo;
-        DialogueData newDialogueData = currentDialogueData;
+        // Guard: kalau dialogue yang baru selesai bukan bagian PQ, ignore
+        if (m_dialogueManager.DialogueData.IsIgnoredbyPQ) return;
 
-        _currentCoroutine = StartCoroutine(StartDialogue(curPMQ_Info.waitTransitionTime, newDialogueData));
+        AdvanceStep();
     }
 
-    public void ConfigPrimaryQuest(GameModeManager GMM)
+    // Dipanggil dari QuestManager ketika quest selesai
+    public void OnQuestCompleted()
     {
-        if (m_dialogueManager.DialogueData.IsIgnoredbyPQ)
-            return;
+        // Pastikan quest yang selesai memang quest di step ini
+        //PQStep current = currentAct.steps[_stepIndex];
+        //if (current.type != PQStepType.Quest || current.questId != questId) return;
 
-        //_currentCoroutine = StartCoroutine(StartPrimaryChain());
-        Debug.Log("Config Primary Quest");
-        // bisa dijadiin kalo targetdialoguedata = null, berarti udah selesai. (g jg sih..)
+        AdvanceStep();
+    }
 
-        PMQuestInfo curPMQ_Info = currentDialogueData.PMQuestInfo;
-        DialogueData newDialogueData = currentDialogueData;
-        
-        if (!string.IsNullOrEmpty(curPMQ_Info.targetDialogueData))
-            newDialogueData = nodeDialogueData[currentDialogueData.PMQuestInfo.targetDialogueData];
+    private void AdvanceStep()
+    {
+        _stepIndex++;
 
-        if (curPMQ_Info.isTriggerDialogue)
-            _currentCoroutine = StartCoroutine(StartDialogue(curPMQ_Info.waitTransitionTime, newDialogueData));
-
-        if (curPMQ_Info.isTriggerQuest)
+        if (_stepIndex >= currentAct.steps.Count)
         {
-            Debug.Log($"Target: {curPMQ_Info.targetQuest}");
-            m_questManager.AddPrimaryQuest(curPMQ_Info.targetQuest);
+            // Act selesai
+            if (currentAct.nextAct != null)
+            {
+                currentAct = currentAct.nextAct;
+                _stepIndex = 0;
+                RunStep();
+            }
+            else
+            {
+                Debug.Log("Story selesai.");
+            }
+            return;
         }
 
-        currentDialogueData = newDialogueData;
+        RunStep();
     }
 
-    public IEnumerator StartDialogue(float timer, DialogueData targetData)
+    private void RunStep()
     {
-        Debug.Log("Starting dialogue.. waiting");
-        yield return new WaitForSeconds(timer);
-        Debug.Log("DIALOGUE INNITATE...");
-        m_gameModeManager.Switch(m_gameModeManager.DialogueMode);
-        m_dialogueManager.DialogueData = currentDialogueData;
-        m_dialogueManager.StartDialogue(targetData.DialogueNodes);
+        PQStep step = currentAct.steps[_stepIndex];
 
-        StopCoroutine(_currentCoroutine);
+        // Stop coroutine lama dulu sebelum mulai yang baru
+        if (_currentCoroutine != null)
+        {
+            StopCoroutine(_currentCoroutine);
+            _currentCoroutine = null;
+        }
+
+        switch (step.type)
+        {
+            case PQStepType.Dialogue:
+                _currentCoroutine = StartCoroutine(RunDialogueStep(step));
+                break;
+
+            case PQStepType.Quest:
+                m_questManager.AddPrimaryQuest(step.questId);
+                // Tidak advance di sini — nunggu OnQuestCompleted() dipanggil
+                break;
+        }
+    }
+
+    private IEnumerator RunDialogueStep(PQStep step)
+    {
+        yield return new WaitForSeconds(step.waitTransitionTime);
+        m_gameModeManager.Switch(m_gameModeManager.DialogueMode);
+        m_dialogueManager.DialogueData = step.dialogueData;
+        m_dialogueManager.StartDialogue(step.dialogueData.DialogueNodes);
+        _currentCoroutine = null;
     }
 }

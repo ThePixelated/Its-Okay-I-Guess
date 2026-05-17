@@ -69,11 +69,14 @@ public class QuestObjective
 
 public enum ObjectiveType
 {
+    Single,
     Collectable,
     Use,
     TalkNPC,
     Interactable,
     ReachLocation,
     SideActivity,
+    EndLocation,
     Custom,
+    Null
 }

@@ -8,6 +8,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private DialogueManager m_dialogueManager;
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private GameObject choicesPanel;
+    public GameObject namePanel;
     [SerializeField] private GameObject imgCharacter;
     [SerializeField] private GameObject buttonPrefab;
     [SerializeField] private TextMeshProUGUI nameText;
@@ -58,9 +59,14 @@ public class DialogueUI : MonoBehaviour
             imgCharacter.SetActive(false);
         }
 
+        if (!string.IsNullOrWhiteSpace(dialogueNode.CharName))
+            namePanel.SetActive(true);
+        else
+            namePanel.SetActive(false);
+
         //Debug.Log("Text: " + dialogueText.text);
 
-        //RemoveButtons();
+            //RemoveButtons();
         if (dialogueNode.Choices.Count >= 1)
             choicesPanel.SetActive(true);
         else

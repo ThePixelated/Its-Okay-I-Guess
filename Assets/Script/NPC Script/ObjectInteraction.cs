@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using TMPro;
 
+[RequireComponent(typeof(ObjectComponent))]
 public class ObjectInteraction : MonoBehaviour
 {
     public bool isInteractable = true;
@@ -35,7 +36,11 @@ public class ObjectInteraction : MonoBehaviour
     // List penampung dialog titipan dari Quest luar
     public List<ExternalQuestDialogue> externalQuestDialogues;
 
+    [HideInInspector]
+    public ObjectComponent m_objectComponent;
+
     // Fungsi ini yang akan dipanggil oleh DialogueManager saat Player menekan tombol interaksi
+    #if UNITY_EDITOR
     private void OnValidate()
     {
         if (namaTxt != null)
@@ -45,7 +50,14 @@ public class ObjectInteraction : MonoBehaviour
         }
         
         objectID = gameObject.name;
+
+        if (GetComponent<ObjectComponent>() == null)
+        {
+            gameObject.AddComponent<ObjectComponent>();
+            //Debug.Log($"Otomatis nambahin ScriptX di {gameObject.name} biar gak error pas runtime!");
+        }
     }
+    #endif
 
     private void Awake()
     {
@@ -56,6 +68,8 @@ public class ObjectInteraction : MonoBehaviour
     {
         PlayerManager.Instance.onInteractKey_E += Interact;
         isInteractable = true;
+
+        m_objectComponent = GetComponent<ObjectComponent>();
     }
     
     [Serializable] 
@@ -89,6 +103,8 @@ public class ObjectInteraction : MonoBehaviour
             {
                 int randomIndex = UnityEngine.Random.Range(0, chosenList.Count);
                 DialogueData selectedDialogue = chosenList[randomIndex];
+                //Debug.Log();
+
                 DialogueManager.Instance.DialogueData = selectedDialogue;
                 DialogueManager.Instance.StartDialogue(selectedDialogue.DialogueNodes);
                 GameModeManager.Instance.Switch(GameModeManager.Instance.DialogueMode);

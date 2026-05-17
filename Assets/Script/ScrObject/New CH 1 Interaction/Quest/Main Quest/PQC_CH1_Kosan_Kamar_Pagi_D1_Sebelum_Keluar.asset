@@ -20,23 +20,24 @@ MonoBehaviour:
   objectives:
   - ObjectiveID: Object_Sisa_Makanan
     Description: Sarapan seadanya di meja kamar
-    Type: 1
+    Type: 0
     RequiredAmount: 1
     Current_Amount: 0
     ObjectivesIDs:
     - Object_Sisa_Makanan
   - ObjectiveID: Object_Buku; Object_Laptop
     Description: Masukkan laptop dan buku ke tas
-    Type: 0
+    Type: 1
     RequiredAmount: 2
     Current_Amount: 0
     ObjectivesIDs:
     - Object_Buku
     - Object_Laptop
-  - ObjectiveID: 
+  - ObjectiveID: Object_EndLoc_Door
     Description: Keluar kamar menuju area kosan
-    Type: 4
+    Type: 7
     RequiredAmount: 1
     Current_Amount: 0
-    ObjectivesIDs: []
+    ObjectivesIDs:
+    - Object_EndLoc_Door
   questState: 0

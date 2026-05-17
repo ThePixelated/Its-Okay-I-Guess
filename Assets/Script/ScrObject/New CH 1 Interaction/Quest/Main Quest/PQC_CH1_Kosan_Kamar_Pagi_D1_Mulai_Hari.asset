@@ -20,14 +20,17 @@ MonoBehaviour:
   objectives:
   - ObjectiveID: Object_HP
     Description: Matikan alarm di HP
-    Type: 6
+    Type: 2
     RequiredAmount: 1
     Current_Amount: 1
-    ObjectivesIDs: []
+    ObjectivesIDs:
+    - Object_HP
   - ObjectiveID: Object_Handuk; Object_Pelengkapan_Mandi
     Description: Ambil handuk dan perlengkapan mandi
-    Type: 0
+    Type: 2
     RequiredAmount: 2
     Current_Amount: 2
-    ObjectivesIDs: []
-  questState: 3
+    ObjectivesIDs:
+    - Object_Handuk
+    - Object_Pelengkapan_Mandi
+  questState: 1

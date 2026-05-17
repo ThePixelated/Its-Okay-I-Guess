@@ -63,7 +63,9 @@ public class QuestManager : MonoBehaviour
     {
         if (currentActiveSQ != null)
             InteractQuestHandler(currentActiveSQ, npcID, npcGameObj, true);
+
         Debug.LogWarning("---------- DEVIDER ----------");
+        
         if (currentActiveActQuest != null)
             InteractQuestHandler(currentActiveActQuest, npcID, npcGameObj, false);
     }
@@ -72,7 +74,6 @@ public class QuestManager : MonoBehaviour
     {
         foreach (QuestObjective obj in quest.objectives)
         {
-            
             if (obj.ObjectivesIDs.Contains(npcID))
             {
                 Debug.Log($"Currently talk: {npcID} - target objective: {obj.ObjectiveID}");
@@ -82,31 +83,7 @@ public class QuestManager : MonoBehaviour
 
                 obj.ObjectivesIDs.Remove(npcID);
 
-                switch (obj.Type)
-                {
-                    case ObjectiveType.Collectable:
-                        npcGameObj.SetActive(false);
-                        Debug.Log("Collectable");
-                        break;
-                    case ObjectiveType.TalkNPC:
-                        Debug.Log("TalkNPC");
-                        break;
-                    case ObjectiveType.Use:
-                        npcGameObj.SetActive(false);
-                        Debug.Log("Use");
-                        break;
-                    case ObjectiveType.ReachLocation:
-                        Debug.Log("Reach Location");
-                        break;
-                    case ObjectiveType.Interactable:
-                        Debug.Log("Interacable");
-                        break;
-                    case ObjectiveType.Custom:
-                        var ObjInteract = npcGameObj.GetComponent<ObjectInteraction>();
-                        ObjInteract.isInteractable = false;
-                        Debug.Log("Custom");
-                        break;
-                }
+                ObjectiveTypeValidation(obj, quest, npcID, npcGameObj, isActiveSQ);
 
                 if (quest.IsAllObjectivesComplete())
                 {
@@ -121,6 +98,62 @@ public class QuestManager : MonoBehaviour
                 m_questUI.UpdateQuestUI();
             }
         }
+    }
+
+    public void ObjectiveTypeValidation(QuestObjective obj, Quest quest, string npcID, GameObject npcGameObj, bool isActiveSQ)
+    {
+        switch (obj.Type)
+        {
+            case ObjectiveType.Single:
+                npcGameObj.SetActive(false);
+                Debug.Log("Collectable");
+                break;
+            case ObjectiveType.Collectable:
+                npcGameObj.SetActive(false);
+                Debug.Log("Collectable");
+                break;
+            case ObjectiveType.TalkNPC:
+                Debug.Log("TalkNPC");
+                break;
+            case ObjectiveType.Use:
+                //npcGameObj.SetActive(false);
+                var tempCompt = npcGameObj.GetComponent<ObjectInteraction>();
+                tempCompt.m_objectComponent.SetDefaultSprite();
+                Debug.Log("Use");
+                break;
+            case ObjectiveType.ReachLocation:
+                Debug.Log("Reach Location");
+                break;
+            case ObjectiveType.Interactable:
+                Debug.Log("Interacable");
+                break;
+            case ObjectiveType.EndLocation:
+                if (EndLocationValidation(quest))
+                {
+                    GameModeManager.Instance.Switch(GameModeManager.Instance.TransitionMode);
+
+                    var endLocObj = npcGameObj.GetComponent<ObjectComponent>();
+                    endLocObj.PlayTriggerAnim("Start", ObjectiveType.EndLocation);
+                }
+                break;
+            case ObjectiveType.Custom:
+                var ObjInteract = npcGameObj.GetComponent<ObjectInteraction>();
+                ObjInteract.isInteractable = false;
+                Debug.Log("Custom");
+                break;
+        }
+    }
+
+    private bool EndLocationValidation(Quest quest)
+    {
+        foreach (QuestObjective otherObj in quest.objectives)
+        {
+            if (otherObj.Type != ObjectiveType.EndLocation && otherObj.Current_Amount < otherObj.RequiredAmount)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void ConfigOnHoldSQtoCurrentSQ()
@@ -144,7 +177,7 @@ public class QuestManager : MonoBehaviour
         currentActiveActQuest.questState = QuestState.Success;
         currentActiveActQuest = null;
 
-        m_primaryQuestManager.ConfigPQAfterQuest();
+        m_primaryQuestManager.OnQuestCompleted();
     }
 
     public void SuccessQuest(Quest quest)

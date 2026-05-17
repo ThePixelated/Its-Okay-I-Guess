@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 
 // Discalimer ini dibuat oleh AI - hellnah
@@ -7,13 +8,17 @@ using UnityEngine.EventSystems;
 
 public class StatsHUD : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public GameObject hudParent;
-    public GameObject panelStat; // Drag UI pop-up lo ke sini
+    public RectTransform hudParent;
+    //public GameObject panelStat; // Drag UI pop-up lo ke sini
+    [SerializeField] private Vector2 hiddenPos; // Posisi saat sembunyi (misal Y = 500)
+    [SerializeField] private Vector2 shownPos;
     public float displayDuration = 2.0f; // Rentan waktu 'x'
+    [SerializeField] private float transitionDuration = 0.5f;
 
     private bool isHovering = false;
     private bool toggleByButton = false;
     private Coroutine hoverCoroutine;
+    private Coroutine activeCoroutine;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -35,16 +40,18 @@ public class StatsHUD : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     }
 
     // Inget yang dianimasiin tu si hudParent
-    private System.Collections.IEnumerator HandleUIPopup()
+    private IEnumerator HandleUIPopup()
     {
-        panelStat.SetActive(true);
+        //panelStat.SetActive(true);
         // Logika Pop Up (bisa pake LeanTween/DOTween buat animasi)
+        activeCoroutine = StartCoroutine(SlideRoutine(shownPos));
 
         // Hold selama x detik
         yield return new WaitForSeconds(displayDuration);
 
+        activeCoroutine = StartCoroutine(SlideRoutine(hiddenPos));
         // Pop Out
-        panelStat.SetActive(false);
+        //panelStat.SetActive(false);
     }
 
     public void ToggleByButton()
@@ -54,7 +61,8 @@ public class StatsHUD : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             isHovering = true;
             StopCoroutine(hoverCoroutine);
             StopAllCoroutines();
-            panelStat.SetActive(true);
+            //panelStat.SetActive(true);
+            activeCoroutine = StartCoroutine(SlideRoutine(shownPos));
             toggleByButton = true;
 
             // set posisi langsung selesai
@@ -63,8 +71,31 @@ public class StatsHUD : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             // animnasi pop out
             toggleByButton = false;
+            activeCoroutine = StartCoroutine(SlideRoutine(hiddenPos));
 
-            panelStat.SetActive(false);
+            //panelStat.SetActive(false);
         }
+    }
+
+    IEnumerator SlideRoutine(Vector2 target)
+    {
+        Vector2 startPos = hudParent.anchoredPosition;
+        float elapsed = 0;
+
+        while (elapsed < transitionDuration)
+        {
+            elapsed += Time.deltaTime;
+            float percent = elapsed / transitionDuration;
+
+            // Menggunakan SmoothStep agar ada efek perlambatan (Ease Out)
+            float curve = Mathf.SmoothStep(0, 1, percent);
+
+            hudParent.anchoredPosition = Vector2.Lerp(startPos, target, curve);
+            yield return null;
+        }
+
+        hudParent.anchoredPosition = target;
+        StopCoroutine(activeCoroutine);
+        activeCoroutine = null;
     }
 }

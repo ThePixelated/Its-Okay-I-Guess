@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d33ba8a57ae0a458aeacd6c5856eb1, type: 3}
+  m_Name: PQ_Prg10_CH1_BersihkanKamar_D1
+  m_EditorClassIdentifier: Assembly-CSharp::ActData
+  actID: PQ_Prg9D_CH1_BersihkanKamar_D1
+  steps:
+  - type: 0
+    dialogueData: {fileID: 11400000, guid: ea9c1cdad1029df498dd752929115a43, type: 2}
+    questID: 
+    waitTransitionTime: 3
+  - type: 1
+    dialogueData: {fileID: 0}
+    questID: PQC10_CH1_Kosan_Kamar_Malam_D1_Bersihkan_Kamar
+    waitTransitionTime: 1
+  nextAct: {fileID: 11400000, guid: 78731fe2f04bf79438e642d117c9e13e, type: 2}
+  hasTransitionBeforeNextAct: 0
+  targetSceneName: 
+  targetSpawnPoint: {fileID: 0}
+  isSoftTransition: 0

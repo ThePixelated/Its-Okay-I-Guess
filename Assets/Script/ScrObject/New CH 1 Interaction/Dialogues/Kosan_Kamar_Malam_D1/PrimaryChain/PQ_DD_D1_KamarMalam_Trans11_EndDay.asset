@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_KamarMalam_Trans11_EndDay
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: end_day1_kasur
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Kamu berbaring. Lampu dimatikan. Kamar menjadi gelap —
+          gelap yang berbeda dari kegelapan di balik selimut
+          tadi pagi. Ini gelap yang lebih tenang.
+    Choices: []
+    NextNodeID: end_day1_inner_01
+  - NodeID: end_day1_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Hari ini... berat.
+    Choices: []
+    NextNodeID: end_day1_inner_02
+  - NodeID: end_day1_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Gue nggak tau sampe kapan bisa terus kayak gini.
+    Choices: []
+    NextNodeID: end_day1_inner_03
+  - NodeID: end_day1_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Tapi... belum saatnya nyerah juga kayaknya.
+    Choices: []
+    NextNodeID: end_day1_narasi_penutup
+  - NodeID: end_day1_narasi_penutup
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Hari pertama selesai. Bukan dengan gemilang — hanya
+          dengan napas yang masih ada. Dan untuk sekarang,
+          itu sudah cukup.
+    Choices: []
+    NextNodeID: 

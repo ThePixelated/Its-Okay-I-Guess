@@ -60,31 +60,13 @@ public class ObjectComponent : MonoBehaviour
 
     public void PlayTriggerAnim(string triggerSet, ObjectiveType objType = ObjectiveType.Null)
     {
-        anim.SetTrigger(triggerSet);
+        if (anim != null)
+            anim.SetTrigger(triggerSet);
+        else
+            Debug.LogWarning("anim null le");
         // Kita mulai coroutine buat nunggu durasi animasi
-        StartCoroutine(WaitAndNotify(objType));
+        //StartCoroutine(WaitAndNotify(objType));
     }
 
-    private System.Collections.IEnumerator WaitAndNotify(ObjectiveType objType)
-    {
-        // Nunggu satu frame biar Animator-nya update ke state baru
-        yield return null;
-
-        // Ambil durasi animasi yang sedang jalan sekarang
-        float duration = anim.GetCurrentAnimatorStateInfo(0).length;
-
-        yield return new WaitForSeconds(duration + 1);
-
-        if (objType == ObjectiveType.EndLocation)
-        {
-            UIManager.Instance.fadeImage.StartFadeIn();
-            Debug.Log("Fading....");
-            yield return new WaitForSeconds(duration + 3);
-            Debug.Log("Transisi");
-            SceneManager.LoadScene("MainMenu");
-        }
-        
-        // Kasih tau siapa pun yang dengerin kalau animasinya kelar
-        //OnAnimationFinished?.Invoke();
-    }
+    
 }

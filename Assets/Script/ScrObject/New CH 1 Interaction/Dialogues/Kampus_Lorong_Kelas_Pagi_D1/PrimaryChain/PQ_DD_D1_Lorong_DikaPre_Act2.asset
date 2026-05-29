@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_Lorong_DikaPre_Act2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: dika_sapa
+    SrcImgSprite: {fileID: 0}
+    CharName: Dika
+    Text: Eh, baru dateng? Kirain udah di dalam dari tadi.
+    Choices: []
+    NextNodeID: player_balas_dika
+  - NodeID: player_balas_dika
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Iya, baru nyampe. Macet.
+    Choices: []
+    NextNodeID: dika_tanya_skripsi
+  - NodeID: dika_tanya_skripsi
+    SrcImgSprite: {fileID: 0}
+    CharName: Dika
+    Text: Oh iya, skripsi lo gimana? Udah sampe mana? Lo biasanya paling cepet soalnya.
+    Choices: []
+    NextNodeID: player_diam_sebentar
+  - NodeID: player_diam_sebentar
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: ...
+    Choices: []
+    NextNodeID: player_pilih_respon
+  - NodeID: player_pilih_respon
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Kamu berpikir sejenak. Mau jawab apa?
+    Choices:
+    - IsTriggerQuest: 0
+      TargetQuestID: 
+      Text: "\"Aman, dikit lagi kelar.\" \u2014 Senyum yang sudah hafal jalurnya."
+      NextNodeID: dika_respon_bohong
+    - IsTriggerQuest: 0
+      TargetQuestID: 
+      Text: '"Jujur, lagi stuck. Butuh bantuan."'
+      NextNodeID: dika_respon_jujur
+    NextNodeID: 
+  - NodeID: dika_respon_bohong
+    SrcImgSprite: {fileID: 0}
+    CharName: Dika
+    Text: Wih, cepet banget. Gue masih struggle di bab tiga nih. Nanti boleh minta
+      tolong liat punya lo nggak?
+    Choices: []
+    NextNodeID: player_bohong_berat
+  - NodeID: player_bohong_berat
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Boleh... nanti ya.
+    Choices: []
+    NextNodeID: pre_act2_masuk_kelas
+  - NodeID: dika_respon_jujur
+    SrcImgSprite: {fileID: 0}
+    CharName: Dika
+    Text: Oh... serius? Gue kira lo udah jauh. Lo baik-baik aja kan?
+    Choices: []
+    NextNodeID: player_jujur_canggung
+  - NodeID: player_jujur_canggung
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Baik kok. Makasih udah nanya.
+    Choices: []
+    NextNodeID: pre_act2_masuk_kelas
+  - NodeID: pre_act2_masuk_kelas
+    SrcImgSprite: {fileID: 0}
+    CharName: Dika
+    Text: Yaudah, masuk yuk. Kayaknya dosennya udah di dalam.
+    Choices: []
+    NextNodeID: 

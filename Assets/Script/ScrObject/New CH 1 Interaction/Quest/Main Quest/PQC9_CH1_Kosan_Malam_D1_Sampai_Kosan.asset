@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
+  m_Name: PQC9_CH1_Kosan_Malam_D1_Sampai_Kosan
+  m_EditorClassIdentifier: Assembly-CSharp::Quest
+  QuestID: PQC9_CH1_Kosan_Malam_D1_Sampai_Kosan
+  Title: Sampai Kosan
+  SubTitle: Akhirnya, tempat yang paling tidak menuntut apapun
+  Description: Kosan menyambutmu seperti biasa, tanpa pertanyaan, tanpa ekspektasi.
+    Tapi sebelum bisa beristirahat, ada beberapa hal kecil yang perlu diurus di area
+    umum dulu.
+  objectives:
+  - ObjectiveID: Object_RakSepatu
+    Description: Taruh sepatu di rak
+    Type: 2
+    RequiredAmount: 1
+    Current_Amount: 0
+    ObjectivesIDs:
+    - Object_RakSepatu
+  - ObjectiveID: Object_Galon; Object_Dispenser
+    Description: Angkat galon ke dispenser
+    Type: 2
+    RequiredAmount: 2
+    Current_Amount: 0
+    ObjectivesIDs:
+    - Object_Galon
+    - Object_Dispenser
+  - ObjectiveID: Object_Sink
+    Description: Cuci piring kotor di bak dapur
+    Type: 2
+    RequiredAmount: 1
+    Current_Amount: 0
+    ObjectivesIDs:
+    - Object_Sink
+  questState: 0

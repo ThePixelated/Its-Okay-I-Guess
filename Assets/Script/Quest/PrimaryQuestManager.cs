@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Manages the Primary Quest (PQ) flow: an ordered chain of Acts,
@@ -15,6 +16,7 @@ using UnityEngine;
 /// </summary>
 public class PrimaryQuestManager : MonoBehaviour
 {
+    public Transform player;
     [Header("References")]
     public QuestManager m_questManager;
     //public QuestUI l;
@@ -31,6 +33,9 @@ public class PrimaryQuestManager : MonoBehaviour
     // ── Manager refs ─────────────────────────────────────────────────────────
     private DialogueManager m_dialogueManager;
     private GameModeManager m_gameModeManager;
+
+    [HideInInspector]
+    public Coroutine transCoroutine;
 
     // =========================================================================
     // Unity Lifecycle
@@ -49,7 +54,9 @@ public class PrimaryQuestManager : MonoBehaviour
 
         // Kick off initial transition, then run first step
         m_gameModeManager.Switch(m_gameModeManager.TransitionMode);
+
         RunStep();
+        //m_gameModeManager.onDialogueStop -= OnDialogueStop;
     }
 
     void OnDestroy()
@@ -131,16 +138,28 @@ public class PrimaryQuestManager : MonoBehaviour
 
         if (_currentAct.nextAct == null)
         {
-            Debug.Log("[PQM] Story completed — no next Act.");
+            if (!string.IsNullOrEmpty(_currentAct.targetSceneName))
+            {
+                m_gameModeManager.Switch(m_gameModeManager.TransitionMode);
+                transCoroutine = StartCoroutine(WaitAndNotify());
+            }
             return;
+        }
+
+        if (_currentAct.isSoftTransition && _currentAct.targetSpawnPoint != null)
+        {
+            m_gameModeManager.Switch(m_gameModeManager.TransitionMode);
+            // Teleport player, tidak load scene
+
+            // Kalau ada Act berikutnya setelah teleport, bisa di-chain ke StartNextAct
+
+            transCoroutine = StartCoroutine(WaitAndNotify());
         }
 
         if (_currentAct.hasTransitionBeforeNextAct)
         {
-            // Subscribe one-shot, baru switch mode
             m_gameModeManager.onTransitionStop += OnTransitionStopForNextAct;
             m_gameModeManager.Switch(m_gameModeManager.TransitionMode);
-            Debug.Log("[PQM] Waiting for TransitionMode to finish before starting next Act.");
             return;
         }
 
@@ -232,6 +251,40 @@ public class PrimaryQuestManager : MonoBehaviour
         {
             StopCoroutine(_currentCoroutine);
             _currentCoroutine = null;
+        }
+    }
+
+    public IEnumerator WaitAndNotify()
+    {
+        ActData currentAct = _currentAct;
+        //// Nunggu satu frame biar Animator-nya update ke state baru
+        yield return null;
+
+        //// Ambil durasi animasi yang sedang jalan sekarang
+        //float duration = anim.GetCurrentAnimatorStateInfo(0).length;
+
+        yield return new WaitForSeconds(1);
+
+        UIManager.Instance.fadeImage.StartFadeIn();
+        yield return new WaitForSeconds(1.5f);
+
+
+        if (currentAct.nextAct == null)
+        {
+            Debug.Log("Fading....");
+            //yield return new WaitForSeconds(1.5f);
+            Debug.Log("Transisi");
+            SceneManager.LoadScene(currentAct.targetSceneName);
+        }
+        else
+        {
+            player.transform.position = currentAct.targetSpawnPoint.position;
+
+            Debug.Log("Fading....");
+            yield return new WaitForSeconds(1.5f);
+            Debug.Log("Transisi");
+            
+            UIManager.Instance.fadeImage.StartFadeOut();
         }
     }
 }

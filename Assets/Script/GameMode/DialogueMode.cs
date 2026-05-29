@@ -19,7 +19,7 @@ public class DialogueMode : GameModeBase
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Dialog Interact Key Pressed...");
+            Debug.Log("Dialog Interact Key Pressed..." + Input.location);
             PlayerManager.Instance.InteractKey_Dialogs();
         }
 
@@ -29,6 +29,7 @@ public class DialogueMode : GameModeBase
     public override void Exit(GameModeManager GMM)
     {
         Debug.LogWarning("Exiting DialogueMode...");
+        GMM.onDialogueStop -= Switching;
         GMM.SetPrevGameModeIndicator(GameMode.DialogueMode);
     }
 
@@ -39,4 +40,6 @@ public class DialogueMode : GameModeBase
 
         GMM.Switch(GMM.ExplorationMode);
     }
+
+    
 }

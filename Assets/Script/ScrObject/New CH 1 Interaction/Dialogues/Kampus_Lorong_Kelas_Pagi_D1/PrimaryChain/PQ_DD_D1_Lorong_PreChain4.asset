@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_Lorong_PreChain4
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: pre4_tiba_kampus
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Lorong kampus pagi hari. Ramai, tapi entah mengapa selalu terasa seperti
+      tempat yang paling sepi untuk berdiri sendiri.
+    Choices: []
+    NextNodeID: pre4_inner_01
+  - NodeID: pre4_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Semua orang kayak tahu harus ke mana.
+    Choices: []
+    NextNodeID: pre4_inner_02
+  - NodeID: pre4_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Kelas dulu. Fokus.
+    Choices: []
+    NextNodeID: pre4_inner_03
+  - NodeID: pre4_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Eh, ada pengumuman baru kayaknya.
+    Choices: []
+    NextNodeID: 

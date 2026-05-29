@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d33ba8a57ae0a458aeacd6c5856eb1, type: 3}
+  m_Name: PQ_Prg3_CH1_MampirSebentar_D1
+  m_EditorClassIdentifier: Assembly-CSharp::ActData
+  actID: PQ_Prg3_CH1_MampirSebentar_D1
+  steps:
+  - type: 0
+    dialogueData: {fileID: 11400000, guid: 3cf14f1d0d0623b45a84de7d279ed23b, type: 2}
+    questID: 
+    waitTransitionTime: 4
+  - type: 1
+    dialogueData: {fileID: 0}
+    questID: PQC3_CH1_Kosan_Pagi_D1_Mampir Sebentar
+    waitTransitionTime: 1
+  nextAct: {fileID: 11400000, guid: f7fac85c596734a4ebc0b8e13d22a2dc, type: 2}
+  hasTransitionBeforeNextAct: 0
+  targetSceneName: 
+  targetSpawnPoint: {fileID: 0}
+  isSoftTransition: 0

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_Lorong_Trans45
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: trans45_lihat_pengumuman
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Pengumuman biasa. Jadwal ujian, info seminar...
+    Choices: []
+    NextNodeID: trans45_jalan_ke_kelas
+  - NodeID: trans45_jalan_ke_kelas
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Kelasnya di mana tadi...
+    Choices: []
+    NextNodeID: trans45_lihat_teman
+  - NodeID: trans45_lihat_teman
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Oh, ada Dika. Sepertinya dia mau masuk kelas juga.
+    Choices: []
+    NextNodeID:

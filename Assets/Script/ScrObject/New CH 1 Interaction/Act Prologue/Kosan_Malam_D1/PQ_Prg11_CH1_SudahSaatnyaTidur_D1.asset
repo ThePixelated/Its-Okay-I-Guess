@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d33ba8a57ae0a458aeacd6c5856eb1, type: 3}
+  m_Name: PQ_Prg11_CH1_SudahSaatnyaTidur_D1
+  m_EditorClassIdentifier: Assembly-CSharp::ActData
+  actID: PQ_Prg11_CH1_SudahSaatnyaTidur_D1
+  steps:
+  - type: 0
+    dialogueData: {fileID: 11400000, guid: e3d445f61a22fb94ab987f52e5f721d5, type: 2}
+    questID: 
+    waitTransitionTime: 3
+  - type: 0
+    dialogueData: {fileID: 11400000, guid: c695f273a438c274eae31b6f8ab1e62a, type: 2}
+    questID: 
+    waitTransitionTime: 1
+  - type: 1
+    dialogueData: {fileID: 0}
+    questID: PQC11_CH1_Kosan_Kamar_Malam_D1_Sudah_Saatnya_Tidur
+    waitTransitionTime: 1
+  nextAct: {fileID: 11400000, guid: 24784b6e7985ac8499e8e4b707e93124, type: 2}
+  hasTransitionBeforeNextAct: 0
+  targetSceneName: 
+  targetSpawnPoint: {fileID: 0}
+  isSoftTransition: 0

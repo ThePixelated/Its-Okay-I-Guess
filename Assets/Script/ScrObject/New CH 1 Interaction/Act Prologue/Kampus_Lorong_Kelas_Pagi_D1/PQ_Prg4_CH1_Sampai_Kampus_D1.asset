@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d33ba8a57ae0a458aeacd6c5856eb1, type: 3}
+  m_Name: PQ_Prg4_CH1_Sampai_Kampus_D1
+  m_EditorClassIdentifier: Assembly-CSharp::ActData
+  actID: PQ_Prg4_CH1_Sampai_Kampus_D1
+  steps:
+  - type: 0
+    dialogueData: {fileID: 11400000, guid: 5001298d4b030424ea9e78ce6bb6d7f0, type: 2}
+    questID: 
+    waitTransitionTime: 2
+  - type: 1
+    dialogueData: {fileID: 0}
+    questID: PQC4_CH1_Kampus_Lorong_Kelas_Pagi_D1_Sampai_Kampus
+    waitTransitionTime: 0
+  nextAct: {fileID: 11400000, guid: 34dcc3ef0127f3743b8dbdaf74cab361, type: 2}
+  hasTransitionBeforeNextAct: 0
+  targetSceneName: 
+  targetSpawnPoint: {fileID: 0}
+  isSoftTransition: 0

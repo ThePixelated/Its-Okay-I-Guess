@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_Kosan_PostAct1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: post_act1_narasi
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Apapun pilihanmu, hari ini tetap harus dijalani. Kampus
+          tidak menunggu.
+    Choices: []
+    NextNodeID: post_act1_inner_01
+  - NodeID: post_act1_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Oke. Berangkat.
+    Choices: []
+    NextNodeID: post_act1_inner_02
+  - NodeID: post_act1_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Semoga hari ini nggak terlalu banyak kejutan.
+    Choices: []
+    NextNodeID: 

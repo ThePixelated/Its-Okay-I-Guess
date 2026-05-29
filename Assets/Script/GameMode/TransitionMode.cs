@@ -16,7 +16,7 @@ public class TransitionMode : GameModeBase
     public override void Exit(GameModeManager GMM)
     {
         Debug.LogWarning("Exit TransitionMode...");
-        GMM.SetCurrGameModeIndicator(GameMode.TransitionMode);
+        GMM.SetPrevGameModeIndicator(GameMode.TransitionMode);
 
         GMM.TransitionStop();
     }

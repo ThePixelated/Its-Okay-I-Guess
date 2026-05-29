@@ -21,7 +21,9 @@ public class ActData : ScriptableObject
     [Header("Transition")]
     [Tooltip("If true, PQM will wait for onTransitionStop before running nextAct. Logic TBD.")]
     public bool hasTransitionBeforeNextAct = false;
-
+    public string targetSceneName;       // untuk EndLocation / hard transition
+    public Transform targetSpawnPoint;   // untuk GoToLocation / soft transition
+    public bool isSoftTransition;
 
 #if UNITY_EDITOR
     private void OnValidate()

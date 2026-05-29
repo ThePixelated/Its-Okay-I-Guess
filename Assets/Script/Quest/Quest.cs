@@ -74,6 +74,7 @@ public enum ObjectiveType
     Use,
     TalkNPC,
     Interactable,
+    GoToLocation,
     ReachLocation,
     SideActivity,
     EndLocation,

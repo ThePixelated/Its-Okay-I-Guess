@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_PostAct3
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: post_act3_narasi
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Keputusan sudah dibuat. Bukan berarti mudah — hanya
+          berarti sudah selesai untuk sekarang. Kelas sudah
+          kosong. Waktunya pulang.
+    Choices: []
+    NextNodeID: post_act3_inner_01
+  - NodeID: post_act3_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Capek juga ya, baru siang udah kepikiran banyak banget.
+    Choices: []
+    NextNodeID: post_act3_inner_02
+  - NodeID: post_act3_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Yaudah. Pulang dulu. Istirahat sebentar.
+    Choices: []
+    NextNodeID: post_act3_inner_03
+  - NodeID: post_act3_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Semoga sore ini lebih tenang.
+    Choices: []
+    NextNodeID:

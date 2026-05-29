@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_KosanMalam_Trans9_PreAct4
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: trans9_selesai_beres
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Oke. Galon beres, piring beres.
+    Choices: []
+    NextNodeID: trans9_duduk_sebentar
+  - NodeID: trans9_duduk_sebentar
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Kamu duduk sejenak di kursi ruang umum. Tanpa sadar,
+          tanganmu sudah membuka HP.
+    Choices: []
+    NextNodeID: trans9_notif_grup
+  - NodeID: trans9_notif_grup
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Ada notifikasi dari grup angkatan...
+    Choices: []
+    NextNodeID: trans9_lihat_foto
+  - NodeID: trans9_lihat_foto
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Oh. Foto wisuda.
+    Choices: []
+    NextNodeID: trans9_diam
+  - NodeID: trans9_diam
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: ...seneng sih. Tapi ada yang aneh di sini.
+    Choices: []
+    NextNodeID: trans9_tunjuk_dada
+  - NodeID: trans9_tunjuk_dada
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Di sini. Ada sesuatu yang mengganjal.
+    Choices: []
+    NextNodeID:

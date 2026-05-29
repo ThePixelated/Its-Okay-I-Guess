@@ -112,6 +112,21 @@ public class QuestManager : MonoBehaviour
             case ObjectiveType.TalkNPC:
                 Debug.Log("TalkNPC");
                 break;
+            case ObjectiveType.GoToLocation:
+                countRequiredfromEndLoc = LocationValidation(quest, ObjectiveType.GoToLocation);
+                Debug.Log("GOTO LOCATION LOGIC: " + countRequiredfromEndLoc);
+                if (countRequiredfromEndLoc)
+                {
+                    var endLocObj = npcGameObj.GetComponent<ObjectComponent>();
+                    endLocObj.PlayTriggerAnim("Start");
+                    
+                    //if (m_primaryQuestManager.transCoroutine == null)
+                    //{
+                    //    GameModeManager.Instance.Switch(GameModeManager.Instance.TransitionMode);
+                    //    StartCoroutine(m_primaryQuestManager.WaitAndNotify());
+                    //}
+                }
+                break;
             case ObjectiveType.Use:
                 //npcGameObj.SetActive(false);
                 var tempCompt = npcGameObj.GetComponent<ObjectInteraction>();
@@ -125,13 +140,15 @@ public class QuestManager : MonoBehaviour
                 Debug.Log("Interacable");
                 break;
             case ObjectiveType.EndLocation:
-                countRequiredfromEndLoc = EndLocationValidation(quest);
+                countRequiredfromEndLoc = LocationValidation(quest, ObjectiveType.EndLocation);
                 if (countRequiredfromEndLoc)
                 {
                     GameModeManager.Instance.Switch(GameModeManager.Instance.TransitionMode);
-
                     var endLocObj = npcGameObj.GetComponent<ObjectComponent>();
                     endLocObj.PlayTriggerAnim("Start", ObjectiveType.EndLocation);
+
+                    // Simpan target scene, tapi JANGAN LoadScene di sini
+                    //_pendingSceneTransition = quest.targetSceneName; // flag baru di QuestManager
                 }
                 break;
             case ObjectiveType.Custom:
@@ -141,18 +158,30 @@ public class QuestManager : MonoBehaviour
                 break;
         }
 
+        Debug.Log("FINAL VALUE: " + countRequiredfromEndLoc);
         return countRequiredfromEndLoc;
     }
 
-    private bool EndLocationValidation(Quest quest)
+    private bool LocationValidation(Quest quest, ObjectiveType objType)
     {
+        int exception = 0;
         bool returnVal = true;
         foreach (QuestObjective otherObj in quest.objectives)
         {
-            if (otherObj.Current_Amount < otherObj.RequiredAmount && otherObj.Type != ObjectiveType.EndLocation)
+            if (otherObj.Current_Amount < otherObj.RequiredAmount && otherObj.Type != objType)
             {
                 returnVal = false;
             }
+
+            //if (otherObj.Type == ObjectiveType.GoToLocation)
+            //{
+            //    exception++;
+            //}
+
+            //if (exception >= 2)
+            //{
+            //    returnVal = true;
+            //}
         }
         return returnVal;
     }

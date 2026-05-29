@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_Kelas_PreChain6
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: pre6_masuk_kelas
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Ruang kelas yang sama. Kursi yang sama. Dosen yang sama yang selalu datang
+      tepat waktu ketika kamu berharap dia terlambat.
+    Choices: []
+    NextNodeID: pre6_inner_01
+  - NodeID: pre6_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Tempat duduk biasa dulu.
+    Choices: []
+    NextNodeID: pre6_inner_02
+  - NodeID: pre6_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Oke. Buku catatan. Fokus. Bisa.
+    Choices: []
+    NextNodeID: pre6_inner_03
+  - NodeID: pre6_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Tadi sama Dika... harusnya gue bilang...
+    Choices: []
+    NextNodeID: pre6_inner_04
+  - NodeID: pre6_inner_04
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Udah. Nggak ada gunanya dipikirin sekarang.
+    Choices: []
+    NextNodeID: 

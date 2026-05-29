@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_Kelas_Trans7_PreAct3
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: trans7_kelas_bubar
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Kelas mulai bubar. Teman-teman sekitarmu sudah packing
+          tas, mengobrol, tertawa soal hal-hal yang tidak kamu
+          ikuti. Kamu masih duduk.
+    Choices: []
+    NextNodeID: trans7_inner_duduk
+  - NodeID: trans7_inner_duduk
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Tiga ratus ribu. Dari mana?
+    Choices: []
+    NextNodeID: trans7_inner_opsi
+  - NodeID: trans7_inner_opsi
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Minta orang tua? Atau... cari kerjaan tambahan?
+    Choices: []
+    NextNodeID: trans7_inner_berat
+  - NodeID: trans7_inner_berat
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Dua-duanya berat.
+    Choices: []
+    NextNodeID: trans7_inner_gerak
+  - NodeID: trans7_inner_gerak
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Yaudah. Gerak dulu.
+    Choices: []
+    NextNodeID: 

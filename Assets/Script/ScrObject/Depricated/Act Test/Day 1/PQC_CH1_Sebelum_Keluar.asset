@@ -18,19 +18,26 @@ MonoBehaviour:
   Description: Mau tidak mau, hari ini harus dijalani. Pastikan semua perlengkapan
     sudah siap sebelum melangkah keluar dari kamar.
   objectives:
-  - ObjectiveID: 
+  - ObjectiveID: Object_Sisa_Makanan
     Description: Sarapan seadanya di meja kamar
-    Type: 4
-    RequiredAmount: 0
-    Current_Amount: 0
-  - ObjectiveID: 
-    Description: Masukkan laptop dan buku ke tas
     Type: 0
+    RequiredAmount: 1
+    Current_Amount: 0
+    ObjectivesIDs:
+    - Object_Sisa_Makanan
+  - ObjectiveID: Object_Buku; Object_Laptop
+    Description: Masukkan laptop dan buku ke tas
+    Type: 2
     RequiredAmount: 2
     Current_Amount: 0
-  - ObjectiveID: 
+    ObjectivesIDs:
+    - Object_Buku
+    - Object_Laptop
+  - ObjectiveID: Object_EndLoc_Door
     Description: Keluar kamar menuju area kosan
-    Type: 1
-    RequiredAmount: 0
+    Type: 7
+    RequiredAmount: 1
     Current_Amount: 0
+    ObjectivesIDs:
+    - Object_EndLoc_Door
   questState: 0

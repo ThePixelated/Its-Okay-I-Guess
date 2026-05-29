@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
+  m_Name: PQC3_CH1_Kosan_Kamar_Pagi_D1_Mampir_Sebentar
+  m_EditorClassIdentifier: Assembly-CSharp::Quest
+  QuestID: PQC3_CH1_Kosan_Pagi_D1_Mampir Sebentar
+  Title: Mampir Sebentar
+  SubTitle: Area kosan sebelum berangkat
+  Description: Sebelum keluar kosan, ada beberapa hal kecil yang perlu diurus. Hal-hal
+    kecil yang kalau diabaikan, nanti pasti terasa mengganjal.
+  objectives:
+  - ObjectiveID: Object_Dispenser
+    Description: Isi ulang tumbler di dispenser
+    Type: 4
+    RequiredAmount: 1
+    Current_Amount: 0
+    ObjectivesIDs:
+    - Object_Dispenser
+  - ObjectiveID: Object_RakSepatu
+    Description: Cek rak sepatu, dan kenakan sepatu
+    Type: 4
+    RequiredAmount: 1
+    Current_Amount: 0
+    ObjectivesIDs:
+    - Object_RakSepatu
+  - ObjectiveID: Object_GerbangKos
+    Description: Menuju pintu gerbang kosan
+    Type: 8
+    RequiredAmount: 1
+    Current_Amount: 0
+    ObjectivesIDs:
+    - Object_GerbangKos
+  questState: 1

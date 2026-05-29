@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_KamarPagi_Trans12
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: trans12_selesai_mandi
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Oke. Sudah mandi. Satu hal beres.
+    Choices: []
+    NextNodeID: trans12_perut_bunyi
+  - NodeID: trans12_perut_bunyi
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Perut udah bunyi dari tadi...
+    Choices: []
+    NextNodeID: trans12_mikir_sarapan
+  - NodeID: trans12_mikir_sarapan
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Ada roti kemarin kayaknya. Atau sudah habis?
+    Choices: []
+    NextNodeID: trans12_reminder_tas
+  - NodeID: trans12_reminder_tas
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Eh, laptop sama buku jangan sampe ketinggalan.
+    Choices: []
+    NextNodeID: 
+  PMQuestInfo:
+    isTriggerQuest: 1
+    targetQuest: PQC_CH1_Kosan_Kamar_Pagi_D1_Sebelum_Keluar
+    isTriggerDialogue: 0
+    targetDialogueData: 
+    waitTransitionTime: 0
+    gameModeTransition: 0

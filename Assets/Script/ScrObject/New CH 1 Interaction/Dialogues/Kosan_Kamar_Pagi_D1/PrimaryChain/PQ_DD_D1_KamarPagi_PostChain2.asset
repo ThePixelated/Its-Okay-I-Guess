@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_KamarPagi_PostChain2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: post2_siap_keluar
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Oke. Tas sudah. Makan sudah, walaupun seadanya.
+    Choices: []
+    NextNodeID: post2_saldo_lagi
+  - NodeID: post2_saldo_lagi
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Tapi saldo itu tadi...
+    Choices: []
+    NextNodeID: post2_pendam
+  - NodeID: post2_pendam
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Nanti. Urusin nanti. Sekarang berangkat dulu.
+    Choices: []
+    NextNodeID:

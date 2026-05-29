@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_KamarMalam_Trans1011
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: trans1011_kamar_rapi
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Lumayan. Lebih manusiawi sekarang.
+    Choices: []
+    NextNodeID: trans1011_duduk_kasur
+  - NodeID: trans1011_duduk_kasur
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: "Kamu duduk di pinggir kasur. Punggungmu terasa berat. Bukan karena capek
+      beres-beres \u2014 tapi karena memang sudah berat dari tadi pagi."
+    Choices: []
+    NextNodeID: trans1011_inner_hitung
+  - NodeID: trans1011_inner_hitung
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Saldo. Dika. Dosen. Foto wisuda itu.
+    Choices: []
+    NextNodeID: trans1011_inner_banyak
+  - NodeID: trans1011_inner_banyak
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Banyak banget yang terjadi hari ini. Dan gue nggak ngerasa oke-oke aja.
+    Choices: []
+    NextNodeID: trans1011_inner_tapi
+  - NodeID: trans1011_inner_tapi
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Tapi... nggak apa-apa. Ini cuma satu hari.
+    Choices: []
+    NextNodeID: 

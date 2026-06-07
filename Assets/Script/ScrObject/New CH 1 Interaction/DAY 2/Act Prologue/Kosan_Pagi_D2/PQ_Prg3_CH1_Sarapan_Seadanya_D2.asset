@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d33ba8a57ae0a458aeacd6c5856eb1, type: 3}
+  m_Name: PQ_Prg3_CH1_Sarapan_Seadanya_D2
+  m_EditorClassIdentifier: Assembly-CSharp::ActData
+  actID: PQ_Prg3_CH1_Sarapan_Seadanya_D2
+  steps:
+  - type: 0
+    dialogueData: {fileID: 11400000, guid: 434826f746d3acd48ae465d2e14196da, type: 2}
+    questID: 
+    waitTransitionTime: 4
+  - type: 1
+    dialogueData: {fileID: 0}
+    questID: PQC3_CH1_Kosan_Pagi_D2_Sarapan_Seadanya_Lagi
+    waitTransitionTime: 1
+  nextAct: {fileID: 11400000, guid: c6c4b71a4645abe4c93a7458af29570b, type: 2}
+  hasTransitionBeforeNextAct: 0
+  targetSceneName: 
+  targetSpawnPoint: {fileID: 0}
+  isSoftTransition: 0

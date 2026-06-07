@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_KosanMalam_PreChain7
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: d2_pre7_tiba
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Kosan malam kedua. Suara TV dari kamar sebelah masih sama. Bau lorong masih
+      sama. Tapi kamu yang pulang hari ini sedikit berbeda dari yang berangkat tadi
+      pagi.
+    Choices: []
+    NextNodeID: d2_pre7_inner_01
+  - NodeID: d2_pre7_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Tas dulu.
+    Choices: []
+    NextNodeID: d2_pre7_inner_02
+  - NodeID: d2_pre7_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Laper. Tapi males masak.
+    Choices: []
+    NextNodeID: d2_pre7_inner_03
+  - NodeID: d2_pre7_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Ambil apa yang ada di dapur aja.
+    Choices: []
+    NextNodeID: 

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
+  m_Name: PQC4_CH1_Kampus_Lorong_Utama_D2_Menuju_Ruang_Dosen
+  m_EditorClassIdentifier: Assembly-CSharp::Quest
+  QuestID: PQC4_CH1_Kampus_Lorong_Utama_D2_Menuju_Ruang_Dosen
+  Title: Menuju Ruang Dosen
+  SubTitle: Lorong yang terasa lebih panjang dari biasanya
+  Description: Kamu sudah di kampus. Ruang dosen ada di ujung lorong. Jarak yang
+    biasanya terasa biasa saja, hari ini terasa seperti perjalanan yang tidak ingin
+    kamu selesaikan terlalu cepat.
+  objectives:
+  - ObjectiveID: 
+    Description: Tiba di kampus, masuk lorong utama
+    Type: 6
+    RequiredAmount: 1
+    Current_Amount: 0
+    ObjectivesIDs: []
+  - ObjectiveID: 
+    Description: Cek jadwal bimbingan di papan pengumuman
+    Type: 4
+    RequiredAmount: 1
+    Current_Amount: 0
+    ObjectivesIDs: []
+  - ObjectiveID: 
+    Description: Menuju area depan ruang dosen
+    Type: 9
+    RequiredAmount: 1
+    Current_Amount: 0
+    ObjectivesIDs: []
+  questState: 0

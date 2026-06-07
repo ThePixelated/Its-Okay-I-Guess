@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_Lorong_PreChain5
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 1
+  _dialogueNodes:
+  - NodeID: d2_pre5_depan_pintu
+    SrcImgSprite: {fileID: 0}
+    CharName:
+    Text: Pintu ruang dosen. Tertutup. Di baliknya
+          mungkin ada mahasiswa lain yang sedang
+          dibimbing. Atau mungkin dosen sedang
+          minum kopi. Kamu tidak tahu.
+    Choices: []
+    NextNodeID: d2_pre5_inner_01
+  - NodeID: d2_pre5_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Duduk dulu. Tenang.
+    Choices: []
+    NextNodeID: d2_pre5_inner_02
+  - NodeID: d2_pre5_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Baca lagi aja dokumennya. Biar nggak
+          nganggur.
+    Choices: []
+    NextNodeID: d2_pre5_inner_03
+  - NodeID: d2_pre5_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Udah dibaca tiga kali. Masih nggak masuk
+          juga ke kepala.
+    Choices: []
+    NextNodeID: d2_pre5_inner_04
+  - NodeID: d2_pre5_inner_04
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Yaudah. Apapun yang terjadi di dalam,
+          terjadi aja.
+    Choices: []
+    NextNodeID:

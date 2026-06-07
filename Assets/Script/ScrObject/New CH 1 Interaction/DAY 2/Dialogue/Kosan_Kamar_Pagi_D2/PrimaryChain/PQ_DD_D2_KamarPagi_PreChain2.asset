@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_KamarPagi_PreChain2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: d2_pre2_selesai_mandi
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Oke. Sudah mandi.
+    Choices: []
+    NextNodeID: d2_pre2_catatan
+  - NodeID: d2_pre2_catatan
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Catatan revisi. Baca sekali lagi biar yakin.
+    Choices: []
+    NextNodeID: d2_pre2_baca
+  - NodeID: d2_pre2_baca
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Perbaiki rumusan masalah. Sudah. Tambahkan referensi bab dua. Sudah. Perjelas metodologi. Su... sudah kayaknya.
+    Choices: []
+    NextNodeID: d2_pre2_tidak_yakin
+  - NodeID: d2_pre2_tidak_yakin
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Harusnya sudah. Tapi kenapa masih ngerasa
+          ada yang kurang?
+    Choices: []
+    NextNodeID: d2_pre2_paksa_yakin
+  - NodeID: d2_pre2_paksa_yakin
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Udah. Cukup. Masukin ke tas, berangkat.
+    Choices: []
+    NextNodeID:

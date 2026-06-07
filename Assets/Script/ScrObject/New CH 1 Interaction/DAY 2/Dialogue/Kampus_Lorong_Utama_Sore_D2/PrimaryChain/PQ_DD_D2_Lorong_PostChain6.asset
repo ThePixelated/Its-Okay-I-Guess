@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_Lorong_PostChain6
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: d2_post6_keluar_kampus
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Kamu melangkah keluar dari gedung kampus. Hari ini tidak ada kelas lain.
+      Tidak ada alasan untuk tinggal lebih lama.
+    Choices: []
+    NextNodeID: d2_post6_inner_01
+  - NodeID: d2_post6_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Gedung ini kayaknya nggak pernah capek ngasih PR ke orang.
+    Choices: []
+    NextNodeID: d2_post6_inner_02
+  - NodeID: d2_post6_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Tapi gue yang milih masuk sini.
+    Choices: []
+    NextNodeID: d2_post6_inner_03
+  - NodeID: d2_post6_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Pulang.
+    Choices: []
+    NextNodeID: 

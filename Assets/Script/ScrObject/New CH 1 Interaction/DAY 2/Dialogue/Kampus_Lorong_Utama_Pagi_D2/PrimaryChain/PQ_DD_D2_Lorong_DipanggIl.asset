@@ -10,32 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
-  m_Name: PQ_DD_D1_KosanMalam_PreChain9
+  m_Name: PQ_DD_D2_Lorong_DipanggIl
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  isIgnoredbyPQ: 0
+  isIgnoredbyPQ: 1
   _dialogueNodes:
-  - NodeID: pre9_tiba_kosan
+  - NodeID: d2_dipanggil_pintu
     SrcImgSprite: {fileID: 0}
-    CharName: 
-    Text: Kosan. Akhirnya. Tempat yang tidak pernah memintamu untuk jadi siapapun
-      selain dirimu sendiri.
+    CharName:
+    Text: Pintu terbuka. Dosen melongok keluar,
+          mencari seseorang.
     Choices: []
-    NextNodeID: pre9_inner_01
-  - NodeID: pre9_inner_01
+    NextNodeID: d2_dipanggil_dosen
+  - NodeID: d2_dipanggil_dosen
     SrcImgSprite: {fileID: 0}
-    CharName: Anggi
-    Text: Capek banget hari ini.
+    CharName: Dosen
+    Text: Masuk, silakan.
     Choices: []
-    NextNodeID: pre9_inner_02
-  - NodeID: pre9_inner_02
-    SrcImgSprite: {fileID: 0}
-    CharName: Anggi
-    Text: Eh, ada yang masak. Enak baunya.
-    Choices: []
-    NextNodeID: pre9_inner_03
-  - NodeID: pre9_inner_03
+    NextNodeID: d2_dipanggil_inner
+  - NodeID: d2_dipanggil_inner
     SrcImgSprite: {fileID: 0}
     CharName: Anggi
-    Text: Oh iya, galon. Udah habis dari kemarin.
+    Text: Oke. Ini dia.
     Choices: []
-    NextNodeID: pre9_inner_04
+    NextNodeID: d2_dipanggil_tarik_napas
+  - NodeID: d2_dipanggil_tarik_napas
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Tarik napas. Masuk.
+    Choices: []
+    NextNodeID:

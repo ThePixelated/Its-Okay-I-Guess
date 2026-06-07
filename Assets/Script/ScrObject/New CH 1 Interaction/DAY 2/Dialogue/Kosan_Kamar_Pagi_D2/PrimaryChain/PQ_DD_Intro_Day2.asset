@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_Intro_Day2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: intro_d2_narasi_01
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Hari kedua. Alarm berbunyi di jam yang sama. Tapi tubuhmu terasa seperti
+      belum benar-benar selesai beristirahat.
+    Choices: []
+    NextNodeID: intro_d2_narasi_02
+  - NodeID: intro_d2_narasi_02
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Hari ini ada bimbingan. Kamu sudah tahu sejak kemarin malam. Dan justru
+      karena itu, tidurmu tidak pernah benar-benar tenang.
+    Choices: []
+    NextNodeID: intro_d2_inner_01
+  - NodeID: intro_d2_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Hoamm...
+    Choices: []
+    NextNodeID: intro_d2_inner_02
+  - NodeID: intro_d2_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Bimbingan hari ini...
+    Choices: []
+    NextNodeID: intro_d2_inner_03
+  - NodeID: intro_d2_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Udah direvisi semua kemarin. Harusnya oke.
+    Choices: []
+    NextNodeID: intro_d2_inner_04
+  - NodeID: intro_d2_inner_04
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: ...harusnya.
+    Choices: []
+    NextNodeID: 

@@ -23,14 +23,14 @@ MonoBehaviour:
     Description: Taruh sepatu di rak
     Type: 2
     RequiredAmount: 1
-    Current_Amount: 0
+    Current_Amount: 1
     ObjectivesIDs:
     - Object_RakSepatu
   - ObjectiveID: Object_Galon; Object_Dispenser
     Description: Angkat galon ke dispenser
     Type: 2
     RequiredAmount: 2
-    Current_Amount: 0
+    Current_Amount: 2
     ObjectivesIDs:
     - Object_Galon
     - Object_Dispenser
@@ -38,7 +38,6 @@ MonoBehaviour:
     Description: Cuci piring kotor di bak dapur
     Type: 2
     RequiredAmount: 1
-    Current_Amount: 0
-    ObjectivesIDs:
-    - Object_Sink
-  questState: 0
+    Current_Amount: 1
+    ObjectivesIDs: []
+  questState: 3

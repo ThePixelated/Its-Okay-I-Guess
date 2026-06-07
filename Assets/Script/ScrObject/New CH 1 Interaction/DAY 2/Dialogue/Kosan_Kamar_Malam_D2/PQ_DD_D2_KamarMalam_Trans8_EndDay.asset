@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_KamarMalam_Trans8_EndDay
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: d2_end_kasur
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Udah. Set alarm. Besok lanjut lagi.
+    Choices: []
+    NextNodeID: d2_end_inner_01
+  - NodeID: d2_end_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Gue nggak oke-oke aja ya.
+    Choices: []
+    NextNodeID: d2_end_inner_02
+  - NodeID: d2_end_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Udah lama nggak oke-oke aja. Dan gue pura-pura nggak tau.
+    Choices: []
+    NextNodeID: d2_end_inner_03
+  - NodeID: d2_end_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Tapi belum sekarang. Besok aja.
+    Choices: []
+    NextNodeID: d2_end_narasi_01
+  - NodeID: d2_end_narasi_01
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Besok aja
+    Choices: []
+    NextNodeID: 

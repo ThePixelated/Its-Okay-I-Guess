@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_KosanPagi_PreChain3
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 1
+  _dialogueNodes:
+  - NodeID: d2_pre3_dapur
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Ada apa ya di dapur...
+    Choices: []
+    NextNodeID: d2_pre3_seadanya
+  - NodeID: d2_pre3_seadanya
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Roti lagi. Yaudah, yang penting ada.
+    Choices: []
+    NextNodeID: d2_pre3_cepat
+  - NodeID: d2_pre3_cepat
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Makan cepet, terus langsung berangkat.
+          Nggak mau telat.
+    Choices: []
+    NextNodeID:

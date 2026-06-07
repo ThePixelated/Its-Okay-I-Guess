@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D1_KosanMalam_PreChain9
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: pre9_tiba_kosan
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Kosan. Akhirnya. Tempat yang tidak pernah memintamu untuk jadi siapapun
+      selain dirimu sendiri.
+    Choices: []
+    NextNodeID: pre9_inner_01
+  - NodeID: pre9_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Capek banget hari ini.
+    Choices: []
+    NextNodeID: pre9_inner_02
+  - NodeID: pre9_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Eh, ada yang masak. Enak baunya.
+    Choices: []
+    NextNodeID: pre9_inner_03
+  - NodeID: pre9_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Oh iya, galon. Udah habis dari kemarin.
+    Choices: []
+    NextNodeID: pre9_inner_04
+  - NodeID: pre9_inner_04
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Piring juga kayaknya numpuk di bak. Beresin dulu deh.
+    Choices: []
+    NextNodeID: 

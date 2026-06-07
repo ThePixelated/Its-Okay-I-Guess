@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca5fbc58b18df6488a2e108ed97a2af, type: 3}
+  m_Name: PQC6_CH1_Kampus_Lorong_Utama_D2_Keluar_dari_Ruangan
+  m_EditorClassIdentifier: Assembly-CSharp::Quest
+  QuestID: PQC6_CH1_Kampus_Lorong_Utama_D2_Keluar_dari_Ruangan
+  Title: Keluar dari Ruangan
+  SubTitle: Lorong yang sama, perasaan yang berbeda
+  Description: Bimbingan sudah selesai. Tapi "selesai" tidak selalu berarti "beres".
+    Kamu berdiri di lorong dan untuk pertama kalinya hari ini, tidak ada agenda berikutnya
+    yang mendesakmu. Hanya kamu dan apa yang baru saja terjadi di dalam ruangan itu.
+  objectives:
+  - ObjectiveID: 
+    Description: Keluar dari area ruang dosen
+    Type: 5
+    RequiredAmount: 0
+    Current_Amount: 0
+    ObjectivesIDs: []
+  - ObjectiveID: 
+    Description: Menuju pintu keluar kampus
+    Type: 8
+    RequiredAmount: 0
+    Current_Amount: 0
+    ObjectivesIDs: []
+  questState: 0

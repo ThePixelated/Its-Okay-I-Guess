@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_KamarPagi_PreChain1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: d2_pre1_alarm
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Iya...
+    Choices: []
+    NextNodeID: d2_pre1_duduk
+  - NodeID: d2_pre1_duduk
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Duduk dulu sebentar.
+    Choices: []
+    NextNodeID: d2_pre1_ingat_bimbingan
+  - NodeID: d2_pre1_ingat_bimbingan
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Bimbingan jam sepuluh. Masih ada waktu.
+    Choices: []
+    NextNodeID: d2_pre1_lihat_meja
+  - NodeID: d2_pre1_lihat_meja
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Eh, draft skripsinya masih berantakan di meja.
+          Beresin dulu biar kepalanya agak tenang.
+    Choices: []
+    NextNodeID:

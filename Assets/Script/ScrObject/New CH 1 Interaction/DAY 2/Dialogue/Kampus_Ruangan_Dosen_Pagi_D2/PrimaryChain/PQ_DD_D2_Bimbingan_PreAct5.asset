@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_Bimbingan_PreAct5
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: d2_bimbing_duduk
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Ruang dosen. Lebih kecil dari yang selalu kamu bayangkan. Atau mungkin
+      kamu yang terlalu besar membayangkannya.
+    Choices: []
+    NextNodeID: d2_bimbing_dosen_buka
+  - NodeID: d2_bimbing_dosen_buka
+    SrcImgSprite: {fileID: 0}
+    CharName: Dosen
+    Text: Ini revisi yang terakhir kamu kirim ya?
+    Choices: []
+    NextNodeID: d2_bimbing_player_jawab
+  - NodeID: d2_bimbing_player_jawab
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Iya pak, yang kemarin saya kirim lewat email.
+    Choices: []
+    NextNodeID: d2_bimbing_dosen_baca
+  - NodeID: d2_bimbing_dosen_baca
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Dosen membaca. Pelan. Kamu menghitung ubin lantai tanpa sadar.
+    Choices: []
+    NextNodeID: d2_bimbing_inner_tunggu
+  - NodeID: d2_bimbing_inner_tunggu
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Satu. Dua. Tiga...
+    Choices: []
+    NextNodeID: d2_bimbing_dosen_respons
+  - NodeID: d2_bimbing_dosen_respons
+    SrcImgSprite: {fileID: 0}
+    CharName: Dosen
+    Text: Masih kurang.
+    Choices: []
+    NextNodeID: d2_bimbing_inner_jatuh
+  - NodeID: d2_bimbing_inner_jatuh
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: ...
+    Choices: []
+    NextNodeID: d2_bimbing_inner_lagi
+  - NodeID: d2_bimbing_inner_lagi
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Lagi.
+    Choices: []
+    NextNodeID: 

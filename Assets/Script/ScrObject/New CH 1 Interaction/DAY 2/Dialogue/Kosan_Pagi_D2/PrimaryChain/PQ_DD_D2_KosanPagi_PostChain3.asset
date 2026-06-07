@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_KosanPagi_PostChain3
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 1
+  _dialogueNodes:
+  - NodeID: d2_post3_gerbang
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Oke. Berangkat.
+    Choices: []
+    NextNodeID: d2_post3_dalam_hati
+  - NodeID: d2_post3_dalam_hati
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Semua revisi sudah dikerjain. Tinggal
+          presentasiin dengan tenang.
+    Choices: []
+    NextNodeID: d2_post3_tapi
+  - NodeID: d2_post3_tapi
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Kalau ternyata masih kurang gimana...
+    Choices: []
+    NextNodeID: d2_post3_stop
+  - NodeID: d2_post3_stop
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Stop. Jangan dipikirin dulu. Jalan aja.
+    Choices: []
+    NextNodeID: d2_post3_narasi
+  - NodeID: d2_post3_narasi
+    SrcImgSprite: {fileID: 0}
+    CharName:
+    Text: Langkahmu keluar dari gerbang kosan terasa
+          lebih berat dari biasanya. Tapi kaki tetap
+          bergerak. Itu sudah cukup untuk sekarang.
+    Choices: []
+    NextNodeID:

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d33ba8a57ae0a458aeacd6c5856eb1, type: 3}
+  m_Name: PQ_Prg1_CH1_Bangun_Lagi_D2
+  m_EditorClassIdentifier: Assembly-CSharp::ActData
+  actID: PQ_Prg1_CH1_Bangun_Lagi_D2
+  steps:
+  - type: 0
+    dialogueData: {fileID: 11400000, guid: ffbbec9975311544fabcfd937c623453, type: 2}
+    questID: 
+    waitTransitionTime: 4
+  - type: 0
+    dialogueData: {fileID: 11400000, guid: 01722e8683521154ebda8a96f79d1390, type: 2}
+    questID: 
+    waitTransitionTime: 2
+  - type: 0
+    dialogueData: {fileID: 11400000, guid: 436a6bfb023cc78409d79d455ade3ece, type: 2}
+    questID: 
+    waitTransitionTime: 1
+  - type: 1
+    dialogueData: {fileID: 0}
+    questID: PQC1_CH1_Kosan_Kamar_Pagi_D2_Bangun_Lagi
+    waitTransitionTime: 1
+  nextAct: {fileID: 11400000, guid: 35be3269dd17bcb49a8373a16ec80f20, type: 2}
+  hasTransitionBeforeNextAct: 0
+  targetSceneName: 
+  targetSpawnPoint: {fileID: 0}
+  isSoftTransition: 0

@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PR_DD_D2_KosanMalam_Trans78
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 1
+  _dialogueNodes:
+  - NodeID: d2_trans78_makan_selesai
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Lumayan. Perut udah agak tenang.
+    Choices: []
+    NextNodeID: d2_trans78_duduk
+  - NodeID: d2_trans78_duduk
+    SrcImgSprite: {fileID: 0}
+    CharName:
+    Text: Kamu duduk di kursi ruang umum. Tidak
+          menyalakan HP. Tidak melakukan apapun.
+          Hanya duduk.
+    Choices: []
+    NextNodeID: d2_trans78_inner_01
+  - NodeID: d2_trans78_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: "Masih kurang."
+    Choices: []
+    NextNodeID: d2_trans78_inner_02
+  - NodeID: d2_trans78_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Kurang apanya? Gue udah ngerjain semua
+          yang diminta. Udah revisi berkali-kali.
+    Choices: []
+    NextNodeID: d2_trans78_inner_03
+  - NodeID: d2_trans78_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Atau emang gue yang nggak cukup baik
+          buat ini semua?
+    Choices: []
+    NextNodeID: d2_trans78_inner_04
+  - NodeID: d2_trans78_inner_04
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Stop. Bukan waktunya.
+    Choices: []
+    NextNodeID: d2_trans78_narasi
+  - NodeID: d2_trans78_narasi
+    SrcImgSprite: {fileID: 0}
+    CharName:
+    Text: Tapi pertanyaan itu tidak pergi hanya
+          karena diperintah. Ia hanya berpindah
+          — ke bagian kepala yang lebih dalam,
+          yang lebih susah dijangkau.
+    Choices: []
+    NextNodeID:

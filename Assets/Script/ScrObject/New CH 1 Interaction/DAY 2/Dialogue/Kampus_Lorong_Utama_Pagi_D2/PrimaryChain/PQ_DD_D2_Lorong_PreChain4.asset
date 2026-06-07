@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_Lorong_PreChain4
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 1
+  _dialogueNodes:
+  - NodeID: d2_pre4_tiba_kampus
+    SrcImgSprite: {fileID: 0}
+    CharName:
+    Text: Kampus hari ini terasa seperti kampus pada
+          umumnya. Ramai, sedikit berisik, bau lorong
+          yang selalu sama. Tapi kamu tidak benar-benar
+          melihat semua itu.
+    Choices: []
+    NextNodeID: d2_pre4_inner_01
+  - NodeID: d2_pre4_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Ruang dosen. Ujung lorong kanan.
+    Choices: []
+    NextNodeID: d2_pre4_inner_02
+  - NodeID: d2_pre4_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Eh, cek dulu di papan. Siapa tau ada
+          perubahan jadwal.
+    Choices: []
+    NextNodeID: d2_pre4_inner_03
+  - NodeID: d2_pre4_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Semoga nggak ada perubahan. Atau semoga
+          ada. Entahlah.
+    Choices: []
+    NextNodeID:

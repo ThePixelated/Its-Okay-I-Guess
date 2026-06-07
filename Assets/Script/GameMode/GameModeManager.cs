@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameModeManager : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class GameModeManager : MonoBehaviour
     private bool _isEnableMove = false; // flag untuk movement (efek rotate in-position)
     private float _currentTime = 0f;
     private string _interactableID;
+    private Rigidbody2D _rb;
+    private Vector2 _moveinput;
+    private Animator _playerAnim;
 
     public string InteratableID { get { return _interactableID; } set { _interactableID = value; } }
 
@@ -46,6 +50,9 @@ public class GameModeManager : MonoBehaviour
 
         PlayerManager.Instance.onTriggerEnter_non += SetFlagTrue;
         PlayerManager.Instance.onTriggerExit_non += SetFlagFalse;
+
+        _rb = m_PlayerObj.GetComponent<Rigidbody2D>();
+        _playerAnim = m_PlayerObj.GetComponent<Animator>();
     }
 
     private void Update()
@@ -85,13 +92,25 @@ public class GameModeManager : MonoBehaviour
     public void HandleCharDirection()
     {
         if (Input.GetKey(KeyCode.W) || (Input.GetKey(KeyCode.UpArrow)))
+        {
             playerDirection = Direction.Forward;
+            //m_PlayerObj.GetComponent<SpriteRenderer>().flipX = false;
+        }
         else if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.LeftArrow)))
+        {
             playerDirection = Direction.Left;
+            //m_PlayerObj.GetComponent<SpriteRenderer>().flipX = true;
+        }
         else if (Input.GetKey(KeyCode.S) || (Input.GetKey(KeyCode.DownArrow)))
+        {
             playerDirection = Direction.Backward;
+            //m_PlayerObj.GetComponent<SpriteRenderer>().flipX = false;
+        }
         else if (Input.GetKey(KeyCode.D) || (Input.GetKey(KeyCode.RightArrow)))
+        {
             playerDirection = Direction.Right;
+            //m_PlayerObj.GetComponent<SpriteRenderer>().flipX = false;
+        }
 
         m_playerData.PlayerDirection = playerDirection;
     }
@@ -116,31 +135,79 @@ public class GameModeManager : MonoBehaviour
 
         if (_isEnableMove)
         {
-            //Debug.LogWarning("MOVEMENT OBSERVE");
-            Vector3 movement = new Vector3(m_PlayerObj.transform.position.x, m_PlayerObj.transform.position.y, m_PlayerObj.transform.position.z);
-            //Debug.Log(movement);
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) // Forward
-            {
-                movement = new Vector3(movement.x, movement.y + playerSpeed * Time.deltaTime, 0f);
-            }
-            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) // Left
-            {
-                movement = new Vector3(movement.x - playerSpeed * Time.deltaTime, movement.y, 0f);
-            }
+            ////Debug.LogWarning("MOVEMENT OBSERVE");
+            //Vector3 movement = new Vector3(m_PlayerObj.transform.position.x, m_PlayerObj.transform.position.y, m_PlayerObj.transform.position.z);
+            ////Debug.Log(movement);
+            //if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) // Forward
+            //{
+            //    movement = new Vector3(movement.x, movement.y + playerSpeed * Time.deltaTime, 0f);
+            //}
+            //else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) // Left
+            //{
+            //    movement = new Vector3(movement.x - playerSpeed * Time.deltaTime, movement.y, 0f);
+            //}
 
-            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) // Backward
-            {
-                movement = new Vector3(movement.x, movement.y - playerSpeed * Time.deltaTime, 0f);
-            }
+            //else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) // Backward
+            //{
+            //    movement = new Vector3(movement.x, movement.y - playerSpeed * Time.deltaTime, 0f);
+            //}
 
-            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Right
-            {
-                movement = new Vector3(movement.x + playerSpeed * Time.deltaTime, movement.y, 0f);
-            }
-            //Debug.Log(movement);
+            //else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Right
+            //{
+            //    movement = new Vector3(movement.x + playerSpeed * Time.deltaTime, movement.y, 0f);
+            //}
+            ////Debug.Log(movement);
 
-            m_PlayerObj.transform.position = movement;
+            
             //Debug.Log(gameObject.transform.position);
+        }
+
+        _rb.linearVelocity = _moveinput * playerSpeed;
+    }
+
+    public void MovePlayer(InputAction.CallbackContext context)
+    {
+        if (CurrentMode == ExplorationMode)
+        {
+            _playerAnim.SetBool("isWalking", true);
+
+            if (context.canceled)
+            {
+                _playerAnim.SetBool("isWalking", false);
+                _playerAnim.SetFloat("lastInputX", _moveinput.x);
+                _playerAnim.SetFloat("lastInputY", _moveinput.y);
+
+                if (_moveinput.x > 0)
+                {
+                    m_PlayerObj.GetComponent<SpriteRenderer>().flipX = false;
+                }
+                else if (_moveinput.x < 0)
+                {
+                    m_PlayerObj.GetComponent<SpriteRenderer>().flipX = true;
+                }
+                else if (_moveinput.y < 0)
+                {
+                    m_PlayerObj.GetComponent<SpriteRenderer>().flipX = false;
+                }
+
+            }
+
+            _moveinput = context.ReadValue<Vector2>();
+            _playerAnim.SetFloat("inputX", _moveinput.x);
+            _playerAnim.SetFloat("inputY", _moveinput.y);
+
+            if (_moveinput.x > 0)
+            {
+                m_PlayerObj.GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if (_moveinput.x < 0)
+            {
+                m_PlayerObj.GetComponent<SpriteRenderer>().flipX = false;
+            }
+            else if (_moveinput.y < 0)
+            {
+                m_PlayerObj.GetComponent<SpriteRenderer>().flipX = true;
+            }
         }
     }
 

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcb2e8873b74e4409684504bb478848, type: 3}
+  m_Name: PQ_DD_D2_PostAct5
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  isIgnoredbyPQ: 0
+  _dialogueNodes:
+  - NodeID: d2_post_act5_keluar
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: "Pintu ruang dosen tertutup di belakangmu. Lorong terasa lebih panjang
+      dari tadi \u2014 padahal jaraknya sama."
+    Choices: []
+    NextNodeID: d2_post_act5_inner_01
+  - NodeID: d2_post_act5_inner_01
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Masih kurang.
+    Choices: []
+    NextNodeID: d2_post_act5_inner_02
+  - NodeID: d2_post_act5_inner_02
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Gue udah revisi semua yang diminta. Kurangnya di mana lagi?
+    Choices: []
+    NextNodeID: d2_post_act5_inner_03
+  - NodeID: d2_post_act5_inner_03
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Atau emang gue yang kurang?
+    Choices: []
+    NextNodeID: d2_post_act5_inner_04
+  - NodeID: d2_post_act5_inner_04
+    SrcImgSprite: {fileID: 0}
+    CharName: Anggi
+    Text: Stop. Jangan ke sana.
+    Choices: []
+    NextNodeID: d2_post_act5_narasi
+  - NodeID: d2_post_act5_narasi
+    SrcImgSprite: {fileID: 0}
+    CharName: 
+    Text: Tapi pikiran tidak selalu bisa dihentikan hanya dengan diperintah. Dan
+      kamu tahu itu lebih dari siapapun.
+    Choices: []
+    NextNodeID: 

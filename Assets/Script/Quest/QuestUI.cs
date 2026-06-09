@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -15,6 +16,12 @@ public class QuestUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI StitleText;
     [SerializeField] private TextMeshProUGUI SdesctText;
 
+    [Header("Panel Config")]
+    public RectTransform hudParent;
+    [SerializeField] private Vector2 hiddenPos; // Posisi saat sembunyi (misal Y = 500)
+    [SerializeField] private Vector2 shownPos;
+    //public float displayDuration = 2.0f; // Rentan waktu 'x'
+    //[SerializeField] private float transitionDuration = 0.5f;
 
     [Header("OLD")]
     [SerializeField] private Transform questListContent;
@@ -126,7 +133,38 @@ public class QuestUI : MonoBehaviour
             questDescTxt.text = tempText;
         }
 
-
         UIManager.Instance.m_UILoader.RefreshLayoutObj();
+    }
+
+    public void ShowPanelQuest(float transitionDur = 0.5f)
+    {
+        StartCoroutine(SlideRoutine(shownPos, transitionDur));
+    }
+
+    public void HidePanelQuest(float transitionDur = 0.5f)
+    {
+        StartCoroutine(SlideRoutine(hiddenPos, transitionDur));
+    }
+
+    IEnumerator SlideRoutine(Vector2 target, float transitionDur = 0.5f)
+    {
+        Vector2 startPos = hudParent.anchoredPosition;
+        float elapsed = 0;
+
+        while (elapsed < transitionDur)
+        {
+            elapsed += Time.deltaTime;
+            float percent = elapsed / transitionDur;
+
+            // Menggunakan SmoothStep agar ada efek perlambatan (Ease Out)
+            float curve = Mathf.SmoothStep(0, 1, percent);
+
+            hudParent.anchoredPosition = Vector2.Lerp(startPos, target, curve);
+            yield return null;
+        }
+
+        hudParent.anchoredPosition = target;
+        //StopCoroutine(activeCoroutine);
+        //activeCoroutine = null;
     }
 }

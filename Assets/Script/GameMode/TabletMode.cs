@@ -32,7 +32,7 @@ public class TabletMode : GameModeBase
         }
 
         // Resume Section
-        if ((Input.GetKeyDown(KeyCode.Return) && m_TabletManager.GetCurrentSectionIndex() == m_TabletManager.ResumeIndex) || m_TabletManager.IsTargetBtnPressed)
+        if ((Input.GetKeyDown(KeyCode.Return) && m_TabletManager.GetCurrentSectionIndex() == m_TabletManager.ResumeIndex) || m_TabletManager.IsTargetBtnPressed || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             m_TabletManager.IsTargetBtnPressed = false;
             GMM.Switch(GMM.PreviousMode);

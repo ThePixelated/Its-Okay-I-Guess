@@ -7,10 +7,10 @@ public class PlayerData : ScriptableObject
     // sprite
     // idle, walk
     [SerializeField] private Direction playerDirection;
-    [SerializeField] private int playerSpeed;
+    [SerializeField] private float playerSpeed = 4.5f;
 
     public Direction PlayerDirection { get { return playerDirection; } set { playerDirection = value; } }
-    public int PlayerSpeed { get { return playerSpeed; } }
+    public float PlayerSpeed { get { return playerSpeed; } }
 }
 
 public enum Direction

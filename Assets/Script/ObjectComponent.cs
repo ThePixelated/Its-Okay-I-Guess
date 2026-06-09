@@ -35,7 +35,10 @@ public class ObjectComponent : MonoBehaviour
             {
                 //Debug.Log("Enter");
                 if (anim != null)
+                {
                     PlayTriggerAnim("Start");
+                    SoundEffectManager.Play("DoorOpen", true);
+                }
                 else
                     Debug.LogWarning("anim null le");
             }
@@ -50,7 +53,10 @@ public class ObjectComponent : MonoBehaviour
             {
                 //Debug.Log("Exit");
                 if (anim != null)
+                {
                     PlayTriggerAnim("Exit");
+                    SoundEffectManager.Play("DoorClose", true);
+                }
 
                 else
                     Debug.LogWarning("anim null le");

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   playerDirection: 2
-  playerSpeed: 6
+  playerSpeed: 4.5

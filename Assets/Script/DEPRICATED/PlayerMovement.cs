@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerData m_playerData;
     [SerializeField] private Direction playerDirection;
-    [SerializeField] private int playerSpeed;
+    [SerializeField] private float playerSpeed;
 
     private bool _keyPressedFlag = true;
     private bool _isEnableMove = false;

@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,19 +10,25 @@ public class GameModeManager : MonoBehaviour
     [SerializeField] private GameObject m_PlayerObj;
     [SerializeField] private PlayerData m_playerData;
     [SerializeField] private Direction playerDirection;
-    [SerializeField] private int playerSpeed;
+    [SerializeField] private float playerSpeed;
+    [SerializeField] private float footstepSpeed = .5f;
     [SerializeField] private GameMode currentGameModeIndicator = GameMode.ExplorationMode;
     [SerializeField] private GameMode previousGameModeIndicator = GameMode.ExplorationMode;
 
     [SerializeField] private bool isObjectInteractable = false;
+
     private bool _isPaused = false;
     private bool _keyPressedFlag = true; // flag untuk movement
     private bool _isEnableMove = false; // flag untuk movement (efek rotate in-position)
     private float _currentTime = 0f;
     private string _interactableID;
+
+    // PLAYER CONFIG
     private Rigidbody2D _rb;
     private Vector2 _moveinput;
     private Animator _playerAnim;
+    private bool _playingFootsteps = false;
+
 
     public string InteratableID { get { return _interactableID; } set { _interactableID = value; } }
 
@@ -80,6 +87,7 @@ public class GameModeManager : MonoBehaviour
         {
             _isPaused = true;
             Switch(TabletMode);
+            
         }
         else
         {
@@ -163,6 +171,17 @@ public class GameModeManager : MonoBehaviour
         }
 
         _rb.linearVelocity = _moveinput * playerSpeed;
+        _playerAnim.SetBool("isWalking", _rb.linearVelocity.magnitude > 0);
+
+        if (_rb.linearVelocity.magnitude > 0 && !_playingFootsteps)
+        {
+            Debug.LogWarning("Sounds PLAYED");
+            StartFootstep();
+        }
+        else if (_rb.linearVelocity.magnitude == 0)
+        {
+            PlayerConfigExit();
+        }
     }
 
     public void MovePlayer(InputAction.CallbackContext context)
@@ -190,6 +209,8 @@ public class GameModeManager : MonoBehaviour
                     m_PlayerObj.GetComponent<SpriteRenderer>().flipX = false;
                 }
 
+                //_rb.linearVelocity = Vector2.zero;
+                //StopFootstep();
             }
 
             _moveinput = context.ReadValue<Vector2>();
@@ -209,6 +230,37 @@ public class GameModeManager : MonoBehaviour
                 m_PlayerObj.GetComponent<SpriteRenderer>().flipX = true;
             }
         }
+
+        else
+        {
+            PlayerConfigExit();
+            return;
+        }
+    }
+
+    private void StartFootstep()
+    {
+        _playingFootsteps = true;
+        InvokeRepeating(nameof(PlayFootstep), 0f, footstepSpeed);
+    }
+
+    private void StopFootstep()
+    {
+        _playingFootsteps = false;
+        CancelInvoke(nameof(PlayFootstep));
+    }
+
+    public void PlayerConfigExit()
+    {
+        _rb.linearVelocity = Vector2.zero;
+        _playerAnim.SetBool("isWalking", false);
+        _moveinput = Vector2.zero;
+        StopFootstep();
+    }
+
+    private void PlayFootstep()
+    {
+        SoundEffectManager.Play("PlayerFootstep", true);
     }
 
     public void HandleObjectInteractable()

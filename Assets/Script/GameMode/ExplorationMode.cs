@@ -19,5 +19,6 @@ public class ExplorationMode : GameModeBase
     {
         Debug.LogWarning("Exiting ExplorationMode...");
         GMM.SetPrevGameModeIndicator(GameMode.ExplorationMode);
+        GMM.PlayerConfigExit();
     }
 }

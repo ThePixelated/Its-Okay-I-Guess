@@ -78,10 +78,13 @@ public class QuestManager : MonoBehaviour
                     Debug.Log($"Objective {obj.ObjectiveID} di quest {quest.QuestID} selesai!");
 
                     obj.ObjectivesIDs.Remove(npcID);
+
+                    SoundEffectManager.Play("StrikeObjective", true);
                 }
          
                 if (quest.IsAllObjectivesComplete())
                 {
+                    SoundEffectManager.Play("FinishedPQ");
                     Debug.Log($"Quest {quest.QuestID} siap diselesaikan!");
 
                     if (isActiveSQ)
@@ -229,6 +232,8 @@ public class QuestManager : MonoBehaviour
 
         currentActiveActQuest = questLookUp[questID];
         m_questUI.UpdateQuestUI();
+
+        SoundEffectManager.Play("AddedPQ");
     }
 
     public void AddQuest(string questID)

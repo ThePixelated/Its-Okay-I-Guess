@@ -16,8 +16,8 @@ MonoBehaviour:
   steps:
   - type: 1
     dialogueData: {fileID: 0}
-    questID: PQC9_CH1_Kosan_Malam_D1_Sampai_Kosan
-    waitTransitionTime: 0
+    questID: PQC9A_CH1_Kosan_Malam_D1_Duduk_Tengah_Malam
+    waitTransitionTime: 2
   nextAct: {fileID: 11400000, guid: faa841c9ac07cc0459f067a07c7e0b32, type: 2}
   hasTransitionBeforeNextAct: 0
   targetSceneName: 

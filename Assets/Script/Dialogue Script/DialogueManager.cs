@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private DialogueNode currentNode;
 
     private Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
-    
+
     public DialogueData DialogueData { get { return m_dialogueData; } set { m_dialogueData = value; } }
 
     private void Awake()
@@ -48,7 +48,7 @@ public class DialogueManager : MonoBehaviour
     public void GoToNodeBtn(string nodeID) // BUTTON DOANG
     {
         Debug.LogWarning("Go to node BUTTON");
-        if (nodeID == null || nodeID.Length == 0)
+        if (string.IsNullOrEmpty(nodeID))
         {
             m_dialogueUI.CloseRender();
             return;
@@ -58,27 +58,34 @@ public class DialogueManager : MonoBehaviour
         m_dialogueUI.Render(currentNode);
     }
 
-    public void GoToNode()
+    public void GoToNode() // dipanggil dari Space / Enter
     {
-        if (currentNode.Choices.Count <= 0)
-        {
-            Debug.LogWarning("Go to node NON-BUTTON");
-            if (currentNode.NextNodeID == null || currentNode.NextNodeID.Length == 0)
-            {
-                m_dialogueUI.CloseRender();
-                return;
-            }
+        // Node punya choices — input diabaikan, player harus pilih button
+        if (currentNode.Choices != null && currentNode.Choices.Count > 0) return;
 
-            currentNode = nodeLookup[currentNode.NextNodeID];
-            m_dialogueUI.Render(currentNode);
+        // Masih typing → skip ke teks penuh dulu, belum next node
+        if (m_dialogueUI.IsTyping)
+        {
+            m_dialogueUI.SkipTyping(currentNode.Text, currentNode.Choices);
+            return;
         }
+
+        // Typing sudah selesai → lanjut ke node berikutnya
+        Debug.LogWarning("Go to node NON-BUTTON");
+        if (string.IsNullOrEmpty(currentNode.NextNodeID))
+        {
+            m_dialogueUI.CloseRender();
+            return;
+        }
+
+        currentNode = nodeLookup[currentNode.NextNodeID];
+        m_dialogueUI.Render(currentNode);
     }
 
     public void DialogueStopped()
     {
         m_gameModeManager.DialogueStopped();
         m_dialogueUI.SetStopDialoguePanel(true);
-        //ReadableSetCheck();
     }
 }
 

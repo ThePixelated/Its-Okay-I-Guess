@@ -13,6 +13,8 @@ public class DialogueMode : GameModeBase
         GMM.onDialogueStop += Switching;
 
         GMM.SetCurrGameModeIndicator(GameMode.DialogueMode);
+
+        QuestManager.Instance.m_questUI.HidePanelQuest();
     }
 
     public override void Update(GameModeManager GMM)
@@ -23,7 +25,7 @@ public class DialogueMode : GameModeBase
             PlayerManager.Instance.InteractKey_Dialogs();
         }
 
-        // mouse skip dialog input box ?
+        // ini update dari custom FSM, nama scriptnya DialogueMode.cs, base arch nya dari GameModeBase
     }
 
     public override void Exit(GameModeManager GMM)
@@ -31,6 +33,8 @@ public class DialogueMode : GameModeBase
         Debug.LogWarning("Exiting DialogueMode...");
         GMM.onDialogueStop -= Switching;
         GMM.SetPrevGameModeIndicator(GameMode.DialogueMode);
+
+        QuestManager.Instance.m_questUI.ShowPanelQuest();
     }
 
     public void Switching(GameModeManager GMM)

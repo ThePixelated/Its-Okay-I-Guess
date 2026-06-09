@@ -19,16 +19,16 @@ MonoBehaviour:
   objectives:
   - ObjectiveID: Object_Makanan_Kania
     Description: Mengambil makanan yang dimasak Kania
-    Type: 2
+    Type: 1
     RequiredAmount: 1
-    Current_Amount: 0
+    Current_Amount: 1
     ObjectivesIDs:
     - Object_Makanan_Kania
   - ObjectiveID: Object_Bangku_Depan
     Description: Duduk di ruang tamu depan
     Type: 6
     RequiredAmount: 1
-    Current_Amount: 0
+    Current_Amount: 1
     ObjectivesIDs:
     - Object_Bangku_Depan
-  questState: 0
+  questState: 3

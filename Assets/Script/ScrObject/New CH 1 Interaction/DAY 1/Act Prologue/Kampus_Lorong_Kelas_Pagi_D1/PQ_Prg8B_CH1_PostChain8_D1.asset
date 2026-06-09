@@ -20,6 +20,6 @@ MonoBehaviour:
     waitTransitionTime: 0
   nextAct: {fileID: 0}
   hasTransitionBeforeNextAct: 0
-  targetSceneName: MainMenu
+  targetSceneName: Kosan_Malem_D1
   targetSpawnPoint: {fileID: 0}
   isSoftTransition: 0

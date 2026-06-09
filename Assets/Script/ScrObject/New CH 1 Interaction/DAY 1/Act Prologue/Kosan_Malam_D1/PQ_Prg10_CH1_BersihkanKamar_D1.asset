@@ -17,7 +17,7 @@ MonoBehaviour:
   - type: 0
     dialogueData: {fileID: 11400000, guid: ea9c1cdad1029df498dd752929115a43, type: 2}
     questID: 
-    waitTransitionTime: 3
+    waitTransitionTime: 6
   - type: 1
     dialogueData: {fileID: 0}
     questID: PQC10_CH1_Kosan_Kamar_Malam_D1_Bersihkan_Kamar

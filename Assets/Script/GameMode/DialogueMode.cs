@@ -14,7 +14,7 @@ public class DialogueMode : GameModeBase
 
         GMM.SetCurrGameModeIndicator(GameMode.DialogueMode);
 
-        QuestManager.Instance.m_questUI.HidePanelQuest();
+        //QuestManager.Instance.m_questUI.HidePanelQuest();
     }
 
     public override void Update(GameModeManager GMM)
@@ -34,7 +34,7 @@ public class DialogueMode : GameModeBase
         GMM.onDialogueStop -= Switching;
         GMM.SetPrevGameModeIndicator(GameMode.DialogueMode);
 
-        QuestManager.Instance.m_questUI.ShowPanelQuest();
+        //QuestManager.Instance.m_questUI.ShowPanelQuest();
     }
 
     public void Switching(GameModeManager GMM)

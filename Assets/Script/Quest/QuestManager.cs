@@ -91,6 +91,11 @@ public class QuestManager : MonoBehaviour
                         ConfigOnHoldSQtoCurrentSQ();
                     else
                         ConfigCurrentActQuest();
+
+                    if (currentActiveActQuest == null && currentActiveSQ == null)
+                    {
+                        m_questUI.HidePanelQuest();
+                    }
                 }
 
                 m_questUI.UpdateQuestUI();
@@ -233,6 +238,7 @@ public class QuestManager : MonoBehaviour
         currentActiveActQuest = questLookUp[questID];
         m_questUI.UpdateQuestUI();
 
+        m_questUI.ShowPanelQuest();
         SoundEffectManager.Play("AddedPQ");
     }
 

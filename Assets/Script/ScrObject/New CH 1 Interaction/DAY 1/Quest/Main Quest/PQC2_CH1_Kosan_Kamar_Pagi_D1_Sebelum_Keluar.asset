@@ -26,7 +26,7 @@ MonoBehaviour:
     ObjectivesIDs: []
   - ObjectiveID: Object_Buku; Object_Laptop
     Description: Masukkan laptop dan buku ke tas
-    Type: 1
+    Type: 2
     RequiredAmount: 2
     Current_Amount: 2
     ObjectivesIDs: []

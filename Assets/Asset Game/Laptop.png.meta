@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 443fb73ed20c5944c87ad759f7565aa3
+guid: a16233b022fd98449af290caf810c8d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2921993722853301858
-    second: animated_emergency_exit_48x48_0
-  - first:
-      213: 5412077739500419770
-    second: animated_emergency_exit_48x48_1
-  - first:
-      213: -847686164616050111
-    second: animated_emergency_exit_48x48_2
-  - first:
-      213: 3849334100721628254
-    second: animated_emergency_exit_48x48_3
+      213: -7773165393155189300
+    second: Laptop_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 48
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: animated_emergency_exit_48x48_0
+      name: Laptop_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 94
-        height: 104
+        x: 1
+        y: 3
+        width: 45
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e916861c03ef277d0800000000000000
-      internalID: -2921993722853301858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_emergency_exit_48x48_1
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 2
-        width: 38
-        height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: abab8b797009b1b40800000000000000
-      internalID: 5412077739500419770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_emergency_exit_48x48_2
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 2
-        width: 29
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 14a0c0dace96c34f0800000000000000
-      internalID: -847686164616050111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: animated_emergency_exit_48x48_3
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 2
-        width: 11
-        height: 131
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e547f4f48f49b6530800000000000000
-      internalID: 3849334100721628254
+      spriteID: cc510a8424b202490800000000000000
+      internalID: -7773165393155189300
       vertices: []
       indices: 
       edges: []
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      animated_emergency_exit_48x48_0: -2921993722853301858
-      animated_emergency_exit_48x48_1: 5412077739500419770
-      animated_emergency_exit_48x48_2: -847686164616050111
-      animated_emergency_exit_48x48_3: 3849334100721628254
+      Laptop_0: -7773165393155189300
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

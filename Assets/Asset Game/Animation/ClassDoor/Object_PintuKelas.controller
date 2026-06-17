@@ -67,7 +67,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 969a8b4a586b0f4418a3c88453daf272, type: 2}
+  m_Motion: {fileID: 7400000, guid: acdc629c8d8cfe342b3bf6a2f205b0eb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -109,7 +109,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: animated_door_5_48x48_0
+  m_Name: Object_PintuKelas
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Start
@@ -158,7 +158,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: fc23cfc5d10c12b40b7cea1c8a0b9f1d, type: 2}
+  m_Motion: {fileID: 7400000, guid: dbba450093b11db4ab8dd81a89e0d6fe, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -184,7 +184,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d1ad16b1b71c6f1459c0259d74881cc5, type: 2}
+  m_Motion: {fileID: 7400000, guid: 14d33ea896c8a5f4b8e82611cc81507b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

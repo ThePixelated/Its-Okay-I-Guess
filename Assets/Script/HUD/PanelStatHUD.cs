@@ -6,7 +6,7 @@ using System.Collections;
 // Discalimer ini dibuat oleh AI - hellnah
 
 
-public class StatsHUD : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class PanelStatHUD : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public RectTransform hudParent;
     //public GameObject panelStat; // Drag UI pop-up lo ke sini
@@ -59,8 +59,12 @@ public class StatsHUD : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (!toggleByButton)
         {
             isHovering = true;
-            StopCoroutine(hoverCoroutine);
-            StopAllCoroutines();
+            if (hoverCoroutine != null)
+            {
+                StopCoroutine(hoverCoroutine);
+                StopAllCoroutines();
+            }
+            
             //panelStat.SetActive(true);
             activeCoroutine = StartCoroutine(SlideRoutine(shownPos));
             toggleByButton = true;

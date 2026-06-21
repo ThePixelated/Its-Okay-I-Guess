@@ -13,18 +13,22 @@ MonoBehaviour:
   m_Name: PQ_Prg1_CH1_BangunTidur_D1
   m_EditorClassIdentifier: Assembly-CSharp::ActData
   actID: PQ_Prg1_CH1_BangunTidur_D1
+  dataChapter: {fileID: 0}
   steps:
   - type: 0
     dialogueData: {fileID: 11400000, guid: 46d329e1cea3dc841b697840c20bfc48, type: 2}
     questID: 
+    chaptSectionIndex: 0
     waitTransitionTime: 5
   - type: 0
     dialogueData: {fileID: 11400000, guid: 69d7a9c68c66f0f4792ff7da34b1bad6, type: 2}
     questID: 
+    chaptSectionIndex: 0
     waitTransitionTime: 2
   - type: 1
     dialogueData: {fileID: 0}
     questID: PQC1_CH1_Kosan_Kamar_Pagi_D1_Mulai_Hari
+    chaptSectionIndex: 0
     waitTransitionTime: 3
   nextAct: {fileID: 11400000, guid: 682887ab1e7d8764f9f02e2cbd94b2f2, type: 2}
   hasTransitionBeforeNextAct: 0

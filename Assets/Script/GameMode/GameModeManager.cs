@@ -44,6 +44,9 @@ public class GameModeManager : MonoBehaviour
     {
         Instance = this;
 
+        // Load persisted stats (Health/Energy/Money/Social) before anything reads PlayerData
+        m_playerData.Load();
+
         playerDirection = m_playerData.PlayerDirection;
         playerSpeed = m_playerData.PlayerSpeed;
 
@@ -87,7 +90,7 @@ public class GameModeManager : MonoBehaviour
         {
             _isPaused = true;
             Switch(TabletMode);
-            
+
         }
         else
         {
@@ -166,7 +169,7 @@ public class GameModeManager : MonoBehaviour
             //}
             ////Debug.Log(movement);
 
-            
+
             //Debug.Log(gameObject.transform.position);
         }
 

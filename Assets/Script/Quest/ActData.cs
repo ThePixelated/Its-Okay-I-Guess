@@ -3,38 +3,38 @@ using System.Collections.Generic;
 
 /// <summary>
 /// Represents one Act in the Primary Quest flow.
-/// An Act is an ordered chain of steps (Dialogue and/or Quest).
+/// An Act is an ordered chain of steps (Dialogue, Quest, or CardAction).
 /// Acts are linked via nextAct to form the full story chain.
 /// </summary>
 [CreateAssetMenu(fileName = "ActData", menuName = "Scriptable Objects/ActData")]
 public class ActData : ScriptableObject
 {
     [Header("Act Identity")]
-    public string actID; // e.g. "CH1_Act1" — for debugging & logging
+    public string actID;
+
+    [Tooltip("Required if type = CardAction — assign the DataChapter SO here")]
+    public DataChapter dataChapter;
 
     [Header("Steps")]
     public List<PQStep> steps = new List<PQStep>();
 
     [Header("Next Act")]
-    public ActData nextAct; // null = end of story / chapter
+    public ActData nextAct;
 
     [Header("Transition")]
-    [Tooltip("If true, PQM will wait for onTransitionStop before running nextAct. Logic TBD.")]
+    [Tooltip("If true, PQM will wait for onTransitionStop before running nextAct.")]
     public bool hasTransitionBeforeNextAct = false;
-    public string targetSceneName;       // untuk EndLocation / hard transition
-    public Transform targetSpawnPoint;   // untuk GoToLocation / soft transition
+    public string targetSceneName;
+    public Transform targetSpawnPoint;
     public bool isSoftTransition;
 
 #if UNITY_EDITOR
     private void OnValidate()
     {
         if (string.IsNullOrWhiteSpace(actID))
-        {
             actID = name;
-        }
     }
 #endif
-
 }
 
 [System.Serializable]
@@ -45,8 +45,11 @@ public class PQStep
     [Tooltip("Required if type = Dialogue")]
     public DialogueData dialogueData;
 
-    [Tooltip("Required if type = Quest. Must match QuestID naming convention: QuestType_CurrChapter_Location_Time_Day_ContextName")]
+    [Tooltip("Required if type = Quest")]
     public string questID;
+
+    [Tooltip("Which ChaptSection index inside DataChapter to use for this step")]
+    public int chaptSectionIndex = 0;
 
     [Tooltip("Seconds to wait before executing this step")]
     public float waitTransitionTime = 0f;
@@ -55,5 +58,6 @@ public class PQStep
 public enum PQStepType
 {
     Dialogue,
-    Quest
+    Quest,
+    CardAction   // <-- new
 }

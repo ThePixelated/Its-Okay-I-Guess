@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: PQ_Prg3A_CH1_PreAct1_D1
   m_EditorClassIdentifier: Assembly-CSharp::ActData
   actID: PQ_Prg3A_CH1_PreAct1_D1
+  dataChapter: {fileID: 11400000, guid: f775c8948b6273141b29f65119543c9b, type: 2}
   steps:
   - type: 0
     dialogueData: {fileID: 11400000, guid: f58683c0ab183114da01cd49c8257600, type: 2}
     questID: 
+    chaptSectionIndex: 0
+    waitTransitionTime: 0
+  - type: 2
+    dialogueData: {fileID: 0}
+    questID: 
+    chaptSectionIndex: 0
     waitTransitionTime: 0
   nextAct: {fileID: 11400000, guid: ea26113f3e83d394e84c2125ea73885b, type: 2}
   hasTransitionBeforeNextAct: 0

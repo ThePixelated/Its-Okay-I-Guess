@@ -4,11 +4,12 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Manages the Primary Quest (PQ) flow: an ordered chain of Acts,
-/// each containing ordered steps (Dialogue / Quest).
+/// each containing ordered steps (Dialogue / Quest / CardAction).
 ///
 /// Flow:
-///   Start -> RunStep() -> [Dialogue] wait for onDialogueStop -> AdvanceStep()
-///                      -> [Quest]    wait for OnQuestCompleted() -> AdvanceStep()
+///   Start -> RunStep() -> [Dialogue]   wait for onDialogueStop      -> AdvanceStep()
+///                      -> [Quest]      wait for OnQuestCompleted()  -> AdvanceStep()
+///                      -> [CardAction] wait for OnCardActionFinished-> AdvanceStep()
 ///   AdvanceStep() -> next step in Act, or next Act, or story end.
 ///
 /// TransitionMode between Acts is flagged via ActData.hasTransitionBeforeNextAct
@@ -33,6 +34,7 @@ public class PrimaryQuestManager : MonoBehaviour
     // ── Manager refs ─────────────────────────────────────────────────────────
     private DialogueManager m_dialogueManager;
     private GameModeManager m_gameModeManager;
+    private CardMode m_cardMode;
 
     [HideInInspector]
     public Coroutine transCoroutine;
@@ -45,9 +47,16 @@ public class PrimaryQuestManager : MonoBehaviour
     {
         m_dialogueManager = DialogueManager.Instance;
         m_gameModeManager = GameModeManager.Instance;
+        m_cardMode = m_gameModeManager.CardMode as CardMode;
 
         // Subscribe: called every time any dialogue ends
         m_gameModeManager.onDialogueStop += OnDialogueStop;
+
+        // Subscribe: called when CardMode finishes the Action+Consequence flow
+        if (m_cardMode != null)
+            m_cardMode.OnCardActionFinished += OnCardActionFinished;
+        else
+            Debug.LogError("[PQM] GameModeManager.CardMode is not a CardMode instance!");
 
         _currentAct = startingAct;
         _stepIndex = 0;
@@ -66,6 +75,9 @@ public class PrimaryQuestManager : MonoBehaviour
             m_gameModeManager.onDialogueStop -= OnDialogueStop;
             m_gameModeManager.onTransitionStop -= OnTransitionStopForNextAct;
         }
+
+        if (m_cardMode != null)
+            m_cardMode.OnCardActionFinished -= OnCardActionFinished;
     }
 
     // =========================================================================
@@ -103,6 +115,24 @@ public class PrimaryQuestManager : MonoBehaviour
         if (current.type != PQStepType.Quest || current.questID != questID)
         {
             Debug.LogWarning($"[PQM] OnQuestCompleted called with '{questID}' but current step expects '{current.questID}'. Ignoring.");
+            return;
+        }
+
+        AdvanceStep();
+    }
+
+    /// <summary>
+    /// Subscribed to CardMode.OnCardActionFinished.
+    /// Fires when the player has completed both Action and Consequence phases.
+    /// </summary>
+    private void OnCardActionFinished()
+    {
+        if (_currentAct == null) return;
+
+        PQStep current = _currentAct.steps[_stepIndex];
+        if (current.type != PQStepType.CardAction)
+        {
+            Debug.LogWarning("[PQM] OnCardActionFinished fired but current step is not CardAction. Ignoring.");
             return;
         }
 
@@ -210,6 +240,10 @@ public class PrimaryQuestManager : MonoBehaviour
                 RunQuestStep(step);
                 break;
 
+            case PQStepType.CardAction:
+                _currentCoroutine = StartCoroutine(RunCardActionStep(step));
+                break;
+
             default:
                 Debug.LogError($"[PQM] Unknown PQStepType: {step.type}");
                 break;
@@ -239,6 +273,25 @@ public class PrimaryQuestManager : MonoBehaviour
         Debug.Log($"[PQM] Quest step — adding quest '{step.questID}'.");
         m_questManager.AddPrimaryQuest(step.questID);
         // Flow continues via OnQuestCompleted() callback
+    }
+
+    private IEnumerator RunCardActionStep(PQStep step)
+    {
+        if (_currentAct.dataChapter == null)
+        {
+            Debug.LogError($"[PQM] Act '{_currentAct.actID}' has a CardAction step but no DataChapter assigned!");
+            yield break;
+        }
+
+        Debug.Log($"[PQM] CardAction step — waiting {step.waitTransitionTime}s then opening CardMode (section #{step.chaptSectionIndex}).");
+
+        yield return new WaitForSeconds(step.waitTransitionTime);
+
+        CardModeManager.Instance.PrepareCardSession(_currentAct.dataChapter, step.chaptSectionIndex);
+        m_gameModeManager.Switch(m_gameModeManager.CardMode);
+
+        _currentCoroutine = null;
+        // Flow continues via OnCardActionFinished() callback
     }
 
     // =========================================================================
@@ -283,7 +336,7 @@ public class PrimaryQuestManager : MonoBehaviour
             Debug.Log("Fading....");
             yield return new WaitForSeconds(1.5f);
             Debug.Log("Transisi");
-            
+
             UIManager.Instance.fadeImage.StartFadeOut();
         }
     }

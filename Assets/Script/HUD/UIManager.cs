@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Config Scripts")]
     public UILoader m_UILoader;
-    public StatsHUD m_StatsHUD;
+    public PanelStatHUD m_StatsHUD;
 
     [Header("Config GameObjects")]
     [SerializeField] private GameObject statsHUD;
@@ -25,5 +25,6 @@ public class UIManager : MonoBehaviour
     public void GoToScene(string targetScene)
     {
         SceneManager.LoadScene(targetScene);
+        
     }
 }

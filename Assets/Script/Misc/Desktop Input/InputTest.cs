@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider))] // Atau BoxCollider2D kalo pure 2D project
-public class CardController : MonoBehaviour
+public class InputTest : MonoBehaviour
 {
-    public static CardController instance;
+    public static InputTest instance;
 
     [Header("References")]
     [SerializeField] private Button confirmBtn;

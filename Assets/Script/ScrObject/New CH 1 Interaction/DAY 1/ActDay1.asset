@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815de553a2e71204b9e5854d2f63a6c0, type: 3}
+  m_Name: ActDay1
+  m_EditorClassIdentifier: Assembly-CSharp::DataChapter
+  ChapterSections:
+  - Title: Action 1 - Dilema Alarm
+    ID: 0
+    actionSection:
+      statement: Alarm bunyi jam 05.00 pagi. Kamu merasa sangat lelah.
+      firstChoice: Bangun segera, mandi air dingin
+      secondChoice: Snooze 15 menit... bentar aja
+      statEffect:
+        Money: 4
+        Health: 0
+        Energy: -3
+        Social: 0
+    consSection:
+    - Title: Action 1 - First Choice
+      firstChoice: Airnya dingin banget, tapi kamu melek.
+      secondChoice: Kamu merasa menang melawan malas.
+    - Title: Action 1 - Second Choice
+      firstChoice: Tidurnya nyenyak tapi kerasa singkat.
+      secondChoice: Kepalamu pening karena tidur lagi.

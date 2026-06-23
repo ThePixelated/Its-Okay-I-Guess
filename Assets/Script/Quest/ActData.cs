@@ -12,7 +12,7 @@ public class ActData : ScriptableObject
     [Header("Act Identity")]
     public string actID;
 
-    [Tooltip("Required if type = CardAction — assign the DataChapter SO here")]
+    [Tooltip("Required if any step has type = CardAction — assign the DataChapter SO here")]
     public DataChapter dataChapter;
 
     [Header("Steps")]
@@ -27,6 +27,10 @@ public class ActData : ScriptableObject
     public string targetSceneName;
     public Transform targetSpawnPoint;
     public bool isSoftTransition;
+
+    [Header("End of Gameplay")]
+    [Tooltip("Centang jika Act ini adalah Act terakhir sebelum Summary Screen muncul (akhir Day 3). PQM akan trigger AIManager.RequestSummary() saat Act ini selesai.")]
+    public bool triggersFinalSummary = false;
 
 #if UNITY_EDITOR
     private void OnValidate()
@@ -48,7 +52,7 @@ public class PQStep
     [Tooltip("Required if type = Quest")]
     public string questID;
 
-    [Tooltip("Which ChaptSection index inside DataChapter to use for this step")]
+    [Tooltip("Which ChaptSection index inside the parent ActData.dataChapter to use for this step")]
     public int chaptSectionIndex = 0;
 
     [Tooltip("Seconds to wait before executing this step")]
@@ -59,5 +63,5 @@ public enum PQStepType
 {
     Dialogue,
     Quest,
-    CardAction   // <-- new
+    CardAction
 }

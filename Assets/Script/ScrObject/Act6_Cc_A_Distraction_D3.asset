@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad68c8f7b61077947941f63bc314e543, type: 3}
+  m_Name: Act6_Cc_A_Distraction_D3
+  m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
+  entryID: Act6_Cc_A_Distraction_D3
+  title: Distraction
+  subtitle: Mengalihkan perhatian dari perasaan yang muncul
+  description: >
+    Distraction adalah upaya mengalihkan perhatian dari pikiran atau
+    perasaan yang tidak nyaman melalui aktivitas lain. Gross (1998)
+    dalam Process Model of Emotion Regulation menempatkan distraksi
+    sebagai salah satu bentuk attentional deployment yang dapat membantu
+    meredakan tekanan emosional dalam jangka pendek. Nolen-Hoeksema
+    (1991) turut mencatat bahwa distraksi dapat bersifat adaptif apabila
+    digunakan sementara, namun dapat menjadi kurang fungsional apabila
+    terus-menerus digunakan untuk menghindari memproses emosi yang
+    sebenarnya perlu dihadapi.
+  icon: {fileID: 0}
+  slotThumbnail: {fileID: 0}
+  tag: 1
+  slotIndex: 6
+  isUnlockedByDefault: 0

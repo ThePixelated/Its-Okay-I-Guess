@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad68c8f7b61077947941f63bc314e543, type: 3}
+  m_Name: Act6_Cc_B_SuppressionRelease_D3
+  m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
+  entryID: Act6_Cc_B_SuppressionRelease_D3
+  title: Suppression Release
+  subtitle: Membiarkan perasaan yang selama ini ditekan untuk hadir
+  description: >
+    Suppression Release menggambarkan proses membiarkan perasaan yang
+    selama ini ditekan untuk muncul dan dirasakan tanpa dilawan. Proses
+    ini berkaitan dengan konsep affect labeling yang diteliti oleh
+    Lieberman et al. (2007), di mana mengenali dan memberi nama pada
+    emosi yang dirasakan terbukti dapat menurunkan intensitas tekanan
+    emosional secara fisiologis. Berbeda dari ekspresi emosi yang
+    meledak-ledak, proses ini lebih menyerupai pengakuan sadar terhadap
+    emosi yang ada, sebagai langkah awal sebelum emosi tersebut dapat
+    diproses lebih lanjut.
+  icon: {fileID: 0}
+  slotThumbnail: {fileID: 0}
+  tag: 0
+  slotIndex: 6
+  isUnlockedByDefault: 0

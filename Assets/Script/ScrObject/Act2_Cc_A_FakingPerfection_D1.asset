@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad68c8f7b61077947941f63bc314e543, type: 3}
+  m_Name: Act2_Cc_A_FakingPerfection_D1
+  m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
+  entryID: Act2_Cc_A_FakingPerfection_D1
+  title: Faking Perfection
+  subtitle: Menutupi kesulitan dengan citra sempurna
+  description: >
+    Faking Perfection menggambarkan kecenderungan menampilkan citra diri
+    yang lebih baik dari kondisi sebenarnya untuk menghindari penilaian
+    negatif dari orang lain. Dalam psikologi sosial, perilaku ini dekat
+    dengan konsep impression management (Goffman, 1959) dan
+    self-concealment (Larson & Chastain, 1990), yaitu kecenderungan
+    menyembunyikan informasi pribadi yang dianggap negatif. Meski dapat
+    membantu mempertahankan citra sosial dalam jangka pendek,
+    mempertahankan fasad ini secara terus-menerus menambah beban
+    emosional karena kesenjangan antara citra yang ditampilkan dan
+    kondisi yang dirasakan.
+  icon: {fileID: 0}
+  slotThumbnail: {fileID: 0}
+  tag: 1
+  slotIndex: 2
+  isUnlockedByDefault: 0

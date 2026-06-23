@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad68c8f7b61077947941f63bc314e543, type: 3}
+  m_Name: Act7_Cc_A_Avoidance_D3
+  m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
+  entryID: Act7_Cc_A_Avoidance_D3
+  title: Avoidance
+  subtitle: Menghindari pertanyaan yang sulit dihadapi
+  description: >
+    Avoidance adalah kecenderungan secara sadar menghindari pikiran,
+    perasaan, atau situasi yang memicu ketidaknyamanan. Lazarus dan
+    Folkman (1984) menempatkan avoidant coping sebagai salah satu
+    strategi emotion-focused yang umum digunakan ketika individu merasa
+    belum siap atau belum memiliki sumber daya untuk menghadapi suatu
+    masalah secara langsung. Strategi ini dapat memberikan jeda yang
+    dibutuhkan dalam jangka pendek, namun apabila digunakan secara
+    konsisten dapat menunda penyelesaian masalah dan memperpanjang
+    tekanan yang dirasakan.
+  icon: {fileID: 0}
+  slotThumbnail: {fileID: 0}
+  tag: 1
+  slotIndex: 7
+  isUnlockedByDefault: 0

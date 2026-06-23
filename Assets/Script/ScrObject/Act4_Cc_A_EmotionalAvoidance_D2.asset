@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad68c8f7b61077947941f63bc314e543, type: 3}
+  m_Name: Act4_Cc_A_EmotionalAvoidance_D2
+  m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
+  entryID: Act4_Cc_A_EmotionalAvoidance_D2
+  title: Emotional Avoidance
+  subtitle: Menghindari perasaan yang tidak nyaman
+  description: >
+    Emotional Avoidance adalah kecenderungan menghindari atau menekan
+    emosi yang tidak nyaman dengan tidak mengakui atau tidak memprosesnya
+    secara langsung. Dalam Acceptance and Commitment Therapy (ACT),
+    Hayes, Strosahl, dan Wilson (1999) menyebut pola ini sebagai bagian
+    dari experiential avoidance, yaitu upaya menghindari pengalaman
+    internal yang tidak diinginkan. Meskipun dapat memberi kelegaan
+    sesaat, penghindaran emosi yang konsisten dapat membuat perasaan
+    tersebut tidak pernah benar-benar terproses dan berpotensi muncul
+    kembali dengan intensitas yang sama atau lebih besar.
+  icon: {fileID: 0}
+  slotThumbnail: {fileID: 0}
+  tag: 1
+  slotIndex: 4
+  isUnlockedByDefault: 0

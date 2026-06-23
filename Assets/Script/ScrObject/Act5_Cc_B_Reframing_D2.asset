@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad68c8f7b61077947941f63bc314e543, type: 3}
+  m_Name: Act5_Cc_B_Reframing_D2
+  m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
+  entryID: Act5_Cc_B_Reframing_D2
+  title: Reframing
+  subtitle: Mengubah sudut pandang untuk menemukan arah
+  description: >
+    Reframing atau cognitive reframing adalah upaya mengubah cara
+    pandang terhadap suatu situasi yang menekan menjadi perspektif yang
+    lebih konstruktif, tanpa menyangkal kenyataan yang ada. Teknik ini
+    merupakan salah satu komponen inti dalam Cognitive Behavioral
+    Therapy yang diperkenalkan oleh Beck (1979). Carver, Scheier, dan
+    Weintraub (1989) turut memasukkan strategi serupa, yaitu positive
+    reinterpretation, sebagai salah satu skala dalam COPE Inventory.
+    Dengan mencari kejelasan atau makna baru dari suatu masalah,
+    individu dapat menemukan arah konkret untuk melangkah meskipun
+    situasinya tetap menantang.
+  icon: {fileID: 0}
+  slotThumbnail: {fileID: 0}
+  tag: 0
+  slotIndex: 5
+  isUnlockedByDefault: 0

@@ -31,6 +31,7 @@ public class GameModeManager : MonoBehaviour
 
 
     public string InteratableID { get { return _interactableID; } set { _interactableID = value; } }
+    public Transform PlayerTransform => m_PlayerObj != null ? m_PlayerObj.transform : null;
 
     public GameModeBase ExplorationMode = new ExplorationMode();
     public GameModeBase TransitionMode = new TransitionMode();
@@ -46,6 +47,7 @@ public class GameModeManager : MonoBehaviour
 
         // Load persisted stats (Health/Energy/Money/Social) before anything reads PlayerData
         m_playerData.Load();
+        PlayerData_StaticAccessor.Current = m_playerData;
 
         playerDirection = m_playerData.PlayerDirection;
         playerSpeed = m_playerData.PlayerSpeed;

@@ -22,6 +22,7 @@ public class CardMode : GameModeBase
 
     // ── Runtime state ──
     private ChaptSection _currentSection;
+    private string _currentActID;
 
     private enum Phase { Action, Consequence }
     private Phase _phase;
@@ -40,7 +41,6 @@ public class CardMode : GameModeBase
 
     public override void Enter(GameModeManager GMM)
     {
-        UIManager.Instance.m_StatsHUD.ToggleByButton();
         _gmm = GMM;
         GMM.SetCurrGameModeIndicator(GameMode.CardMode);
 
@@ -78,7 +78,6 @@ public class CardMode : GameModeBase
 
     public override void Exit(GameModeManager GMM)
     {
-        UIManager.Instance.m_StatsHUD.ToggleByButton();
         Debug.Log("[CardMode] Exit");
         GMM.SetPrevGameModeIndicator(GameMode.CardMode);
 
@@ -97,10 +96,11 @@ public class CardMode : GameModeBase
     //  PUBLIC — dipanggil CardModeManager.PrepareCardSession
     // ─────────────────────────────────────────────
 
-    public void SetData(DataChapter dataChapter, int sectionIndex)
+    public void SetData(DataChapter dataChapter, int sectionIndex, string actID)
     {
         _currentSection = dataChapter.ChapterSections[sectionIndex];
-        Debug.Log($"[CardMode] Data set: {_currentSection.Title}");
+        _currentActID = actID;
+        Debug.Log($"[CardMode] Data set: {_currentSection.Title} (source: {_currentActID})");
     }
 
     // ─────────────────────────────────────────────
@@ -202,9 +202,36 @@ public class CardMode : GameModeBase
 
         if (_phase == Phase.Action)
         {
+            ActionChapt action = _currentSection.actionSection;
+
             // Apply stat effect ke PlayerData
             if (CMM.playerData != null)
-                CMM.playerData.ApplyStatEffect(_currentSection.actionSection.statEffect);
+                CMM.playerData.ApplyStatEffect(action.statEffect);
+
+            // Catat log untuk NLM (hanya Phase Action, Consequence tidak di-log)
+            if (ActionLogger.Instance != null)
+            {
+                string chosenText = _chosenLeft ? action.firstChoice : action.secondChoice;
+                CopingTag chosenTag = _chosenLeft ? action.firstChoiceTag : action.secondChoiceTag;
+
+                ActionLogger.Instance.AddLog(
+                    _currentSection.Title,
+                    _currentActID,
+                    chosenText,
+                    chosenTag,
+                    action.statEffect);
+            }
+
+            // Unlock entry ensiklopedia sesuai pilihan
+            if (EncyclopediaProgress.Instance != null)
+            {
+                EncyclopediaEntry chosenEntry = _chosenLeft
+                    ? action.firstChoiceEncyclopedia
+                    : action.secondChoiceEncyclopedia;
+
+                if (chosenEntry != null)
+                    EncyclopediaProgress.Instance.UnlockEntry(chosenEntry);
+            }
 
             // Kartu fly out → load consequence
             CMM.transition.PlayCardFlyOut(!_chosenLeft, () =>

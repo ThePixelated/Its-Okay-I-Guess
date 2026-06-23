@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad68c8f7b61077947941f63bc314e543, type: 3}
+  m_Name: Act3_Cc_B_Overworking_D2
+  m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
+  entryID: Act3_Cc_B_Overworking_D2
+  title: Over-working
+  subtitle: Menambah beban kerja untuk menutupi tekanan
+  description: >
+    Over-working adalah kecenderungan mengambil lebih banyak pekerjaan
+    atau tanggung jawab dari yang sebenarnya mampu ditangani sebagai
+    respons terhadap tekanan, dalam hal ini tekanan finansial. Konsep
+    ini berkaitan dengan workaholism yang dijelaskan Spence dan Robbins
+    (1992) sebagai pola kerja berlebihan yang didorong oleh dorongan
+    internal untuk terus bekerja. Dalam jangka pendek, over-working
+    dapat membantu menyelesaikan masalah praktis, namun dalam jangka
+    panjang berisiko menguras energi dan memperburuk kelelahan fisik
+    maupun mental.
+  icon: {fileID: 0}
+  slotThumbnail: {fileID: 0}
+  tag: 1
+  slotIndex: 3
+  isUnlockedByDefault: 0

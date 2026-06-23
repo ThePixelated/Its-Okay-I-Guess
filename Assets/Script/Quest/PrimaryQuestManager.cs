@@ -58,14 +58,51 @@ public class PrimaryQuestManager : MonoBehaviour
         else
             Debug.LogError("[PQM] GameModeManager.CardMode is not a CardMode instance!");
 
-        _currentAct = startingAct;
-        _stepIndex = 0;
+        // Resume from save if one exists for THIS scene, otherwise start fresh.
+        // NOTE: only resumes if the saved scene matches the current scene —
+        // cross-scene Acts (different day's exploration scene) load their own
+        // startingAct as normal; SaveManager just remembers where within that flow.
+        bool resumed = TryResumeFromSave();
+
+        if (!resumed)
+        {
+            _currentAct = startingAct;
+            _stepIndex = 0;
+        }
 
         // Kick off initial transition, then run first step
         m_gameModeManager.Switch(m_gameModeManager.TransitionMode);
 
         RunStep();
         //m_gameModeManager.onDialogueStop -= OnDialogueStop;
+    }
+
+    /// <summary>
+    /// Attempts to resume progress via SaveManager. Returns true if resumed.
+    /// Only resumes when the saved scene name matches the active scene —
+    /// otherwise this PQM instance (in a different scene) just runs its own
+    /// startingAct normally.
+    /// </summary>
+    private bool TryResumeFromSave()
+    {
+        if (SaveManager.Instance == null || !SaveManager.Instance.HasActiveSave)
+            return false;
+
+        SaveManager.ProgressData data = SaveManager.Instance.ContinueGame();
+        if (!data.isValid) return false;
+
+        string activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (data.sceneName != activeScene)
+            return false; // save belongs to a different scene, let this PQM run its default flow
+
+        _currentAct = data.act;
+        _stepIndex = data.stepIndex;
+
+        if (player != null)
+            player.position = data.playerPosition;
+
+        Debug.Log($"[PQM] Resumed from save → Act '{_currentAct.actID}' step {_stepIndex}.");
+        return true;
     }
 
     void OnDestroy()
@@ -149,6 +186,7 @@ public class PrimaryQuestManager : MonoBehaviour
     private void AdvanceStep()
     {
         _stepIndex++;
+        SaveCurrentProgress();
 
         if (_stepIndex >= _currentAct.steps.Count)
         {
@@ -159,6 +197,17 @@ public class PrimaryQuestManager : MonoBehaviour
         RunStep();
     }
 
+    /// <summary>Persist current Act/step/player position via SaveManager.</summary>
+    private void SaveCurrentProgress()
+    {
+        if (SaveManager.Instance == null) return;
+
+        Vector3 pos = player != null ? player.position : Vector3.zero;
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+        SaveManager.Instance.SaveProgress(_currentAct.actID, _stepIndex, pos, sceneName);
+    }
+
     /// <summary>
     /// Called when all steps in the current Act are done.
     /// </summary>
@@ -166,6 +215,50 @@ public class PrimaryQuestManager : MonoBehaviour
     {
         Debug.Log($"[PQM] Act '{_currentAct.actID}' completed.");
 
+        if (_currentAct.triggersFinalSummary)
+        {
+            Debug.Log("[PQM] Final Act reached — requesting AI summary before proceeding.");
+            RequestFinalSummaryThenProceed();
+            return;
+        }
+
+        ProceedAfterActCompleted();
+    }
+
+    /// <summary>
+    /// Kicks off AIManager.RequestFinalSummary() and waits for the result
+    /// before continuing the normal transition flow (so the summary is
+    /// guaranteed to be saved to PlayerPrefs before any scene change happens).
+    /// </summary>
+    private void RequestFinalSummaryThenProceed()
+    {
+        if (AIManager.Instance == null)
+        {
+            Debug.LogError("[PQM] AIManager.Instance is null — skipping summary request.");
+            ProceedAfterActCompleted();
+            return;
+        }
+
+        AIManager.Instance.OnSummaryRequestFinished += OnFinalSummaryFinished;
+        AIManager.Instance.RequestFinalSummary();
+    }
+
+    private void OnFinalSummaryFinished(bool success)
+    {
+        AIManager.Instance.OnSummaryRequestFinished -= OnFinalSummaryFinished;
+
+        if (!success)
+            Debug.LogWarning("[PQM] Final summary request failed — proceeding anyway.");
+
+        ProceedAfterActCompleted();
+    }
+
+    /// <summary>
+    /// The original OnActCompleted transition logic, now separated so it can
+    /// run either immediately or after the final summary request resolves.
+    /// </summary>
+    private void ProceedAfterActCompleted()
+    {
         if (_currentAct.nextAct == null)
         {
             if (!string.IsNullOrEmpty(_currentAct.targetSceneName))
@@ -211,6 +304,7 @@ public class PrimaryQuestManager : MonoBehaviour
         _currentAct = nextAct;
         _stepIndex = 0;
         Debug.Log($"[PQM] Starting Act '{_currentAct.actID}'.");
+        SaveCurrentProgress();
         RunStep();
     }
 
@@ -287,7 +381,7 @@ public class PrimaryQuestManager : MonoBehaviour
 
         yield return new WaitForSeconds(step.waitTransitionTime);
 
-        CardModeManager.Instance.PrepareCardSession(_currentAct.dataChapter, step.chaptSectionIndex);
+        CardModeManager.Instance.PrepareCardSession(_currentAct.dataChapter, step.chaptSectionIndex, _currentAct.actID);
         m_gameModeManager.Switch(m_gameModeManager.CardMode);
 
         _currentCoroutine = null;

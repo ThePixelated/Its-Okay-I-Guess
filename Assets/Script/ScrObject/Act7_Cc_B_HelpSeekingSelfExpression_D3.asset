@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad68c8f7b61077947941f63bc314e543, type: 3}
+  m_Name: Act7_Cc_B_HelpSeekingSelfExpression_D3
+  m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
+  entryID: Act7_Cc_B_HelpSeekingSelfExpression_D3
+  title: Help-seeking / Self-expression
+  subtitle: Mulai menulis dan mencari jalan keluar
+  description: >
+    Help-seeking dan self-expression merujuk pada tindakan mencari
+    bantuan atau mengekspresikan perasaan sebagai langkah awal menuju
+    pemulihan. Lazarus dan Folkman (1984) mengategorikan help-seeking
+    sebagai strategi coping adaptif yang melibatkan pencarian dukungan
+    dari luar diri. Sementara itu, Pennebaker (1997) melalui penelitian
+    expressive writing menemukan bahwa menuliskan pengalaman emosional
+    secara bebas dapat membantu menurunkan distres psikologis dan
+    meningkatkan kesejahteraan, meskipun tulisan tersebut tidak
+    dibagikan kepada siapa pun. Tindakan kecil seperti mulai menulis
+    dapat menjadi langkah awal yang bermakna menuju pemrosesan emosi
+    yang lebih sehat.
+  icon: {fileID: 0}
+  slotThumbnail: {fileID: 0}
+  tag: 0
+  slotIndex: 7
+  isUnlockedByDefault: 0

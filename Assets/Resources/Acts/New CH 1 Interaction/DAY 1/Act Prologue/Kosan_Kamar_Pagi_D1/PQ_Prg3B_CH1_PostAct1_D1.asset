@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: PQ_Prg3B_CH1_PostAct1_D1
   m_EditorClassIdentifier: Assembly-CSharp::ActData
   actID: PQ_Prg3B_CH1_PostAct1_D1
+  dataChapter: {fileID: 0}
   steps:
   - type: 0
     dialogueData: {fileID: 11400000, guid: f1062c011d3fa76489203f6ac2d76889, type: 2}
     questID: 
+    chaptSectionIndex: 0
     waitTransitionTime: 1
   nextAct: {fileID: 0}
   hasTransitionBeforeNextAct: 1
   targetSceneName: Kampus_Pagi_D1
   targetSpawnPoint: {fileID: 0}
   isSoftTransition: 0
+  triggersFinalSummary: 1

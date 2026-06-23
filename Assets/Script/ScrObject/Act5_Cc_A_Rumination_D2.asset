@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad68c8f7b61077947941f63bc314e543, type: 3}
+  m_Name: Act5_Cc_A_Rumination_D2
+  m_EditorClassIdentifier: Assembly-CSharp::EncyclopediaEntry
+  entryID: Act5_Cc_A_Rumination_D2
+  title: Rumination
+  subtitle: Memikirkan masalah berulang tanpa solusi
+  description: >
+    Rumination adalah kecenderungan untuk terus-menerus memikirkan
+    suatu masalah, kegagalan, atau emosi negatif secara berulang tanpa
+    menghasilkan langkah penyelesaian yang konkret. Nolen-Hoeksema
+    (1991) dalam Response Styles Theory menjelaskan rumination sebagai
+    respons pasif yang berfokus pada distress dan penyebabnya tanpa
+    mengarah pada solusi. Pola pikir ini terbukti menjadi salah satu
+    faktor risiko yang memperpanjang durasi suasana hati negatif serta
+    meningkatkan risiko gejala depresi dan kecemasan.
+  icon: {fileID: 0}
+  slotThumbnail: {fileID: 0}
+  tag: 1
+  slotIndex: 5
+  isUnlockedByDefault: 0

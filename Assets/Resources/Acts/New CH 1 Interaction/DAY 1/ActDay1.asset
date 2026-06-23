@@ -18,7 +18,11 @@ MonoBehaviour:
     actionSection:
       statement: Alarm bunyi jam 05.00 pagi. Kamu merasa sangat lelah.
       firstChoice: Bangun segera, mandi air dingin
+      firstChoiceTag: 0
+      firstChoiceEncyclopedia: {fileID: 11400000, guid: e822a46adf4dbe045a70b1167edcffd2, type: 2}
       secondChoice: Snooze 15 menit... bentar aja
+      secondChoiceTag: 0
+      secondChoiceEncyclopedia: {fileID: 11400000, guid: 231b866ba184bac40805e8d637145375, type: 2}
       statEffect:
         Money: 4
         Health: 0

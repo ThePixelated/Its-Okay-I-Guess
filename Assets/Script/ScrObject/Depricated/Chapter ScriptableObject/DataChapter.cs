@@ -25,8 +25,19 @@ public class ChaptSection
 public class ActionChapt
 {
     [TextArea(3, 10)] public string statement;
+
     [TextArea(3, 10)] public string firstChoice;   // shown when card dragged LEFT
+    [Tooltip("Coping mechanism tag untuk firstChoice — dipakai NLM logging & fitur ensiklopedia")]
+    public CopingTag firstChoiceTag;
+    [Tooltip("Entry ensiklopedia yang ke-unlock kalau player pilih firstChoice (kiri)")]
+    public EncyclopediaEntry firstChoiceEncyclopedia;
+
     [TextArea(3, 10)] public string secondChoice;  // shown when card dragged RIGHT
+    [Tooltip("Coping mechanism tag untuk secondChoice — dipakai NLM logging & fitur ensiklopedia")]
+    public CopingTag secondChoiceTag;
+    [Tooltip("Entry ensiklopedia yang ke-unlock kalau player pilih secondChoice (kanan)")]
+    public EncyclopediaEntry secondChoiceEncyclopedia;
+
     public StatVariable statEffect;
 }
 
@@ -47,7 +58,16 @@ public class StatVariable
     public float Social;
 }
 
-// Keep enums for backward compatibility — SubChaptType no longer used in new flow
-// but may still exist in old SO assets in the project
+/// <summary>
+/// Coping mechanism classification untuk tiap choice.
+/// Dipakai oleh NLM (Narrative Logic Manager / AI summary) dan fitur ensiklopedia.
+/// </summary>
+public enum CopingTag
+{
+    Adaptive,
+    Maladaptive
+}
+
+// Keep for backward compatibility — no longer used in new flow
 public enum SubChaptType { Null, ActionChapt, Consequences }
 public enum BranchState { Stable, Trigger, Continues, Closed }

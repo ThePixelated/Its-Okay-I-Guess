@@ -41,12 +41,12 @@ public class CardModeManager : MonoBehaviour
     /// Dipanggil oleh PrimaryQuestManager sebelum GMM.Switch(CardMode).
     /// Menyimpan data chapter yang akan dipakai sesi ini.
     /// </summary>
-    public void PrepareCardSession(DataChapter dataChapter, int sectionIndex)
+    public void PrepareCardSession(DataChapter dataChapter, int sectionIndex, string actID)
     {
         // Teruskan ke CardMode via GameModeManager
         var cardMode = GameModeManager.Instance.CardMode as CardMode;
         if (cardMode != null)
-            cardMode.SetData(dataChapter, sectionIndex);
+            cardMode.SetData(dataChapter, sectionIndex, actID);
         else
             Debug.LogError("[CardModeManager] CardMode cast gagal!");
     }
